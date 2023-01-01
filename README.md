@@ -189,28 +189,29 @@ Stores and delivers data on an easy-to-use frontend that allows users to make de
 ## High-level drawing of the architecture
 
 1) Design the database schema to store the various types of data that will be collected by "The Raven" (stock market data, social media posts, budget information, etc.)
-Implement the data collection nodes for "The Raven", including the front-end, back-end, and API for each node
-Implement the Open Source Intelligence gathering techniques for "The Raven" to collect contextual data from various sources
-Develop the machine learning algorithms for "The Raven" and "Loki" to analyze trends and make predictions on contract outcomes and performance
-Implement "Heimdall" to manage the data sorting and security of the database
-Implement "Hermes" to efficiently compress, package, and deliver data
-Implement "Oden" to handle governance, risk, and compliance, and manage security policies
-Implement "Thor" to respond to security incidents and manage the security of stored and delivered data
-Implement "Fandral" to monitor network traffic and security, and prevent manipulation of data in transit
-Implement "Bragi" to manage data storage and retrieval
-Implement "Volstagg" to manage the overall defensive posture and make suggestions for improvement
-Implement "Sif" to generate business proposals and other documents, and deliver data on an easy-to-use frontend
+2) Implement the data collection nodes for "The Raven", including the front-end, back-end, and API for each node
+3) Implement the Open Source Intelligence gathering techniques for "The Raven" to collect contextual data from various sources
+4) Develop the machine learning algorithms for "The Raven" and "Loki" to analyze trends and make predictions on contract outcomes and performance
+5) Implement "Heimdall" to manage the data sorting and security of the database
+6) Implement "Hermes" to efficiently compress, package, and deliver data
+7) Implement "Oden" to handle governance, risk, and compliance, and manage security policies
+8) Implement "Thor" to respond to security incidents and manage the security of stored and delivered data
+9) Implement "Fandral" to monitor network traffic and security, and prevent manipulation of data in transit
+10) Implement "Bragi" to manage data storage and retrieval
+11) Implement "Volstagg" to manage the overall defensive posture and make suggestions for improvement
+12) Implement "Sif" to generate business proposals and other documents, and deliver data on an easy-to-use frontend
+
 For deployment, you could consider a rolling deployment strategy, where you gradually deploy the different components of the system to production, starting with "The Raven" and proceeding through the rest of the components in order. This can help minimize downtime and allow you to catch and fix any issues that arise during deployment.
 
 As for the cost and labor of the project, it is difficult to provide an accurate estimate without knowing more about the specific technologies and frameworks you will be using, the level of expertise of your team, and the scope of the project in terms of features and functionality.
 
 If you decide to move forward with this plan, some next steps could include:
 
-Assembling a project team with the necessary skills and expertise to implement the different components of the system
-Setting up a development and testing environment for the project
-Defining and prioritizing the features and functionality for the project
-Developing a project schedule and timeline
-Procuring any necessary hardware, software, or other resources for the project
-Setting up a version control system and code repository for the project
-Setting up a continuous integration and deployment pipeline for the project
-Establishing project management and communication processes and tools to keep the team organized and on track.
+1) Assembling a project team with the necessary skills and expertise to implement the different components of the system
+2) Setting up a development and testing environment for the project
+3) Defining and prioritizing the features and functionality for the project
+4) Developing a project schedule and timeline
+5) Procuring any necessary hardware, software, or other resources for the project
+6) Setting up a version control system and code repository for the project
+7) Setting up a continuous integration and deployment pipeline for the project
+8) Establishing project management and communication processes and tools to keep the team organized and on track.
