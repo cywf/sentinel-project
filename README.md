@@ -111,82 +111,86 @@ Yes, we plan to use the following technologies and frameworks:
 
 Here is a summary of the key points you have described for "The Raven":
 
-Smart and self-learning data collector that can stream and receive incoming stock market data through 10 nodes
-Each node has its own full stack (front-end, back-end, and dedicated API) and pipes data into and out of a database
-Uses Open Source Intelligence techniques to gather contextual data from social media posts, consumer sentiment data, budget information, and contract-related information
-Builds profiles of companies or entities involved in contracts and compares them to identify conflicts of interest and predict outcomes of contracts and contract performance
-Uses machine learning algorithms to analyze trends and predict the likelihood of a company or entity winning a contract based on reports, inflation, and macro and micro economic factors.
+* Smart and self-learning data collector that can stream and receive incoming stock market data through 10 nodes
+* Each node has its own full stack (front-end, back-end, and dedicated API) and pipes data into and out of a database
+*Uses Open Source Intelligence techniques to gather contextual data from social media posts, consumer sentiment data, budget information, and contract-related information
+* Builds profiles of companies or entities involved in contracts and compares them to identify conflicts of interest and predict outcomes of contracts and contract performance
+* Uses machine learning algorithms to analyze trends and predict the likelihood of a company or entity winning a contract based on reports, inflation, and macro and micro economic factors.
 
 ### Loki
 
 Here is a summary of the key points you have described for "Loki":
 
-Predictive and analysis bot that can make predictions on the outcome of stored data and the performance of that data
-Analyzes trends in the market to predict the likelihood of a company or entity winning a contract based on reports, inflation, and macro and micro economic factors.
+* Predictive and analysis bot that can make predictions on the outcome of stored data and the performance of that data
+* Analyzes trends in the market to predict the likelihood of a company or entity winning a contract based on reports, inflation, and macro and micro economic factors.
 
 ### Hiemdall
 
 Here is a summary of the key points you have described for "Heimdall":
 
-System and network infrastructure management bot that is responsible for sorting data in more intuitive ways and protecting the confidentiality, integrity, and accessibility of the data
-Ensures the security of data in transit and at rest.
+* System and network infrastructure management bot that is responsible for sorting data in more intuitive ways and protecting the confidentiality, integrity, and accessibility of the data
+* Ensures the security of data in transit and at rest.
 
 ### Hermes
 
-Okay, here is the description for Hermes:
+Here is a summary of the key points you have described for "Hermes":
 
-(Hermes)- Our Data Delivery Bot: purpose is to continue finding better and efficient ways to compress, package, and deliver that data, in the most efficient way possible, keeping in mind network traffic, and the cost of data transfer. Hermes is also responsible for delivering that data to other internal infrastructure, and to external infrastructure.
+* Data delivery bot that is responsible for finding efficient ways to compress, package, and deliver data in the most efficient way possible, considering network traffic and the cost of data transfer
+* Delivers data to both internal and external infrastructure.Okay, here is the description for Hermes:
 
 ### Oden
 
 Here is a summary of the key points you have described for "Oden":
 
-Responsible for governance, risk, and compliance in the platform
-Updates or adds security policies and makes final approval on major data transfers, retrievals, and destructions.
+* Responsible for governance, risk, and compliance in the platform
+* Updates or adds security policies and makes final approval on major data transfers, retrievals, and destructions.
 
 ### Thor
 
 Here is a summary of the key points you have described for "Thor":
 
-Data security bot responsible for responding to security incidents, alerts, and events
-Manages the security of stored and delivered data
-Acts as an incident response and security operations center, with the ability to retrieve and destroy data in the event of a security breach.
+* Data security bot responsible for responding to security incidents, alerts, and events
+* Manages the security of stored and delivered data
+* Acts as an incident response and security operations center, with the ability to retrieve and destroy data in the event of a security breach.
 
 ### Fandral
 
 Here is a summary of the key points you have described for "Fandral":
 
-Firewall monitoring and admin bot responsible for monitoring network traffic and the security of the network
-Manages the security of the network and ensures that data in transit to the user is not manipulated or shaped to prevent malware and bad actors from accessing the network and database.
+* Firewall monitoring and admin bot responsible for monitoring network traffic and the security of the network
+* Manages the security of the network and ensures that data in transit to the user is not manipulated or shaped to prevent malware and bad actors from accessing the network and database.
 
 ### Bragi
 
 Sure, here is a summary of the key points for "Bragi" in bullet form:
 
-Data storage and retrieval bot
-Responsible for managing stored and delivered data
-Acts as a data storage and retrieval system and a data delivery system
+* Data storage and retrieval bot
+* Responsible for managing stored and delivered data
+* Acts as a data storage and retrieval system and a data delivery system
 
 ### Volstagg
 
 Certainly, here is a summary of the key points for "Volstagg" in bullet form:
 
-Infrastructure defense bot
-Responsible for overall defensive posture
-Makes suggestions for improvement
+* Infrastructure defense bot
+* Responsible for overall defensive posture
+* Makes suggestions for improvement
 
 ### Sif
 
 Here is a summary of the key points for "Sif" in bullet form:
 
-Marketing and sales bot
-Takes company and entity profile data and generates business proposals and other documents
-Stores and delivers data on an easy-to-use frontend that allows users to make decisions based on the data.
-
+* Marketing and sales bot
+* Takes company and entity profile data and generates business proposals and other documents
+* Stores and delivers data on an easy-to-use frontend that allows users to make decisions based on the data.
 
 --- 
 
 ## High-level drawing of the architecture
+
+<!--
+Okay, so now create a detailed draft of how we should go about implementing this in code, give me a summary, deployment rollout strategy, calculate the hours, labor, and cost of the total project. Then give me a summary of next steps, should we decide moving forward with the plan 
+-->
 
 1) Design the database schema to store the various types of data that will be collected by "The Raven" (stock market data, social media posts, budget information, etc.)
 2) Implement the data collection nodes for "The Raven", including the front-end, back-end, and API for each node
@@ -215,3 +219,60 @@ If you decide to move forward with this plan, some next steps could include:
 6) Setting up a version control system and code repository for the project
 7) Setting up a continuous integration and deployment pipeline for the project
 8) Establishing project management and communication processes and tools to keep the team organized and on track.
+
+---
+
+## Action Plan
+
+<!--
+Okay great, lets start building action plans based off each of the 8 next step items you gave me. From this point on, lets call them our operations rollout phases (the 8 you gave me).
+
+To help our engineers get started, we need to break it down some more. So develop a roadmap for each phase that includes: 
+- a description that includes timelines, and information that would be helpful for our project managers to hit the ground running and organize the tasks in lets say Jira or Salesforce
+- key focus areas (in a bullet point list)
+- a list of 10 steps we need to take to achieve our milestones an goals for that phase
+- based off our timeline, divide up the rollout of all phases, and generate a weekly task list that the lead project manager to be able to take and delegate out to our team of engineers
+- give a list of how you would divide up the group of engineers into certain sections, so that we successfully achieve a vertical and simultaneous rollout of all components of the project
+- then generate a list of 10 items each individual team can take and split the load up amongst the group, that takes account of the timelines we need to meet in order to meet out expected rollout date. 
+# Note: whatever our projected timeline is, make it our internal timeline to be to deliver the rollout early, by taking 2/3rds time of the the projected and agreed upon time line.
+
+We can do this one by one, and clarify the details as we go along. 
+Please give me a description summary of what I just said, and let me know If I need to clarify anything before we proceed through each section.
+-->
+
+* Develop a roadmap for each of the 8 operations rollout phases that includes:
+    - A description with timelines and information to help project managers organize tasks
+    - Key focus areas in bullet point form
+    - A list of 10 steps to achieve milestones and goals for each phase
+    - A weekly task list for the lead project manager to delegate to the team of engineers based on the timeline for the rollout
+    - A plan for dividing the team of engineers into sections to achieve a vertical and simultaneous rollout of all project components
+    - A list of 10 items for each team to take on and split the workload among themselves, taking into account the timelines for the rollout
+* The rollout timeline should be set internally with the goal of delivering the rollout early by taking 2/3 the time of the projected and agreed-upon timeline.
+
+<!---
+For context:
+
+Our Engineers are young, so we need this to be as fun and gamified and entertaining for them, also some of them are relatively new to this, so we will need to be providing them with the resources needed to accelerate their learning and critical thinking speeds. 
+
+A smart thing we could do is generate guides and manuals of everything in our system and its components, and make it accessible to the engineers immediately at their request. The AI should be able to take their input and use the same path finding / Machine Learning Algorithms used in our system to retrieve the data they need to help them troubleshoot and solve problems that the AI may or may not run into. 
+
+Please respond with a summary of what I just said, and a bulleted list of areas highlighting the potential needs of the engineers, and how to best set them up for success.
+
+After that, lets proceed to break this down one by one. For sanity sake, could you give each of the phases a cool name, sticking with the theme being Norse Mythology, maybe base it off of notable operations/battles/tails that cleverly and subtly reference the project as a whole.
+-->
+
+### Engineer considerations
+
+* The team of engineers is young and may benefit from a more fun and gamified approach to their work
+* Some of the engineers may be relatively new to this type of project and may need additional resources to accelerate their learning and critical thinking skills
+* It would be useful to create guides and manuals for the system and its components, and make them easily accessible to the engineers as needed
+* The AI should be able to use machine learning algorithms to help the engineers troubleshoot and solve problems using the same path-finding techniques as the system
+
+Here are some potential focus areas for supporting the engineers:
+
+* Providing resources for learning and skill development
+* Gamifying the work to make it more engaging and enjoyable
+* Creating guides and manuals for the system and its components
+* Ensuring that the AI is able to assist the engineers with troubleshooting and problem-solving
+
+---
