@@ -488,7 +488,7 @@ Here are some potential focus areas for supporting the engineers:
     - [Week-1](): Test the system for reliability and scalability
     - [Week-2](): Identify and resolve any issues or bugs in
 
-### **Financial Breakdown for Labor and Resources**
+### **Financial Breakdown for Labor and Resources for Phase 2**
 
 * **Labor costs**:
     - Database and data storage team: $50,000
@@ -523,92 +523,159 @@ Here are some potential focus areas for supporting the engineers:
 * [Week-10]: Deploy system to production environment
 
 ### **Key focus areas:**
-    - Data storage and retrieval
-    - Data delivery
-    - Frontend design and user experience
-    - Integration with existing systems and platforms
 
-### **10 steps to achieve milestones and goals:**
-    1. Set up data storage and retrieval system using MySQL or equivalent database
-    2. Design and implement data delivery system using efficient data transfer protocols
-    3. Design frontend interface for easy use and understanding by end users
-    4. Test and debug data storage, retrieval, and delivery systems
-    5. Integrate system with existing systems and platforms as needed
-    6. Implement security measures to protect data at rest and in transit
-    7. Conduct user testing and gather feedback to improve frontend design and user experience
-    8. Optimize system for performance and scalability
-    9. Perform final testing and debugging
-    10. Deploy system to production environment
+- Data storage and retrieval
+- Data delivery
+- Frontend design and user experience
+- Integration with existing systems and platforms
 
-### **Team breakdown:**
+### **10 steps to achieve milestones and goals**
 
-* Data storage and retrieval team: responsible for setting up and maintaining the database, as well as developing and implementing the data retrieval system
-* Data delivery team: responsible for designing and implementing the data delivery system, as well as integrating it with external systems and platforms
-* Frontend design team: responsible for designing the frontend interface and user experience, as well as gathering and implementing user feedback
-* Quality assurance team: responsible for testing and debugging the system to ensure it is functioning as expected
+1. Set up data storage and retrieval system using MySQL or equivalent database
+2. Design and implement data delivery system using efficient data transfer protocols
+3. Design frontend interface for easy use and understanding by end users
+4. Test and debug data storage, retrieval, and delivery systems
+5. Integrate system with existing systems and platforms as needed
+6. Implement security measures to protect data at rest and in transit
+7. Conduct user testing and gather feedback to improve frontend design and user experience
+8. Optimize system for performance and scalability
+9. Perform final testing and debugging
+10. Deploy system to production environment
 
-### **Tasks for individual teams:**
+### **Team breakdown**
 
-* **[Data storage and retrieval team]()**:
+* [Data storage and retrieval team](): 
+    - responsible for setting up and maintaining the database, as well as developing and implementing the data retrieval system
+* [Data delivery team](): 
+    - responsible for designing and implementing the data delivery system, as well as integrating it with external systems and platforms
+* [Frontend design team](): 
+    - responsible for designing the frontend interface and user experience, as well as gathering and implementing user feedback
+* [Quality assurance team](): 
+    - responsible for testing and debugging the system to ensure it is functioning as expected
+
+### **Phase Goals of Each Team**
+
+* **[Data storage and retrieval team]()**
+
     - Research and choose appropriate database system
     - Set up and configure database
     - Develop data retrieval system using appropriate programming languages and tools
     - Test and debug data retrieval system
     - Implement security measures to protect data at rest
 
-* [Data delivery team]():
+* [Data delivery team]()
+
     - Research and choose appropriate data transfer protocols
     - Design and implement data delivery system using chosen protocols
     - Integrate data delivery system with external systems and platforms as needed
     - Test and debug data delivery system
     - Implement security measures to protect data in transit
 
-* [Frontend design team]():
+* [Frontend design team]()
+
     - Research user experience design best practices
     - Design frontend interface and user flow
     - Implement frontend design using appropriate programming languages and tools
     - Gather and incorporate user feedback
     - Test and debug frontend design
 
-* [Quality assurance team]():
+* [Quality assurance team]()
+
     - Develop and implement testing plan
     - Conduct testing and debugging of all system components
     - Document and report any issues found
     - Work with other teams to resolve issues
     - Perform final testing and debugging before deployment to production environment
 
+### Weekly Tasks List Breakdown for Each Team:
+
+* **[Data Storage and Retrieval Team]()**
+
+    - [Week-1](): Set up and configure database
+    - [Week-2](): Develop data retrieval system
+    - [Week-3](): Test and debug data retrieval system
+    - [Week-4](): Implement security measures to protect data at rest
+
+* **[Data Delivery Team]()**
+
+    - [Week-1](): Research and choose data transfer protocols
+    - [Week-2](): Design and implement data delivery system
+    - [Week-3](): Integrate data delivery system with external systems and platforms
+    - [Week-4](): Test and debug data delivery system
+    - [Week-5](): Implement security measures to protect data in transit
+
+* **[Frontend Design Team]()**
+
+    - [Week-1](): Research user experience design best practices
+    - [Week-2](): Design frontend interface and user flow
+    - [Week-3](): Implement frontend design
+    - [Week-4](): Gather and incorporate user feedback
+    - [Week-5](): Test and debug frontend design
+
+* **[Quality Assurance Team]()**
+
+    - [Week-1](): Develop and implement testing plan
+    - [Week-2](): Conduct testing and debugging of all system components
+    - [Week-3](): Document and report any issues found
+    - [Week-4](): Work with other teams to resolve issues
+    - [Week-5](): Perform final testing and debugging before deployment to production environment
+
+### **Financial Breakdown for Labor and Resources**
+
+* **Labor**:
+
+    - Data storage and retrieval team: $20,000
+    - Data delivery team: $15,000
+    - Frontend design team: $15,000
+    - Quality assurance team: $10,000
+
+* **Resources:**
+
+    - Hardware: $10,000
+    - Software: $5,000
+    - Miscellaneous: $1,000
+
+* **Total cost**: $66,000
+
+---
+
 ## (Phase 4) Jotunheim: The Defiance of the Giants
 
-### **Timeline**:
+### **Timeline**
 
-### **Key focus areas:**
-    - Building the Thor bot
-    - Integrating the Thor bot with the rest of the system
-    - Testing the data security measures
+### **Key focus areas**
 
-### **10 teps to achieve milestones:**
-    - Design the architecture and functionality of the Thor bot
-    - Implement the Thor bot using the chosen programming language
-    - Integrate the Thor bot with the rest of the system
-    - Test the Thor bot to ensure it is functioning correctly
-    - Monitor the Thor bot during initial usage to ensure it is handling incidents and data security correctly
-    - Document the Thor bot's architecture and functionality
-    - Train relevant team members on the use and maintenance of the Thor bot
-    - Roll out the Thor bot to the rest of the system
-    - Continuously monitor and maintain the Thor bot to ensure it is functioning correctly
-    - Conduct regular audits to ensure the data security measures are effective
+- Building the Thor bot
+- Integrating the Thor bot with the rest of the system
+- Testing the data security measures
 
-### **Tasks for lead project manager:**
-    - Assign tasks to team members
-    - Coordinate with other project managers to ensure the Thor bot is integrated smoothly with the rest of the system
-    - Monitor the progress of the tasks
-    - Ensure the Thor bot is tested and deployed successfully
+### **10 Steps to achieve milestones**
 
-### **Team structure:**
-    - Data security team: responsible for building and integrating the Thor bot
-    - Testing team: responsible for testing the data security measures
+1. Design the architecture and functionality of the Thor bot
+2. Implement the Thor bot using the chosen programming language
+3. Integrate the Thor bot with the rest of the system
+4. Test the Thor bot to ensure it is functioning correctly
+5. Monitor the Thor bot during initial usage to ensure it is handling incidents and data security correctly
+6. Document the Thor bot's architecture and functionality
+7. Train relevant team members on the use and maintenance of the Thor bot
+8. Roll out the Thor bot to the rest of the system
+9. Continuously monitor and maintain the Thor bot to ensure it is functioning correctly
+10. Conduct regular audits to ensure the data security measures are effective
 
-### **Tasks for individual teams**:
+### **Tasks for lead project manager**
+
+- Assign tasks to team members
+- Coordinate with other project managers to ensure the Thor bot is integrated smoothly with the rest of the system
+- Monitor the progress of the tasks
+- Ensure the Thor bot is tested and deployed successfully
+
+### **Team structure**
+
+- Data security team: responsible for building and integrating the Thor bot
+- Testing team: responsible for testing the data security measures
+
+### **Tasks for individual teams**
+
 * Data security team:
     - Design the architecture and functionality of the Thor bot
     - Implement the Thor bot using the chosen programming language
@@ -628,105 +695,123 @@ Here are some potential focus areas for supporting the engineers:
     - Review and update the test plan as needed
     - Retest any issues or discrepancies found during initial testing to ensure they have been resolved.
 
+### **Financial Breakdown for Labor and Resources**
+
+---
+
 ## (Phase 5) Niflheim: The Descent into the Underworld
 
-### **Timeline**:
+### **Timeline**
 
 
 ### **Key focus areas:**
-    - Designing and implementing the machine learning algorithms that Loki will use to analyze and predict outcomes based on the data collected by The Raven
-    - Integrating Loki with the database and ensuring that it has access to all relevant data
-    - Testing and debugging Loki to ensure that it is functioning correctly
+
+- Designing and implementing the machine learning algorithms that Loki will use to analyze and predict outcomes based on the data collected by The Raven
+- Integrating Loki with the database and ensuring that it has access to all relevant data
+- Testing and debugging Loki to ensure that it is functioning correctly
 
 ### **10 Steps:**
-    1. Design and prototype the machine learning algorithms that Loki will use.
-    2. Train the algorithms using sample data.
-    4. Integrate the algorithms into Loki's codebase.
-    4. Test the algorithms to ensure they are functioning correctly.
-    5. Connect Loki to the database and test its access to data.
-    6. Integrate Loki with the rest of the system.
-    7. Test Loki's integration with the system.
-    8. Debug any issues that arise during testing.
-    9. Perform final testing to ensure Loki is fully functional.
-    10. Deploy Loki to the live system.
 
-### **Team breakdown**:
+1. Design and prototype the machine learning algorithms that Loki will use.
+2. Train the algorithms using sample data.
+4. Integrate the algorithms into Loki's codebase.
+4. Test the algorithms to ensure they are functioning correctly.
+5. Connect Loki to the database and test its access to data.
+6. Integrate Loki with the rest of the system.
+7. Test Loki's integration with the system.
+8. Debug any issues that arise during testing.
+9. Perform final testing to ensure Loki is fully functional.
+10. Deploy Loki to the live system.
 
-### **Tasks for individual teams**:
+### **Team breakdown**
+
+### **Tasks for individual teams**
+
+### **Financial Breakdown for Labor and Resources**
 
 ---
 
 ## (Phase 6) Muspelheim: The Siege of the Fire Giants
 
-### **Timeline**:
+### **Timeline**
 
-### **Key focus areas**:
-    - Implementing measures to ensure the security and integrity of data in transit and at rest
-    - Setting up systems to monitor for and respond to security incidents, alerts, and events
-    - Developing processes and procedures for data retrieval and destruction in case of a security breach
 
-### **10 Steps to achieve milestones and goals**:
-    1. Conduct a thorough assessment of the current security measures in place
-    2. Identify and prioritize areas for improvement based on the results of the assessment
-    3. Develop and implement new security policies and procedures based on industry best practices
-    4. Set up systems to continuously monitor for security incidents and alerts
-    5. Create an incident response plan and train team members on how to execute it
-    6. Develop processes and procedures for data retrieval and destruction in case of a security breach
-    7. Integrate these processes and procedures into the overall platform governance and compliance framework
-    8. Test and validate the effectiveness of the new measures through simulations and exercises
-    9. Monitor and regularly review the security posture of the platform to ensure it remains effective
-    10. Continuously educate and train team members on security best practices
+### **Key focus areas**
 
-### **Team breakdown**:
-    - Lead project manager: responsible for overall coordination and management of the phase
-    - Security team: responsible for implementing the new security measures and monitoring for incidents
-    - Incident response team: responsible for executing the incident response plan and handling data retrieval and destruction in case of a security breach
+- Implementing measures to ensure the security and integrity of data in transit and at rest
+- Setting up systems to monitor for and respond to security incidents, alerts, and events
+- Developing processes and procedures for data retrieval and destruction in case of a security breach
 
-### **Tasks for individual teams**:
-    - Conduct security assessment and identify areas for improvement
-    - Develop and implement new security policies and procedures
-    - Set up systems to continuously monitor for security incidents and alerts
-    - Create incident response plan and train team members on execution
-    - Develop processes and procedures for data retrieval and destruction in case of a security breach
-    - Integrate processes and procedures into overall platform governance and compliance framework
-    - Test and validate effectiveness of new measures through simulations and exercises
-    - Monitor and regularly review platform security posture
-    - Educate and train team members on security best practices
+### **10 Steps to achieve milestones and goals**
+
+1. Conduct a thorough assessment of the current security measures in place
+2. Identify and prioritize areas for improvement based on the results of the assessment
+3. Develop and implement new security policies and procedures based on industry best practices
+4. Set up systems to continuously monitor for security incidents and alerts
+5. Create an incident response plan and train team members on how to execute it
+6. Develop processes and procedures for data retrieval and destruction in case of a security breach
+7. Integrate these processes and procedures into the overall platform governance and compliance framework
+8. Test and validate the effectiveness of the new measures through simulations and exercises
+9. Monitor and regularly review the security posture of the platform to ensure it remains effective
+10. Continuously educate and train team members on security best practices
+
+### **Team breakdown**
+
+- Lead project manager: responsible for overall coordination and management of the phase
+- Security team: responsible for implementing the new security measures and monitoring for incidents
+- Incident response team: responsible for executing the incident response plan and handling data retrieval and destruction in case of a security breach
+
+### **Tasks for individual teams**
+
+- Conduct security assessment and identify areas for improvement
+- Develop and implement new security policies and procedures
+- Set up systems to continuously monitor for security incidents and alerts
+- Create incident response plan and train team members on execution
+- Develop processes and procedures for data retrieval and destruction in case of a security breach
+- Integrate processes and procedures into overall platform governance and compliance framework
+- Test and validate effectiveness of new measures through simulations and exercises
+- Monitor and regularly review platform security posture
+- Educate and train team members on security best practices
+
+### **Financial Breakdown for Labor and Resources**
 
 ---
 
 ## (Phase 7) Svartalfheim: The Lurking of the Dark Elves
 
-### **Timeline**:
+### **Timeline**
 
 
-### **Key Focus Areas**: 
-    - Testing
-    - Debugging
-    - User acceptance testing
-    - Gathering feedback
-    - Making refinements
+### **Key Focus Areas**
 
-### **10 Steps to Achieve Milestones and Goals**:
-    1. Develop and implement a comprehensive testing plan
-    2. Set up a testing environment
-    3. Conduct unit testing on all individual components
-    4. Conduct integration testing to ensure all components are working together properly
-    5. Conduct system testing to ensure the entire system is functioning as intended
-    6. Identify and fix any bugs or issues that are discovered during testing
-    7. Conduct user acceptance testing with a small group of users to gather feedback
-    8. Analyze and incorporate feedback from user acceptance testing
-    9. Conduct further testing as needed based on feedback and refinements
-    10. Finalize and document the testing process
+- Testing
+- Debugging
+- User acceptance testing
+- Gathering feedback
+- Making refinements
 
-### **Weekly Task List**: 
+### **10 Steps to Achieve Milestones and Goals**
+
+1. Develop and implement a comprehensive testing plan
+2. Set up a testing environment
+3. Conduct unit testing on all individual components
+4. Conduct integration testing to ensure all components are working together properly
+5. Conduct system testing to ensure the entire system is functioning as intended
+6. Identify and fix any bugs or issues that are discovered during testing
+7. Conduct user acceptance testing with a small group of users to gather feedback
+8. Analyze and incorporate feedback from user acceptance testing
+9. Conduct further testing as needed based on feedback and refinements
+10. Finalize and document the testing process
+
+### **Weekly Task List**
 
 ### **Team breakdown**
 
 - The team should be divided into smaller groups focused on different components or areas of the system. Each group should have a lead engineer responsible for coordinating their tasks and communicating with the lead project manager.
 
-### **Tasks for individual teams**:
-    - Develop and implement a testing plan for their specific component or area of the system
+### **Tasks for individual teams**
+
+- Develop and implement a testing plan for their specific component or area of the system
     - Set up a testing environment for their component or area
     - Conduct unit testing on their component or area
     - Integrate their component or area with the rest of the system and conduct integration testing
@@ -737,39 +822,42 @@ Here are some potential focus areas for supporting the engineers:
     - Document the testing process for their component or area
     - Assist with testing and debugging of other components or areas as needed.
 
+### **Financial Breakdown for Labor and Resources**
+
 ---
 
 ## (Phase 8) Helheim: The Judgement of the Dead
 
-### **Timeline**:
+### **Timeline**
 
-### **Key focus areas**:
-    - Finalizing and implementing marketing and sales strategies
-    - Gathering and analyzing feedback from end users
-    - Implementing improvements and updates based on feedback
+### **Key focus areas**
+- Finalizing and implementing marketing and sales strategies
+- Gathering and analyzing feedback from end users
+- Implementing improvements and updates based on feedback
 
-### **10 steps to achieve milestones and goals**:
-    1. Review and finalize marketing and sales proposals and documents
-    2. Train team on using marketing and sales tools and platforms
-    3. Launch marketing campaigns targeting potential clients
-    4. Follow up with leads and schedule sales calls or meetings
-    5. Close deals and sign contracts with clients
-    6. Implement onboarding process for new clients
-    7. Gather and analyze feedback from end users on product and service
-    8. Identify areas for improvement based on end user feedback
-    9. Implement updates and improvements based on end user feedback
-    10. Monitor and track success of marketing and sales efforts
+### **10 steps to achieve milestones and goals**
+1. Review and finalize marketing and sales proposals and documents
+2. Train team on using marketing and sales tools and platforms
+3. Launch marketing campaigns targeting potential clients
+4. Follow up with leads and schedule sales calls or meetings
+5. Close deals and sign contracts with clients
+6. Implement onboarding process for new clients
+7. Gather and analyze feedback from end users on product and service
+8. Identify areas for improvement based on end user feedback
+9. Implement updates and improvements based on end user feedback
+10. Monitor and track success of marketing and sales efforts
 
 ### **Weekly task list**:
-    * __Week 1__:
-        - Review and finalize marketing and sales proposals and documents
-        - Train team on using marketing and sales tools and platforms
-    * __Week 2__:
-        - Launch marketing campaigns targeting potential clients
-        - Follow up with leads and schedule sales calls or meetings
-    * __Week 3__:
-        - Close deals and sign contracts with clients
-        - Implement onboarding process for new clients
+
+* __Week 1__:
+    - Review and finalize marketing and sales proposals and documents
+    - Train team on using marketing and sales tools and platforms
+* __Week 2__:
+    - Launch marketing campaigns targeting potential clients
+    - Follow up with leads and schedule sales calls or meetings
+* __Week 3__:
+    - Close deals and sign contracts with clients
+    - Implement onboarding process for new clients
 
 ### **Group division**:
     - Marketing team: _responsible for launching marketing campaigns and following up with leads_
@@ -787,17 +875,7 @@ Here are some potential focus areas for supporting the engineers:
         - Close deals and sign contracts with clients
         - Implement onboarding process for new clients
 
-<!--
-Now that we have completed the breakdown of all 8 phases, our next steps could include:
-
-* Reviewing and finalizing the phase descriptions and task lists to ensure that they accurately reflect the work that needs to be done.
-
-* Assigning specific tasks to individual engineers or teams and tracking progress using a project management tool such as Jira or Salesforce.
-
-* Providing resources and support to the engineers to help them complete their tasks efficiently and effectively.
-
-* Monitoring the overall progress of the project and making any necessary adjustments to the rollout plan.
--->
+### **Financial Breakdown for Labor and Resources**
 
 ---
 
@@ -882,3 +960,5 @@ Now that we have completed the breakdown of all 8 phases, our next steps could i
     8. Implement any necessary fixes or improvements based on the results of the test rollout.
     9. Prepare all necessary documentation for the full rollout of the system.
     10. Assist with the full rollout of the system, as needed.
+
+### **Financial Breakdown for Labor and Resources**
