@@ -67,40 +67,42 @@ All major industries classified as Critical Infrastructure, such as:
 
 ## Do you have any specific technologies or frameworks in mind that you plan to use?
 
-Yes, we plan to use the following technologies and frameworks:
-- [Python]()
-- [MySQL]()
-- [Flask]()
-- [React]()
-- [Node.js]()
-- [Express.js]()
-- [HashiCorp Vault]()
-- [Terraform]()
-- [Rust]()
-- [Golang]()
-- [JavaScrip]()
-- [HTML]()
-- [CSS]()
-- [AWS]()
-- [Azure]()
-- [Google Cloud]()
-- [Linode]()
-- [Digital Ocean]()
-- [Heroku]()
-- [Docker]()
-- [Kubernetes]()
-- [Ansible]()
-- [Jenkins]()
-- [Git]()
-- [GitHub]()
-- [Git Actions]()
-- [Portainer]()
-- [OpenWRT]()
-- [FreeBSD]()
-- [Sysdig]()
-- [Prometheus]()
-- [Grafana]()
-- [NextCloud]()
+We plan to use the following technologies and frameworks:
+
+#### Programming Languages:
+
+- **Python**: a high-level, general-purpose programming language with dynamic semantics, used for web development, data analysis, and scientific computing
+- **MySQL**: a popular open-source relational database management system that uses Structured Query Language (SQL) for managing data
+- **Flask**: a microweb framework for Python, used for developing web applications
+- **React**: a JavaScript library for building user interfaces, commonly used for building single-page applications
+- **Node.js**: a JavaScript runtime environment that executes code outside of a browser, commonly used for building server-side applications
+- **Express.js**: a web application framework for Node.js, used for building web and mobile applications
+- **Rust**: a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety
+- **Golang**: a statically-typed programming language developed by Google, used for building simple, reliable, and efficient software
+- **JavaScript**: a high-level, interpreted programming language that is commonly used for building interactive elements on websites
+- **HTML**: a markup language used for structuring and formatting content on the web
+- **CSS**: a style sheet language used for describing the look and formatting of a document written in HTML
+
+#### Frameworks and Tools:
+
+- **HashiCorp Vault**: a tool for securely storing and managing secrets and sensitive data
+- **Terraform**: a tool for building, changing, and versioning infrastructure safely and efficiently
+- **AWS**: Amazon Web Services, a cloud computing platform that offers a wide range of services, including storage, computing, networking, and more
+- **Azure**: Microsoft Azure, a cloud computing platform and infrastructure for building, deploying, and managing applications and services
+- **Google Cloud**: Google Cloud Platform, a cloud computing platform that offers a wide range of services, including storage, computing, networking, and more
+- **Linode**: a cloud hosting provider that offers a range of services, including virtual private servers, cloud storage, and more
+- **Digital Ocean**: a cloud hosting provider that offers a range of services, including virtual private servers, cloud storage, and more
+- **Heroku**: a cloud platform that allows developers to build, run, and operate applications entirely in the cloud
+- **Docker**: a containerization platform that allows developers to package applications and dependencies into portable containers
+- **Kubernetes**: an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications
+- **Ansible**: a configuration management and orchestration tool that allows developers to automate tasks and manage infrastructure
+- **Jenkins**: an open-source automation server that helps developers automate parts of the software development process
+- **Git**: a version control system for tracking changes in computer files and coordinating work on those files among multiple people
+- **GitHub**: a web-based platform for hosting and collaborating on Git repositories
+- **Git Actions**: a tool for automating, customizing, and executing software development workflows
+- **Portainer**: a lightweight management tool for Docker that allows developers to easily manage their Docker environments
+- **OpenWRT**: an open-source operating system for network devices, such as routers and switches
+- **FreeBSD**: a free and open-source operating system used for building and running modern applications and services
 
 ---
 
