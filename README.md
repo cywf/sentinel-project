@@ -1,8 +1,7 @@
 # Sentinel-Bot
 An Infrastructure that combines the power of automation with Artificial Intelligence and Machine Learning to gather, compile, and relay data faster, with the ability to preformed a predetermind set of actions, based off of the nature of the data, and its respective applications. 
 
-To develop this system, it's first application will be to stock market and crypto traders, firms, and investors, to help them make better and more informed decisions, and to help them make better and more informed predictions, and to help them make better and more informed trades, and to have the ability to make automated trades, across all markets, in real time, both domestic and Internationally.
-
+The system includes a smart and self-learning data collector with 10 nodes that stream and receive stock market data, which is then piped into and out of a database. The Sentinel Project also uses open source intelligence gathering techniques to gather contextual data from social media posts, consumer sentiment data, and company and agency budgets and contracts. The system compares this data to predict the outcome of contracts and evaluate the performance of companies and entities involved in the contracts, taking into account inflation and market trends
 
 ## How does it work?
 
