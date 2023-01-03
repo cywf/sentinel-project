@@ -2,7 +2,7 @@
 
 - **Executive summary**: 
 
-    - _Our company, Acme Inc., is focused on developing a new platform for the e-commerce industry. Our platform, called ShopifyPlus, will provide a scalable and customizable solution for large enterprises, providing a unique solution for these businesses to manage their online sales. We are seeking funding of $500,000 to develop and launch the platform, and expect to generate $1.2 million in revenue in the first year of operation._
+    - _Our company, Acme Inc., is focused on developing a new platform for the e-commerce industry. Our platform, called ShopifyPlus, will provide a scalable and customizable solution for large enterprises, providing a unique solution for these businesses to manage their online sales. We are **seeking funding** of **$500,000** to develop and **launch** the **platform**, and expect to **generate $1.2 million in revenue** in the **first year of operation**._
 
 - **Company description**: 
 
