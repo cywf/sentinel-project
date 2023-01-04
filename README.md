@@ -1,4 +1,5 @@
-# Sentinel-Bot
+# Sentinel Project
+
 An Infrastructure that combines the power of automation with Artificial Intelligence and Machine Learning to gather, compile, and relay data faster, with the ability to preformed a predetermind set of actions, based off of the nature of the data, and its respective applications. 
 
 The system includes a smart and self-learning data collector with 10 nodes that stream and receive stock market data, which is then piped into and out of a database. The Sentinel Project also uses open source intelligence gathering techniques to gather contextual data from social media posts, consumer sentiment data, and company and agency budgets and contracts. The system compares this data to predict the outcome of contracts and evaluate the performance of companies and entities involved in the contracts, taking into account inflation and market trends

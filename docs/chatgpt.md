@@ -1,4 +1,5 @@
 
+
 To design a CI/CD pipeline for this project, we will need to consider the needs of the engineers and the frameworks, operating systems, and programming languages that they will be using. The infrastructure should be designed to minimize operating costs, and should have the ability to scale up and down as needed. It should also be possible to have multiple instances of the same service running concurrently. We will need to consider the dependencies of the various technologies, and ensure that all minimum requirements are met in order to run and operate the project.
 
 
@@ -1317,37 +1318,677 @@ Please try to remember all of the environment variables we set, so we can genera
 
 --- [ChatGPT] ---
 
+To use an environment variable in this code, you can do the following:
+
+```t
+# Set the environment variable
+# You can set this in your terminal before running the terraform code, or set it as a
+# secret in your CI/CD pipeline
+# For example: export TF_VAR_oauth_token=your_oauth_token
+
+# Create a new VCS connection
+resource "tfe_vcs_connection" "sentinel-project" {
+  provider = "github"
+  organization = "folkvarlabs"
+
+  # Use the environment variable
+  oauth_token = var.oauth_token
+  repository  = "folkvarlabs/sentinel-project"
+}
+```
+
+You will also need to add a variable declaration for oauth_token to your terraform code:
+
+```t
+variable "oauth_token" {
+  type = string
+  sensitive = true
+}
+```
+
+You can then set the value of the oauth_token variable using the -var flag when running the terraform apply command:
+
+```bash
+terraform apply -var 'oauth_token=your_oauth_token'
+```
+
+You can also set the value of the oauth_token variable in a terraform.tfvars file and reference it when running the terraform apply command:
+
+```bash
+# In a file named terraform.tfvars
+oauth_token = "your_oauth_token"
+
+# Then run
+terraform apply -var-file=terraform.tfvars
+```
+
+Alternatively, you can create a secrets.tf file to store sensitive variables, and add the secrets.tf file to your .gitignore to prevent it from being committed to version control:
+
+```t
+# In a file named secrets.tf
+variable "oauth_token" {
+  type = string
+  sensitive = true
+}
+
+# Set the value of the oauth_token variable in a secrets.auto.tfvars file
+# which will be automatically loaded by Terraform.
+# This file should be ignored by version control.
+oauth_token = "your_oauth_token"
+```
 --- [cywf] ---
+
+Okay, lets circle back to the directory structure real quick. Our repositories current directory structure is as follows:
+
+```bash
+sentinel-project/
+├── README.md
+├── docs
+│   ├── README.md
+├── code
+│   ├── terraform
+│   │   ├── README.md
+│   │── docs
+│   │   ├── README.md
+```
+
+How would the structure look if we went with the structure you previously suggested that we use? For reference, heres the directory structure you suggested:
+
+```bash
+.
+├── documentation
+├── global_modules
+├── global_variables
+├── gcp
+│   ├── modules
+│   ├── terraform
+│   ├── variables
+├── aws
+│   ├── modules
+│   ├── terraform
+│   ├── variables
+├── azure
+│   ├── modules
+│   ├── terraform
+│   ├── variables
+├── other_cloud_providers
+│   ├── linode
+│   ├── vultr
+│   ├── digital_ocean
+│   ├── modules
+│   ├── terraform
+│   ├── variables
+├── terraform_cloud
+└── git_actions
+```
+
+What changes would we need to make to our current directory structure to use the structure you suggested? 
+
+Could you please provide a list of the changes we would need to make, and a revision of the directory structure that we would end up with in a code block?
 
 --- [ChatGPT] ---
 
---- [cywf] ---
+Here are the changes you would need to make to your current directory structure to use the structure I suggested:
 
---- [ChatGPT] ---
-
---- [cywf] ---
-
---- [ChatGPT] ---
-
---- [cywf] ---
-
---- [ChatGPT] ---
-
---- [cywf] ---
-
---- [ChatGPT] ---
+1. Create a new directory called documentation at the root level.
+2. Create a new directory called global_modules at the root level.
+3. Create a new directory called global_variables at the root level.
+4. Create a new directory called gcp at the root level. Inside gcp, create the following directories: modules, terraform, and variables.
+5. Create a new directory called aws at the root level. Inside aws, create the following directories: modules, terraform, and variables.
+6. Create a new directory called azure at the root level. Inside azure, create the following directories: modules, terraform, and variables.
+7. Create a new directory called other_cloud_providers at the root level. Inside other_cloud_providers, create the following directories: linode, vultr, digital_ocean, modules, terraform, and variables.
+8. Create a new directory called terraform_cloud at the root level.
+9. Create a new directory called git_actions at the root level.
 
 --- [cywf] ---
 
+could you please make a bash script that will do all of that?
+
 --- [ChatGPT] ---
+
+Certainly! Here is a bash script that will create the directory structure that I previously suggested:
+
+```bash
+# Create the root directory
+mkdir sentinel-project
+
+# Create the documentation directory
+mkdir sentinel-project/documentation
+
+# Create the global_modules directory
+mkdir sentinel-project/global_modules
+
+# Create the global_variables directory
+mkdir sentinel-project/global_variables
+
+# Create the gcp directory
+mkdir sentinel-project/gcp
+
+# Create the gcp/modules directory
+mkdir sentinel-project/gcp/modules
+
+# Create the gcp/terraform directory
+mkdir sentinel-project/gcp/terraform
+
+# Create the gcp/variables directory
+mkdir sentinel-project/gcp/variables
+
+# Create the aws directory
+mkdir sentinel-project/aws
+
+# Create the aws/modules directory
+mkdir sentinel-project/aws/modules
+
+# Create the aws/terraform directory
+mkdir sentinel-project/aws/terraform
+
+# Create the aws/variables directory
+mkdir sentinel-project/aws/variables
+
+# Create the azure directory
+mkdir sentinel-project/azure
+
+# Create the azure/modules directory
+mkdir sentinel-project/azure/modules
+
+# Create the azure/terraform directory
+mkdir sentinel-project/azure/terraform
+
+# Create the azure/variables directory
+mkdir sentinel-project/azure/variables
+```
 
 --- [cywf] ---
 
+Now please create a bash script that would make all of the files we know we'll need in each directory. Files like `main.tf`, `variables.tf`, `providers.tf`, ect. 
+
+Please use the follow bash script we have began creating:
+
+```bash
+#!/bin/bash
+
+# ------------------------------------- #
+# Project directory provisioning script #
+# ------------------------------------- #
+
+# Create the root terraform directory
+mkdir sentinel-project/terraform
+
+# Create the documentation directory
+mkdir sentinel-project/terraform/docs
+touch sentinel-project/terraform/docs/README.md
+
+# Create the global_modules directory
+mkdir sentinel-project/terraform/global_modules
+
+# Create the global_variables directory
+mkdir sentinel-project/terraform/global_variables
+
+# Create the gcp directory
+mkdir sentinel-project/terraform/env/gcp
+touch sentinel-project/terraform/env/gcp/README.md
+
+# Create the gcp/modules directory
+mkdir sentinel-project/terraform/env/gcp/modules
+
+# Create the gcp/terraform directory
+mkdir sentinel-project/terraform/env/gcp/terraform
+
+# Create the gcp/variables directory
+mkdir sentinel-project/terraform/env/gcp/variables
+
+# Create the aws directory
+mkdir sentinel-project/terraform/env/aws
+touch sentinel-project/terraform/env/aws/README.md
+
+# Create the aws/modules directory
+mkdir sentinel-project/terraform/env/aws/modules
+
+# Create the aws/terraform directory
+mkdir sentinel-project/terraform/env/aws/terraform
+
+# Create the aws/variables directory
+mkdir sentinel-project/terraform/env/aws/variables
+
+# Create the azure directory
+mkdir sentinel-project/terraform/env/azure
+touch sentinel-project/terraform/env/azure/README.md
+
+# Create the azure/modules directory
+mkdir sentinel-project/terraform/env/azure/modules
+
+# Create the azure/terraform directory
+mkdir sentinel-project/terraform/env/azure/terraform
+
+# Create the azure/variables directory
+mkdir sentinel-project/terraform/env/azure/variables
+```
+
+Please add to this bash script, by adding the necessary files to each directory, and remember to provide the code to me in a code block please
+
 --- [ChatGPT] ---
+
+Here's an updated version of the bash script that creates the necessary directories and files:
+
+```bash
+#!/bin/bash
+
+# ------------------------------------- #
+# Project directory provisioning script #
+# ------------------------------------- #
+
+# Create the root terraform directory
+mkdir sentinel-project/terraform
+
+# Create the documentation directory
+mkdir sentinel-project/terraform/docs
+touch sentinel-project/terraform/docs/README.md
+
+# Create the global_modules directory
+mkdir sentinel-project/terraform/global_modules
+
+# Create the global_variables directory
+mkdir sentinel-project/terraform/global_variables
+
+# Create the gcp directory
+mkdir sentinel-project/terraform/env/gcp
+touch sentinel-project/terraform/env/gcp/README.md
+
+# Create the gcp/modules directory
+mkdir sentinel-project/terraform/env/gcp/modules
+
+# Create the gcp/terraform directory
+mkdir sentinel-project/terraform/env/gcp/terraform
+
+# Create the gcp/variables directory
+mkdir sentinel-project/terraform/env/gcp/variables
+
+# Create the aws directory
+mkdir sentinel-project/terraform/env/aws
+touch sentinel-project/terraform/env/aws/README.md
+
+# Create the aws/modules directory
+mkdir sentinel-project/terraform/env/aws/modules
+
+# Create the aws/terraform directory
+mkdir sentinel-project/terraform/env/aws/terraform
+
+# Create the aws/variables directory
+mkdir sentinel-project/terraform/env/aws/variables
+
+# Create the azure directory
+mkdir sentinel-project/terraform/env/azure
+touch sentinel-project/terraform/env/azure/README.md
+
+# Create the azure/modules directory
+mkdir sentinel-project/terraform/env/azure/modules
+
+# Create the azure/terraform directory
+mkdir sentinel-project/terraform/env/azure/terraform
+
+# Create the azure/variables directory
+mkdir sentinel-project/terraform/env/azure/variables
+
+# Create the necessary files in each terraform directory
+touch sentinel-project/terraform/env/gcp/terraform/main.tf
+touch sentinel-project/terraform/env/gcp/terraform/variables.tf
+touch sentinel-project/terraform/env/gcp/terraform/providers.tf
+
+touch sentinel-project/terraform/env/aws/terraform/main.tf
+touch sentinel-project/terraform/env/aws/terraform/variables.tf
+touch sentinel-project/terraform/env/aws/terraform/providers.tf
+
+touch sentinel-project/terraform/env/azure/terraform/main.tf
+touch sentinel-project/terraform/env/azure/terraform/variables.tf
+touch sentinel-project/terraform/env/az
+```
 
 --- [cywf] ---
 
+oops, looks like you cut off there, could you please finish the bash script? For reference, here is the section you left off at:
+
+```bash
+# Create the necessary files in each terraform directory
+touch sentinel-project/terraform/env/gcp/terraform/main.tf
+touch sentinel-project/terraform/env/gcp/terraform/variables.tf
+touch sentinel-project/terraform/env/gcp/terraform/providers.tf
+
+touch sentinel-project/terraform/env/aws/terraform/main.tf
+touch sentinel-project/terraform/env/aws/terraform/variables.tf
+touch sentinel-project/terraform/env/aws/terraform/providers.tf
+
+touch sentinel-project/terraform/env/azure/terraform/main.tf
+touch sentinel-project/terraform/env/azure/terraform/variables.tf
+touch sentinel-project/terraform/env/az
+```
+
 --- [ChatGPT] ---
+
+Sure thing, here is the rest of the bash script to create the necessary files in each terraform directory:
+
+```bash
+# Create the necessary files in each terraform directory
+touch sentinel-project/terraform/env/gcp/terraform/main.tf
+touch sentinel-project/terraform/env/gcp/terraform/variables.tf
+touch sentinel-project/terraform/env/gcp/terraform/providers.tf
+
+touch sentinel-project/terraform/env/aws/terraform/main.tf
+touch sentinel-project/terraform/env/aws/terraform/variables.tf
+touch sentinel-project/terraform/env/aws/terraform/providers.tf
+
+touch sentinel-project/terraform/env/azure/terraform/main.tf
+touch sentinel-project/terraform/env/azure/terraform/variables.tf
+touch sentinel-project/terraform/env/azure/terraform/providers.tf
+```
+
+--- [cywf] ---
+
+Perfect! Thanks for that. I'll add it to the bash script. Additionally, we want to add to the number of enviorments we can deploy too. So could you please give me the bash script to create the following directories, and add the necessary files to each directory?
+
+- sentinel-project/terraform/env/linode
+- sentinel-project/terraform/env/vultr
+- sentinel-project/terraform/env/digitalocean
+
+Note: You can just provide me with the bash script to create the directories and files, and I'll add it to the bash script.
+
+--- [ChatGPT] ---
+
+Certainly! Here's the script to create the additional directories and files:
+
+```bash
+# Create the linode directory
+mkdir sentinel-project/terraform/env/linode
+touch sentinel-project/terraform/env/linode/README.md
+
+# Create the linode/modules directory
+mkdir sentinel-project/terraform/env/linode/modules
+
+# Create the linode/terraform directory
+mkdir sentinel-project/terraform/env/linode/terraform
+
+# Create the linode/variables directory
+mkdir sentinel-project/terraform/env/linode/variables
+
+# Create the necessary files in the linode terraform directory
+touch sentinel-project/terraform/env/linode/terraform/main.tf
+touch sentinel-project/terraform/env/linode/terraform/variables.tf
+touch sentinel-project/terraform/env/linode/terraform/providers.tf
+
+# Create the vultr directory
+mkdir sentinel-project/terraform/env/vultr
+touch sentinel-project/terraform/env/vultr/README.md
+
+# Create the vultr/modules directory
+mkdir sentinel-project/terraform/env/vultr/modules
+
+# Create the vultr/terraform directory
+mkdir sentinel-project/terraform/env/vultr/terraform
+
+# Create the vultr/variables directory
+mkdir sentinel-project/terraform/env/vultr/variables
+
+# Create the necessary files in the vultr terraform directory
+touch sentinel-project/terraform/env/vultr/terraform/main.tf
+touch sentinel-project/terraform/env/vultr/terraform/variables.tf
+touch sentinel-project/terraform/env/vultr/terraform/providers.tf
+
+# Create the digitalocean directory
+mkdir sentinel-project/terraform/env/digitalocean
+touch sentinel-project/terraform/env/digitalocean/README.md
+
+# Create the digitalocean/modules directory
+mkdir sentinel-project/terraform/env/digitalocean/modules
+
+# Create the digitalocean/terraform directory
+mkdir sentinel-project/terraform/env/digitalocean/terraform
+
+# Create the digitalocean/variables directory
+mkdir sentinel-project/terraform/env/digitalocean/variables
+
+# Create the necessary files in the digitalocean terraform directory
+touch sentinel-project/terraform/env/digitalocean/terraform/main.tf
+touch sentinel-project/terraform/env/digitalocean/terraform/variables.tf
+touch sentinel-project/terraform/env/digitalocean/terraform/providers.tf
+```
+
+--- [cywf] ---
+
+Thanks for that! Now please add a ploicy directory to each of the enviorments, and add a policy.hcl file to each of the policy directories.
+
+Note: You can just provide me with what I asked for, and I'll add it to the bash script.
+
+--- [ChatGPT] ---
+
+Here's the code to create the policy directories and policy.hcl files in each environment:
+
+```bash
+# Create the linode policy directory and policy.hcl file
+mkdir sentinel-project/terraform/env/linode/policy
+touch sentinel-project/terraform/env/linode/policy/policy.hcl
+
+# Create the vultr policy directory and policy.hcl file
+mkdir sentinel-project/terraform/env/vultr/policy
+touch sentinel-project/terraform/env/vultr/policy/policy.hcl
+
+# Create the digitalocean policy directory and policy.hcl file
+mkdir sentinel-project/terraform/env/digitalocean/policy
+touch sentinel-project/terraform/env/digitalocean/policy/policy.hcl
+```
+
+Is there anything else you'd like me to add to this bash script?
+
+--- [cywf] ---
+
+Yes, please give me the same thing, but for the remaining enviorments, those being:
+
+- sentinel-project/terraform/env/gcp
+- sentinel-project/terraform/env/azure
+- sentinel-project/terraform/env/aws
+
+--- [ChatGPT] ---
+
+Here is the bash script to create the policy directories and policy.hcl files in the remaining environments:
+
+```bash
+# Create the policy directories and policy.hcl files in the remaining environments
+mkdir sentinel-project/terraform/env/gcp/policy
+touch sentinel-project/terraform/env/gcp/policy/policy.hcl
+
+mkdir sentinel-project/terraform/env/azure/policy
+touch sentinel-project/terraform/env/azure/policy/policy.hcl
+
+mkdir sentinel-project/terraform/env/aws/policy
+touch sentinel-project/terraform/env/aws/policy/policy.hcl
+```
+
+--- [cywf] ---
+
+Do you suggest we add anything to our current bash script?:
+
+```bash
+#!/bin/bash
+
+# ------------------------------------- #
+# Project directory provisioning script #
+# ------------------------------------- #
+
+# Create the root terraform directory
+mkdir sentinel-project/terraform
+
+# Create the documentation directory
+mkdir sentinel-project/terraform/docs
+touch sentinel-project/terraform/docs/README.md
+
+# Create the global_modules directory
+mkdir sentinel-project/terraform/global_modules
+
+# Create the global_variables directory
+mkdir sentinel-project/terraform/global_variables
+
+# -------------------------- #
+# ------ ENVIORNMENTS ------ #
+# -------------------------- #
+
+## GCP ##
+
+# Create the gcp directory
+mkdir sentinel-project/terraform/env/gcp
+touch sentinel-project/terraform/env/gcp/README.md
+
+# Create the gcp/modules directory
+mkdir sentinel-project/terraform/env/gcp/modules
+
+# Create the gcp/terraform directory
+mkdir sentinel-project/terraform/env/gcp/terraform
+
+# Create the gcp/variables directory
+mkdir sentinel-project/terraform/env/gcp/variables
+
+# Create the necessary files in the gcp terraform directory
+touch sentinel-project/terraform/env/gcp/terraform/main.tf
+touch sentinel-project/terraform/env/gcp/terraform/variables.tf
+touch sentinel-project/terraform/env/gcp/terraform/providers.tf
+
+# Create the gcp/policy directory
+mkdir sentinel-project/terraform/env/gcp/policy
+touch sentinel-project/terraform/env/gcp/policy/policy.hcl
+
+## --- ##
+## AWS ##
+## --- ##
+
+# Create the aws directory
+mkdir sentinel-project/terraform/env/aws
+touch sentinel-project/terraform/env/aws/README.md
+
+# Create the aws/modules directory
+mkdir sentinel-project/terraform/env/aws/modules
+
+# Create the aws/terraform directory
+mkdir sentinel-project/terraform/env/aws/terraform
+
+# Create the aws/variables directory
+mkdir sentinel-project/terraform/env/aws/variables
+
+# Create the aws/policy directory
+mkdir sentinel-project/terraform/env/aws/policy
+touch sentinel-project/terraform/env/aws/policy/policy.hcl
+
+# Create the necessary files in the aws terraform directory
+touch sentinel-project/terraform/env/aws/terraform/main.tf
+touch sentinel-project/terraform/env/aws/terraform/variables.tf
+touch sentinel-project/terraform/env/aws/terraform/providers.tf
+
+## ----- ##
+## AZURE ##
+## ----- ##
+
+# Create the azure directory
+mkdir sentinel-project/terraform/env/azure
+touch sentinel-project/terraform/env/azure/README.md
+
+# Create the azure/modules directory
+mkdir sentinel-project/terraform/env/azure/modules
+
+# Create the azure/terraform directory
+mkdir sentinel-project/terraform/env/azure/terraform
+
+# Create the azure/variables directory
+mkdir sentinel-project/terraform/env/azure/variables
+
+# Create the azure/policy directory
+mkdir sentinel-project/terraform/env/azure/policy
+touch sentinel-project/terraform/env/azure/policy/policy.hcl
+
+## ------ ##
+## LINODE ##
+## ------ ##
+
+# Create the linode directory
+mkdir sentinel-project/terraform/env/linode
+touch sentinel-project/terraform/env/linode/README.md
+
+# Create the linode/modules directory
+mkdir sentinel-project/terraform/env/linode/modules
+
+# Create the linode/terraform directory
+mkdir sentinel-project/terraform/env/linode/terraform
+
+# Create the linode/variables directory
+mkdir sentinel-project/terraform/env/linode/variables
+
+# Create the necessary files in the linode terraform directory
+touch sentinel-project/terraform/env/linode/terraform/main.tf
+touch sentinel-project/terraform/env/linode/terraform/variables.tf
+touch sentinel-project/terraform/env/linode/terraform/providers.tf
+
+## ----- ##
+## VULTR ##
+## ----- ##
+
+# Create the vultr directory
+mkdir sentinel-project/terraform/env/vultr
+touch sentinel-project/terraform/env/vultr/README.md
+
+# Create the vultr/modules directory
+mkdir sentinel-project/terraform/env/vultr/modules
+
+# Create the vultr/terraform directory
+mkdir sentinel-project/terraform/env/vultr/terraform
+
+# Create the vultr/variables directory
+mkdir sentinel-project/terraform/env/vultr/variables
+
+# Create the necessary files in the vultr terraform directory
+touch sentinel-project/terraform/env/vultr/terraform/main.tf
+touch sentinel-project/terraform/env/vultr/terraform/variables.tf
+touch sentinel-project/terraform/env/vultr/terraform/providers.tf
+
+## ------------ ##
+## DIGITALOCEAN ##
+## ------------ ##
+
+# Create the digitalocean directory
+mkdir sentinel-project/terraform/env/digitalocean
+touch sentinel-project/terraform/env/digitalocean/README.md
+
+# Create the digitalocean/modules directory
+mkdir sentinel-project/terraform/env/digitalocean/modules
+
+# Create the digitalocean/terraform directory
+mkdir sentinel-project/terraform/env/digitalocean/terraform
+
+# Create the digitalocean/variables directory
+mkdir sentinel-project/terraform/env/digitalocean/variables
+
+# Create the necessary files in the digitalocean terraform directory
+touch sentinel-project/terraform/env/digitalocean/terraform/main.tf
+touch sentinel-project/terraform/env/digitalocean/terraform/variables.tf
+touch sentinel-project/terraform/env/digitalocean/terraform/providers.tf
+```
+
+If so, please provide the code, and I will add it to the script.
+
+--- [ChatGPT] ---
+
+It looks like the bash script is complete. The script will create the directories and files needed to structure your project according to the directory structure we previously discussed.
+
+If you would like to run the script, you can do so by saving the script to a file, making the file executable, and then running the file. For example:
+
+```bash
+# Save the script to a file
+$ cat > provision.sh
+# Paste the script
+# Press Ctrl+D
+
+# Make the file executable
+$ chmod +x provision.sh
+
+# Run the file
+$ ./provision.sh
+```
+
+This will create the necessary directories and files in the sentinel-project directory. If you have any other questions about the script, please let me know.
 
 --- [cywf] ---
 
