@@ -1992,47 +1992,559 @@ This will create the necessary directories and files in the sentinel-project dir
 
 --- [cywf] ---
 
+Could you generate a README for the global_modules directory, explaining what it is, and examples using code blocks on how to add and / or configure what is meant to be in that directory?
+
+Please provide your response, in a code block, using markdown syntax highlighting
+
 --- [ChatGPT] ---
+
+Certainly! Here is a sample README for the global_modules directory:
+
+```md
+# Global Modules
+
+The `global_modules` directory is meant to store terraform modules that are meant to be used across all environments. These modules should be designed to be as abstract and reusable as possible, and should not include any environment-specific configurations.
+
+To use a global module in your environment-specific configuration, you can use the `module` block and specify the path to the module in the `global_modules` directory:
+
+```hcl
+module "example_module" {
+  source = "../global_modules/example_module"
+  # Other module inputs go here
+}
+```
+
+Adding a Global Module
+To add a new global module, create a new directory within the global_modules directory and add your .tf files and any other necessary files (such as input and output variables).
+
+For example, let's say we want to create a new global module called example_module:
+
+Create a new directory within global_modules: mkdir global_modules/example_module
+Add your .tf files and any other necessary files to the example_module directory
+Test and debug your module as needed
+Commit and push your changes to version control
+Now, the example_module can be used in any environment by including it in the environment-specific configuration using the module block as shown above.
+
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the global_variables directory? Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+Certainly! Here is a proposed README for the global_variables directory:
+
+# Global Variables
+
+The `global_variables` directory contains Terraform variables that are used across all environments. These variables should be defined in the `variables.tf` file within this directory.
+
+Here is an example of how to define and use a global variable:
+
+```tf
+# variables.tf
+variable "region" {
+  description = "The default region to use for resources"
+  default     = "us-east-1"
+}
+
+# main.tf
+module "ec2_instance" {
+  source = "./modules/ec2_instance"
+
+  region = var.region
+}
+```
+
+Now, the `region` variable can be used in any environment by including it in the environment-specific configuration and setting its value as shown above.
+
+Note: It is recommended to define default values for all global variables in order to provide a fallback in case no value is set.
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the aws directory? The README should explain the AWS Terraform Provider, and its respective variables, it should also have code blocks of terraform code giving examples on how to use the AWS Terraform Provider. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# AWS Terraform Provider
+
+The AWS Terraform provider is used to interact with the resources supported by AWS. The provider needs to be configured with the proper credentials before it can be used.
+
+## Using the AWS Provider
+
+```tf
+provider "aws" {
+  access_key = "ACCESS_KEY"
+  secret_key = "SECRET_KEY"
+  region     = "REGION"
+}
+```
+
+## AWS Provider Variables
+
+* `access_key` - (Required) This is the AWS access key.
+* `secret_key` - (Required) This is the AWS secret key.
+* `region` - (Required) This is the AWS region.
+
+### Example
+
+```tf
+provider "aws" {
+  access_key = "ACCESS_KEY"
+  secret_key = "SECRET_KEY"
+  region     = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-2757f631"
+  instance_type = "t2.micro"
+}
+```
+
+In the example above, we create an AWS instance using the aws_instance resource. We specify the AMI to use and the instance type.
+
+## AWS Resources
+
+AWS resources can be managed using Terraform using the `aws` provider. The `aws` provider can be configured using provider-specific variables in the `variables.tf` file. Here is an example of configuring the `aws` provider using the `access_key`, `secret_key`, and `region` variables:
+
+```tf
+provider "aws" {
+  access_key = var.access_key
+  secret_key = var.secret_key
+  region     = var.region
+}
+```
+
+The `access_key` and `secret_key` variables are used to authenticate with AWS and the `region` variable specifies which region the resources will be created in.
+
+Once the `aws` provider is configured, resources can be created. Here is an example of creating an S3 bucket:
+
+```tf
+resource "aws_s3_bucket" "example_bucket" {
+  bucket = "example-bucket"
+  acl    = "private"
+}
+```
+
+This will create an S3 bucket with the name `example-bucket` and a private ACL.
+
+For more information on the aws provider and the resources it supports, see the [AWS Provider documentation](https://www.terraform.io/docs/providers/aws/index.html)
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the azure directory? The README should explain the Azure Terraform Provider, and its respective variables, it should also have code blocks of terraform code giving examples on how to use the Azure Terraform Provider. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# Azure Terraform Provider
+
+The Azure Terraform Provider allows users to manage Azure resources using the Terraform configuration language.
+
+## Configuration
+
+To use the Azure Terraform Provider, you will need to specify the version of the provider you want to use and configure the provider using an Azure Active Directory service principal and tenant ID.
+
+```t
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 2.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  version = "~> 2.0"
+
+  subscription_id = "00000000-0000-0000-0000-000000000000"
+  client_id       = "00000000-0000-0000-0000-000000000000"
+  client_secret   = "00000000-0000-0000-0000-000000000000"
+  tenant_id       = "00000000-0000-0000-0000-000000000000"
+}
+```
+
+## Resources
+
+The Azure Terraform Provider supports a wide range of resources, including Virtual Machines, Storage Accounts, and Network Interfaces.
+
+Here is an example of how to create an Azure Virtual Machine using the `azurerm_virtual_machine` resource:
+
+```t
+resource "azurerm_resource_group" "example" {
+  name     = "example-resources"
+  location = "westus"
+}
+
+resource "azurerm_virtual_machine" "example" {
+  name                  = "example"
+  resource_group_name   = azurerm_resource_group.example.name
+  location              = azurerm_resource_group.example.location
+  size                  = "Standard_
+```
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the digitalocean directory? The README should explain the DigitalOcean Terraform Provider, and its respective variables, it should also have code blocks of terraform code giving examples on how to use the DigitalOcean Terraform Provider. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# DigitalOcean Terraform Provider
+
+The DigitalOcean Terraform provider is used to interact with the resources supported by DigitalOcean. The provider needs to be configured with the proper credentials before it can be used.
+
+## Example Usage
+
+```tf
+# Configure the DigitalOcean Provider
+provider "digitalocean" {
+  token = "your_do_token"
+}
+
+# Create a droplet
+resource "digitalocean_droplet" "example" {
+  image  = "ubuntu-20-04-x64"
+  name   = "example"
+  region = "nyc3"
+  size   = "s-1vcpu-1gb"
+}
+
+# Create a firewall
+resource "digitalocean_firewall" "example" {
+  name = "example"
+
+  inbound_rule {
+    protocol = "tcp"
+    port_range = "22"
+  }
+
+  outbound_rule {
+    protocol = "tcp"
+    port_range = "22"
+  }
+
+  droplet_ids = [digitalocean_droplet.example.id]
+}
+```
+
+## Argument Reference
+
+The following arguments are supported:
+
+* `token` - (Required) The token used to authenticate with DigitalOcean. This can also be provided by the `DIGITALOCEAN_TOKEN` environment variable.
+
+## Attributes Reference
+
+The following attributes are exported:
+
+* `id` - The ID of the droplet.
+* `name` - The name of the droplet.
+* `region` - The region the droplet is in.
+* `image` - The image the droplet was created from.
+* `size` - The size of the droplet.
+* `ipv4_address` - The IPv4 address of the droplet.
+* `ipv6_address` - The IPv6 address of the droplet.
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the gcp directory? The README should explain the GCP Terraform Provider, and its respective variables, it should also have code blocks of terraform code giving examples on how to use the GCP Terraform Provider. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# Google Cloud Platform (GCP) Terraform Provider
+
+The GCP Terraform provider is used to interact with the many resources supported by Google Cloud Platform. The provider needs to be configured with the proper credentials before it can be used.
+
+## Configuration
+
+To use the GCP provider, you will need to create a service account and download the JSON key file.
+
+```tf
+provider "google" {
+  credentials = file("service-account.json")
+  project     = "my-project"
+  region      = "us-central1"
+}
+```
+
+## Resources
+
+The GCP provider supports a wide range of resources, including compute instances, load balancers, and DNS records.
+
+## Compute Instance
+
+To create a compute instance, use the `google_compute_instance` resource:
+
+```tf
+resource "google_compute_instance" "web" {
+  name         = "web"
+  machine_type = "f1-micro"
+  zone         = "us-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
+  }
+
+  network_interface {
+    network = "default"
+  }
+}
+```
+
+## Load Balancer
+
+To create a load balancer, use the `google_compute_http_health_check`, `google_compute_target_pool`, and `google_compute_forwarding_rule` resources:
+
+```tf
+resource "google_compute_http_health_check" "lb_health_check" {
+  name               = "lb-health-check"
+  request_path       = "/health"
+  check_interval_sec = 1
+  timeout_sec        = 1
+```
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the linode directory? The README should explain the Linode Terraform Provider, and its respective variables, it should also have code blocks of terraform code giving examples on how to use the Linode Terraform Provider. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# Linode Terraform Provider
+
+The Linode Terraform Provider allows you to manage Linode resources, such as instances and DNS records, within your Terraform configuration. It is part of the Linode API, which is a RESTful API for interacting with Linode programmatically.
+
+## Provider Configuration
+
+To use the Linode provider, you must configure the provider block in your Terraform configuration. The minimum required configuration is your Linode API access token.
+
+```t
+provider "linode" {
+  token = "your-linode-api-access-token"
+}
+```
+
+## Resources
+
+The Linode provider offers several resources for managing Linode resources within your Terraform configuration. Some examples include:
+
+### Instance
+
+The linode_instance resource allows you to create and manage Linode instances. Here is an example of how to create a Linode instance using the linode_instance resource:
+
+```t
+resource "linode_instance" "web_server" {
+  label        = "web-server"
+  region       = "us-west"
+  image        = "linode/ubuntu20.04"
+  type         = "g6-nanode-1"
+  root_pass    = "supersecurepassword"
+  authorized_keys = [
+    "ssh-rsa AAAAB...",
+  ]
+}
+```
+
+### DNS Zone
+
+The linode_domain resource allows you to create and manage DNS zones for your domains. Here is an example of how to create a DNS zone for the domain example.com using the linode_domain resource:
+
+```t
+resource "linode_domain" "example_com" {
+  domain = "example.com"
+}
+```
+
+## Data Sources
+
+The Linode provider offers several data sources for retrieving information about Linode resources. Some examples include:
+
+### Instance
+
+The linode_instance data source allows you to retrieve information about a Linode instance. Here is an example of how to retrieve the IP address of a Linode instance using the linode_instance data source:
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the vultr directory? The README should explain the Vultr Terraform Provider, and its respective variables, it should also have code blocks of terraform code giving examples on how to use the GCP Terraform Provider. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# Vultr Terraform Provider
+
+The Vultr Terraform Provider is a plugin for Terraform that allows you to manage resources in Vultr.
+
+## Configuring the Provider
+
+To use the Vultr Terraform Provider, you will need to create an API key for your Vultr account. You can find instructions for doing this in the Vultr API documentation.
+
+Once you have your API key, you can configure the provider by adding the following block to your Terraform configuration:
+
+```t
+provider "vultr" {
+  api_key = "your_api_key_here"
+}
+```
+
+## Using the Provider
+
+With the provider configured, you can use the provider to manage resources in Vultr. Here is an example of how to create a new Vultr instance:
+
+```t
+resource "vultr_instance" "example" {
+  region_id   = 1
+  plan_id     = 201
+  os_id       = 167
+  hostname    = "example"
+  ssh_keys = [123]
+}
+```
+
+You can find a list of available resources and their properties in the [Vultr Terraform Provider documentation](https://www.terraform.io/docs/providers/vultr/index.html).
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the env directory? The README should explain the contents of the directory, and its respective mean, it should all be in 1 code block, using the markdown syntax format highlighting, please have the README use index highlighting, where our engineers can click on a section, and all the information on that section drop down, use the name of the environment as the title, for the body, please give a description, and include links to directly navigate to certain sections of their env directory, respectively. Please, remember to use code blocks with the proper syntax highlighting That I requested
+
 --- [ChatGPT] ---
+
+# Enviornment Directory
+
+The `env` directory is where all of the environment-specific configurations for your Terraform code are stored. Each environment has its own subdirectory, and within those subdirectories, you will find the Terraform code and variables specific to that environment.
+
+## Contents
+
+* [AWS](aws/README.md)
+* [Azure](azure/README.md)
+* [DigitalOcean](digitalocean/README.md)
+* [GCP](gcp/README.md)
+* [Linode](linode/README.md)
+* [Vultr](vultr/README.md)
+
+### AWS
+
+The AWS environment is used to deploy infrastructure to the Amazon Web Services platform. Within the `aws` subdirectory, you will find the Terraform code and variables specific to this environment.
+
+[Click here to go directly to the AWS environment directory](aws/README.md)
+
+### Azure
+
+The Azure environment is used to deploy infrastructure to the Microsoft Azure platform. Within the `azure` subdirectory, you will find the Terraform code and variables specific to this environment.
+
+[Click here to go directly to the Azure environment directory](azure/README.md)
+
+### DigitalOcean
+
+The DigitalOcean environment is used to deploy infrastructure to the DigitalOcean platform. Within the `digitalocean` subdirectory, you will find the Terraform code and variables specific to this environment.
+
+[Click here to go directly to the DigitalOcean environment directory](digitalocean/README.md)
+
+### GCP
+
+The GCP environment is used to deploy infrastructure to the Google Cloud Platform. Within the gcp subdirectory, you will find the Terraform code and variables specific to this environment.
+
+[Click here to go directly to the GCP environment directory](gcp/README.md)
+
+### Linode
+
+The Linode environment is used to deploy infrastructure to the Linode platform. Within the `linode` subdirectory, you will find the Terraform code and variables specific to this environment.
+
+[Click here to go directly to the Linode environment directory](linode/README.md)
+
+### Vultr
+
+The Vultr environment is used to deploy infrastructure to the Vultr platform. Within the `vultr` subdirectory, you will find the Terraform code and variables specific to this environment.
+
+[Click here to go directly to the Vultr environment directory](vultr/README.md)
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the main terraform directory? The README should explain the purpose of the directory, an index of its child directories in a list with links to navigate directly to the respective sections, it should also have code blocks of terraform code giving examples on how to use the terraform cli tool, to initialize, plan, and apply the terraform code. Please, remember to use code blocks with the proper syntax highlighting
+
 --- [ChatGPT] ---
+
+# Terraform Root Directory
+
+Welcome to the root directory of our Terraform project! This directory serves as the hub for all of our environments, modules, and global variables.
+
+## Table of Contents
+
+* [Environments](#environments)
+* [Global Modules](#global-modules)
+* [Global Variables](#global-variables)
+* [Terraform Cloud](#terraform-cloud)
+* [Git Actions](#git-actions)
+
+## Environments
+
+The `environments` directory contains all of the Terraform configuration for each of our environments. These configurations include resources such as virtual machines, networking infrastructure, and storage.
+
+To navigate to a specific environment's directory, click on the environment's name in the list below:
+
+* [AWS](environments/aws/README.md)
+* [Azure](environments/azure/README.md)
+* [DigitalOcean](environments/digitalocean/README.md)
+* [GCP](environments/gcp/README.md)
+* [Linode](environments/linode/README.md)
+* [Vultr](environments/vultr/README.md)
+
+## Global Modules
+
+The `global_modules` directory contains modules that are intended to be reused across multiple environments. These modules might include things like networking infrastructure, security group rules, and storage.
+
+To use a global module in an environment, you can use the `module` block in your environment's configuration, like this:
+
+```t
+module "example_module" {
+  source = "../global_modules/example_module"
+
+  # Insert any variables required by the module here
+  example_variable = "value"
+}
+```
+
+Now, the example_module can be used in any environment by including it in the environment-specific configuration using the module block as shown above.
+
+## Global Variables
+
+The `global_variables` directory contains files with global variables that can be used across multiple environments. These variables might include things like AMI IDs, IP ranges, and default tags.
+
+To use a global variable in an environment, you can reference it in your environment's configuration like this:
+
+```t
+variable "default_ami" {
+  description = "The default AMI to use for all instances"
+  type        = string
+}
+
+resource "aws_instance" "example" {
+  ami           = var.default_ami
+  instance_type = "t2.micro"
+}
+```
+
+By keeping these variables in a global directory, you can easily reuse them across multiple environments and make changes in a single location rather than having to update them in multiple places.
 
 --- [cywf] ---
 
+thanks! Now could you please generate a README for the docs directory? The README should explain the directories purpose, it should also have a list with links navigating directly to certain sections specific documents directory
+
 --- [ChatGPT] ---
+
+
+This directory contains all of the documentation for the Sentinel Project.
+
+## Table of Contents
+
+* [Global Modules](global_modules/README.md)
+* [Global Variables](global_variables/README.md)
+* [AWS](terraform/env/aws/README.md)
+* [Azure](terraform/env/azure/README.md)
+* [DigitalOcean](terraform/env/digitalocean/README.md)
+* [GCP](terraform/env/gcp/README.md)
+* [Linode](terraform/env/linode/README.md)
+* [Vultr](terraform/env/vultr/README.md)
+* [Environments](terraform/env/README.md)
+* [Terraform](terraform/README.md)
 
 --- [cywf] ---
 
