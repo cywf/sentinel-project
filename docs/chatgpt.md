@@ -1093,45 +1093,227 @@ for row in rows:
 cluster.shutdown()
 ```
 
-### Kubernetes cluster
+--- [cywf] ---
 
-k
+I have 10 specific questions / tasks that I would like to ask you, pertaining to our project, are you ready for number 1?
 
-```py
+--- [ChatGPT] ---
 
+Yes, I'm ready for question 1.
 
+--- [cywf] ---
 
-```
-
-### Docker daemon
-
+Okay, here it is:
 
 ```md
+1. We want to make sure to have thorough documentation throught this whole build process. So I want you to give our project the necessary directories, to not only host our code, but also to host our documentation. Could you please provide me with instructions on how to specifically do this, using discriptions, and using code blocks? This way, we can add it to our documentation.
+```
+
+Please provide me with your answer, if there is anything that you need me to clarify anything, please ask at the end of your response. If you do not have any questions, let me know that you understand and are ready for the next question.
+
+--- [ChatGPT] ---
+
+To create the necessary directories for our project, you can use the following steps:
+
+1. Open a terminal window and navigate to the root directory of your project.
+2. Use the mkdir command to create the following directories:
+
+```bash
+mkdir code
+mkdir documentation
+```
+
+This will create a code directory to host your code and a documentation directory to host your documentation.
+
+You can also use the mkdir command to create subdirectories within the code and documentation directories as needed. For example, to create a terraform directory within the code directory, you can use the following command:
+
+```bash
+mkdir code/terraform
+```
+You can also use the -p flag to create multiple directories at once. For example, to create the terraform, aws, and gcp directories within the code directory, you can use the following command:
+
+```bash
+mkdir -p code/{terraform,aws,gcp}
+```
+
+Do you have any questions about this?
+
+--- [cywf] ---
+
+Looks good to me! Here is my next question:
+
+```md
+2. We want our platform engineering team to be able to apply changes to our infrastructure, via terraform. So we need to make sure that we have a directory for our terraform code. Could you please provide me with instructions on how to specifically do this, using discriptions, and using code blocks? This way, we can add it to our documentation.
+```
+
+Please provide me with your answer, if there is anything that you need me to clarify anything, please ask at the end of your response. If you do not have any questions, let me know that you understand and are ready for the next question.
+
+--- [ChatGPT] ---
+
+Sure! Here is how you can create a directory for your Terraform code:
+
+```bash
+# Navigate to the root directory of your project
+cd /path/to/project
+
+# Create a new directory for your Terraform code
+mkdir terraform
+
+# Navigate into the new directory
+cd terraform
+```
+
+This will create a new directory called terraform in your project root and navigate you inside of it. You can then create your Terraform configuration files in this directory.
+
+It is generally a good practice to keep your Terraform code organized by environment, so you may want to create additional subdirectories for different environments, such as dev, staging, and prod.
+
+For example:
+
+```bash
+# Navigate to the root directory of your project
+cd /path/to/project
+
+# Create a new directory for your Terraform code
+mkdir terraform
+
+# Navigate into the new directory
+cd terraform
+
+# Create a subdirectory for each environment
+mkdir dev staging prod
+```
+
+This will create three subdirectories inside of terraform for your development, staging, and production environments, respectively. You can then create your Terraform configuration files for each environment in its respective subdirectory.
+
+I hope this helps! Let me know if you have any questions or need further clarification.
+
+--- [cywf] ---
+
+Looks good to me! Here is my next question:
+
+```md
+3. We want to use Terraform Cloud to manage our terraform code, so we need to make sure that we have a directory for our terraform cloud code, that can manage our terraform code, and our terraform cloud workspace. Could you please provide me with instructions on how to specifically do this, using discriptions, and using code blocks? This way, we can add it to our documentation.
+```
+
+Please provide me with your answer, if there is anything that you need me to clarify anything, please ask at the end of your response. If you do not have any questions, let me know that you understand and are ready for the next question.
+
+--- [ChatGPT] ---
+
+Sure thing! Here is how you can set up a directory for your Terraform Cloud code:
+
+```bash
+# 1. First, create a new directory for your Terraform Cloud code
+mkdir terraform-cloud
+cd terraform-cloud
+
+# 2. Initialize Terraform in the new directory
+terraform init
+
+# 3. Set up the necessary configuration for your Terraform Cloud workspace
+# This includes setting up a Terraform Cloud organization, creating a new workspace, and setting the workspace as the active one for your local Terraform Cloud code directory
+
+# You can do this manually through the Terraform Cloud web interface, or you can use the Terraform Cloud API and the Terraform Cloud CLI to automate the process
+
+# For example, you can use the following Terraform configuration to set up a new workspace in your Terraform Cloud organization:
+
+resource "tfe_organization" "my-organization" {
+  name  = "My Organization"
+  email = "admin@example.com"
+}
+
+resource "tfe_workspace" "my-workspace" {
+  name         = "My Workspace"
+  organization = tfe_organization.my-organization.id
+  vcs_repo {
+    identifier = "my-organization/my-repo"
+  }
+}
+
+# You can then use the following command to set the new workspace as the active one for your local Terraform Cloud code directory:
+
+terraform workspace select my-workspace
 
 ```
 
+That's it! Your Terraform Cloud code directory is now set up and ready to go. You can now use Terraform Cloud to manage your Terraform code and your Terraform Cloud workspace.
+
+I hope this helps. Let me know if you have any questions or need further clarification.
 
 --- [cywf] ---
+
+Looks good, however could we make sure the details have the proper values set in that code? The values, being to our particular project and organization. For example:
+
+Oraganization Name: `folkvarlabs`
+Directory name: `sentinel-project`
+Email: `mgmt@folkvarlabs.com`
+Workspace Name: `sentinel-project`
+Identifier: `folkvarlabs/sentinel-project`
 
 --- [ChatGPT] ---
 
+Certainly! Here is the updated version:
+
+```t
+# Configure the Terraform Cloud provider
+provider "tfe" {
+  organization = "folkvarlabs"
+}
+
+# Create a new workspace
+resource "tfe_workspace" "sentinel-project" {
+  name         = "sentinel-project"
+  email        = "mgmt@folkvarlabs.com"
+  organization = "folkvarlabs"
+}
+
+# Use the newly created workspace
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "folkvarlabs"
+
+    workspaces {
+      name = "sentinel-project"
+    }
+  }
+}
+
+# Create a new VCS connection
+resource "tfe_vcs_connection" "sentinel-project" {
+  provider = "github"
+  organization = "folkvarlabs"
+
+  oauth_token = "changeme"
+  repository  = "folkvarlabs/sentinel-project"
+}
+
+# Assign the VCS connection to the workspace
+resource "tfe_workspace_vcs_connection" "sentinel-project" {
+  workspace_id = tfe_workspace.sentinel-project.id
+  vcs_connection_id = tfe_vcs_connection.sentinel-project.id
+}
+```
+
+Is there anything else you would like me to clarify?
+
 --- [cywf] ---
 
---- [ChatGPT] ---
+Yes there is, we consider `oauth_token` to be a secret, and we do not want to store it in our code. Could you give it an enviorment variable, and then use that enviorment variable in the code? 
 
---- [cywf] ---
+For reference, this is the section I am talking about:
 
---- [ChatGPT] ---
+```t
+# Create a new VCS connection
+resource "tfe_vcs_connection" "sentinel-project" {
+  provider = "github"
+  organization = "folkvarlabs"
 
---- [cywf] ---
+  oauth_token = "changeme"
+  repository  = "folkvarlabs/sentinel-project"
+}
+```
 
---- [ChatGPT] ---
-
---- [cywf] ---
-
---- [ChatGPT] ---
-
---- [cywf] ---
+Please try to remember all of the environment variables we set, so we can generate a variable file for our terraform code, and add to it as we go along with the build process.
 
 --- [ChatGPT] ---
 
