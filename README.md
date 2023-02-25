@@ -137,7 +137,7 @@ Here is a summary of the key points you have described for "[Heimdall]()":
 Here is a summary of the key points you have described for "[Hermes]()":
 
 * Data delivery bot that is responsible for finding efficient ways to compress, package, and deliver data in the most efficient way possible, considering network traffic and the cost of data transfer
-* Delivers data to both internal and external infrastructure.Okay, here is the description for Hermes:
+* Delivers data to both internal and external infrastructure.Okay, here is the description for Hermes
 
 ### Oden
 
