@@ -67,6 +67,7 @@ All major industries classified as Critical Infrastructure, such as:
 - [Food and Agriculture]()
 - [Defense Industrial Base]()
 - [Chemical]()
+
 - [Commercial Facilities]()
 - [Emergency Services]()
 - [Nuclear Reactors, Materials, and Waste]()

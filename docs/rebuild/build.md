@@ -73,3 +73,115 @@ As we move through the development process, we'll need to ensure that we're test
 Throughout the development process, we'll also need to consider issues related to security, privacy, and compliance. Given the sensitive nature of the industries we're targeting, it's essential that the Sentinel system is built to the highest standards of security and privacy, and is designed to comply with all relevant regulations and requirements.
 
 With all that said, I believe that with your leadership, Völundr, and the expertise of our team, we'll be able to build a Sentinel system that truly lives up to its name. What do you say? Are we ready to do this?
+
+## cywf
+
+Lets do this
+
+## Vol
+
+Great! What would you like to start with?
+
+## cywf
+
+Lets start with a master list (in code lock with markdown format with syntax highlighting) of all industries and match them with the names of our previous design's components, which were:
+
+- The Raven
+- Loki
+- Heimdall
+- Hermes
+- Oden
+- Thor
+- Fandral
+- Bragi
+- Volstagg
+- Sif
+
+There are 10 here, so we need to add 8 more names. We want to dedicate one to each of our areas of scope (total of 18 industries). You and I will refer to them as "Sentry". These Sentry's will be created specifically to fine tuned itself to best protect its assigned Industry, and those of which interact or preside with in it. 
+
+Just like I asked you previously to come up with a name that personifies its purpose and meaning, I want you to do the same for when you give me a list. Please consider pulling names from other mythologies, Religons, Anchient Dieties, ect. so that we have a diverse group. That way when the Sentinel is applied in other countries, it doesn't seem like its all from one source.   
+
+## Vol
+
+Sure, here is a master list of industries matched with the previously designed components and 8 new Sentry names:
+
+```md
+| Industry                                            | Sentry Name      |
+| --------------------------------------------------- | ----------------|
+| Energy                                              | Thor            |
+| Water                                               | Fandral         |
+| Transportation                                      | Hermes          |
+| Communications                                      | Loki            |
+| Banking and Finance                                 | Bragi           |
+| Government                                          | Oden            |
+| Healthcare                                          | Sif             |
+| Food and Agriculture                                | Volstagg        |
+| Defense Industrial Base                             | Heimdall        |
+| Chemical                                            | Ares            |
+| Commercial Facilities                               | Artemis         |
+| Emergency Services                                  | Hestia          |
+| Nuclear Reactors, Materials, and Waste              | Chernobog       |
+| Dams                                                | Sobek           |
+| Critical Manufacturing                              | Hephaestus      |
+| Postal and Shipping                                 | Mercury         |
+| Information Technology                              | Enki            |
+| Other Community-Based Governmental Organizations    | Osiris          |
+```
+
+The 8 new Sentry names are:
+
+- Ares
+- Artemis
+- Hestia
+- Chernobog
+- Sobek
+- Hephaestus
+- Mercury
+- Enki
+
+These names were selected from various mythologies and religions to ensure diversity and cultural representation.
+
+## cywf
+
+Nice, okay give me a README for Thor (Energy)
+
+## Vol
+
+# Thor (Energy)
+
+Thor is a Sentry designed to protect the energy sector, which includes power generation, transmission, and distribution facilities. Its primary purpose is to prevent unauthorized access, monitor for potential threats, and respond to security incidents in real-time.
+
+## Features
+
+* Real-time monitoring of energy facilities and infrastructure
+* Automated threat detection and response
+* Access control and authorization management
+* Advanced anomaly detection and alerting
+* Compliance with industry standards and regulations
+
+## Technologies Used
+
+* Machine learning and artificial intelligence
+* Big data analytics
+* Security information and event management (SIEM)
+* Identity and access management (IAM)
+* Network and endpoint security
+
+## Getting Started
+
+To get started with Thor, please contact the Sentinel Project team to schedule a consultation and installation. Once installed, Thor will begin monitoring your energy infrastructure and provide real-time threat intelligence and incident response.
+
+## Contributing
+
+If you're interested in contributing to Thor, please check out our [contribution guidelines]() and [code of conduct]() for more information.
+
+## License
+
+Thor is licensed under the [MIT License]().
+
+## cywf
+
+Okay, lets see fandral's (water) README
+
+## Vol
+
