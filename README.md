@@ -1,14 +1,29 @@
 # Sentinel Project
 
-The system includes a smart and self-learning data collector with 10 nodes that stream and receive stock market data, which is then piped into and out of a database. The Sentinel Project also uses open source intelligence gathering techniques to gather contextual data from social media posts, consumer sentiment data, and company and agency budgets and contracts. The system compares this data to predict the outcome of contracts and evaluate the performance of companies and entities involved in the contracts, taking into account inflation and market trends
+<!--
+Revision History:
+- 2023-01-01: Initial Draft
+- 2023-03-19: Redeigning the project (https://github.com/orgs/folkvarlabs/projects/3)
+-->
+
+## What is the Sentinel Project?
+
+<!--
+
+
+-->
 
 ## How does it work?
 
 Uses a network of API's to preform complex tasks, such as:
-- Storing stock market data
-- Analyzing stock market data
-- Delivering stock market data
-- Trading stock market data
+
+<!--
+- Natural Language Processing (Speech to Text, Text to Speech, Text to Text, Speech to Speech)
+- OCR (Optical Character Recognition)
+- Facial Recognition
+- Code Generation (Generate code from a set of requirements)
+-->
+
 
 ---
 
