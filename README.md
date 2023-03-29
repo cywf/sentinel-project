@@ -14,70 +14,57 @@ Each Sentry is designed to think for itself and provide real-time threat intelli
 
 This repository serves as the main hub for the Sentinel Project, containing all the necessary documentation, source code, and other resources for getting started with the project. Whether you're interested in contributing to the project or just want to learn more about the Sentinel Project and its various Sentries, you'll find everything you need right here.
 
-
-## How does it work?
-
-Uses a network of API's to preform complex tasks, such as:
-
-<!--
-- Natural Language Processing (Speech to Text, Text to Speech, Text to Text, Speech to Speech)
-- OCR (Optical Character Recognition)
-- Facial Recognition
-- Code Generation (Generate code from a set of requirements)
--->
-
-
 ---
 
-## What are you trying to build or accomplish?
+## Sentry Overview
 
-We want to be able to build a complex system that can do the following:
+The following are our Sentries and their designated sectors to protect:
 
-* [The Raven]() - Our smart and self learning data collector:that can stream and recieve incoming stock market data through 10 nodes (each node having its own full stack: front end, backend, and dedicated API) that pipes that data into and out of a MySQL or equivalent database. The Raven should also have the functionality to use Open Source Intelligence gathering techniques to gather vital contextual data from social media posts, consumer sentiment data, quarderly/biannual/annual budget's from companies, and agencies, current contract agreements, contractual agreements that are about to expire, and any concerns with the current contract holder's company's preformance in the past, currently, and in the future. That builds a profile of the company or entity that holds the current contract, and compares that to the company or entity that is bidding for the contract, then builds profiles on the other companies or entities that are bidding for the contract, and compares that to the company or entity that holds the current contract. Locate any potential conflicts of interest, and any potential conflicts of interest that may arise in the future. Make predictions on the outcome of the contract, and the outcome of the contract's preformance. Evaluate the current contract holder's company's preformance, and compare that to the company or entity that is bidding for the contract, and compare that to the company or entity that holds the current contract. Run the data through a machine learning algorithm to predict the outcome of the contract, and the outcome of the contract's preformance.It should be able to compare the trends of the market to predict whether or not the company or entity that holds the current contract, has the capabilities to win the contract again based off of its reports, compare that to inflation, from both macro and micro economics perspectives
-
-
-* [Loki]() - Our Prediction & Analyzer Bot: to analyze the data that is stored in the database, and make predictions on the outcome of the data, and the outcome of the data's preformance. It should be able to compare the trends of the market to predict whether or not the company or entity that holds the current contract, has the capabilities to win the contract again based off of its reports, compare that to inflation, from both macro and micro economics perspectives
-
-* [Hiemdall]() Our System and Network Infrastructure Managment Bot: responsible for continuously sorting this data in better and more intuitive ways, and protecting that data's Confidentuality, Integrity, and Accessability, by ensuring the security of that data in transit and at rest.  
-
-* [Hermes]()- Our Data Delivery Bot: purpose is to contiune finding better and efficiant ways to compress, package, and deliver that data, in the most efficiant way possible, keeping in mind network traffic, and the cost of data transfer. Hermese is also responsible for delivering that data to other internal infrastructure, and to external infrastructure.
-
-* [Oden]() - Our Platform Management: responsible for the Governance Risk and Compliance, and updating or adding security policies, and making the final approval on any major data transfers, and any major data retrivals, and any major data destructions.
-
-* [Thor]() - Our Data Security Bot: responsible for responding to security incidents, alerts, and events, and for the managment of the security of the data that is stored in the database, and the security of the data that is being delivered to the end user. Both acting as Incident response, and as a Security Operations Center, with the capabilities of data retrival and destruction of data, in the extreme cases of a security breach.
-
-* [Fandral]() - Our Firewall monitoring and Admin Bot: responsible for monitoring the network traffic, and the security of the network, and for the managment of the security of the network, and ensuring that the data intransit to the user is not manipulated or packet shaped, to hopes to prevent malware, and bad actors from piercing their way into the network, and into the database.
-
-* [Bragi]() - Our Data Storage and Retrival Bot: responsible for the managment of the data that is stored in the database, and the managment of the data that is being delivered to the end user. Both acting as a Data Storage and Retrival System, and as a Data Delivery System.
-
-* [Volstagg]() - Our Infrastructure Defence Bot: responsible for the overall defencive posture and makes improvments and suggestions to the Oden bot on how to improve the overall defencive posture of the platform immediatly and in the future.
-
-* [Sif]() - Our Marketing and Sales Bot: responsibile for takeing the profile data of companies and entities, and generating business proposals, letters, intention to do business with, and any other documents that are needed to do business with the company or entity. And store that data in the database, and deliver that data to the end user, on a frontend that is easy to use, and easy to understand, and that allows users to take options on the data, and to make decisions based off of the data.
+* [Thor](ai/thor/README.md) - Energy
+* [Fandral](ai/fandral/README.md) - Water
+* [Hermes](ai/hermes/README.md) - Postal & Shipping
+* [Loki](ai/loki/README.md) - Telecommunications
+* [Tyche](ai/tyche/README.md) - Banking & Finance
+* [Oden](ai/oden/README.md) - Government
+* [Sif](ai/sif/README.md) - Healthcare
+* [Demeter]() - Food & Agriculture
+* [Heimdall](ai/heimdall/README.md) - Defensive & Industrial Bases
+* [Ares]() - Chemical
+* [Artemis](ai/artemis/README.md) - Commercial Facilities
+* [Hestia](ai/hestia/README.md) - Emergency Services
+* [Chernobog](ai/chernobog/README.md) - Nuclear Reactors, Materials, and Waste
+* [Sobek](ai/sobek/README.md) - Dams
+* [Hephaestus](ai/hephaestus/README.md) - Critical Manufacturing 
+* [Mercury](ai/mercury/README.md) - Transportation
+* [Enki]() - Information Technology
+* [Osiris](ai/osiris/README.md) - Other Community-Based Governmental Organizations
 
 --- 
 
 ## What is the scope and scale of your project?
 
-All major industries classified as Critical Infrastructure, such as:
-- [Energy]()
-- [Water]()
-- [Transportation]()
-- [Communications]()
-- [Banking and Finance]()
-- [Government]()
-- [Healthcare]()
-- [Food and Agriculture]()
-- [Defense Industrial Base]()
-- [Chemical]()
-
-- [Commercial Facilities]()
-- [Emergency Services]()
-- [Nuclear Reactors, Materials, and Waste]()
-- [Dams]()
-- [Critical Manufacturing]()
-- [Postal and Shipping]()
-- [Information Technology]()
-- [Other Community-Based Governmental Organizations]()
+```md
+| Industry                                            | Sentry Name     |
+| --------------------------------------------------- | ----------------|
+| Energy                                              | Thor            |
+| Water                                               | Fandral         |
+| Transportation                                      | Mercury         |
+| Communications                                      | Loki            |
+| Banking and Finance                                 | Tyche           |
+| Government                                          | Oden            |
+| Healthcare                                          | Sif             |
+| Food and Agriculture                                | Volstagg        |
+| Defense Industrial Base                             | Heimdall        |
+| Chemical                                            | Ares            |
+| Commercial Facilities                               | Artemis         |
+| Emergency Services                                  | Hestia          |
+| Nuclear Reactors, Materials, and Waste              | Chernobog       |
+| Dams                                                | Sobek           |
+| Critical Manufacturing                              | Hephaestus      |
+| Postal and Shipping                                 | Hermes          |
+| Information Technology                              | Enki            |
+| Other Community-Based Governmental Organizations    | Osiris          |
+```
 
 ---
 

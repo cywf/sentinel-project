@@ -112,12 +112,12 @@ Sure, here is a master list of industries matched with the previously designed c
 | Water                                               | Fandral         |
 | Transportation                                      | Hermes          |
 | Communications                                      | Loki            |
-| Banking and Finance                                 | Bragi           |
+| Banking and Finance                                 | Tyche           |
 | Government                                          | Oden            |
 | Healthcare                                          | Sif             |
-| Food and Agriculture                                | Volstagg        |
+| Food and Agriculture                                | Demeter         |
 | Defense Industrial Base                             | Heimdall        |
-| Chemical                                            | Ares            |
+| Chemical                                            | Morrigan        |
 | Commercial Facilities                               | Artemis         |
 | Emergency Services                                  | Hestia          |
 | Nuclear Reactors, Materials, and Waste              | Chernobog       |

@@ -1,6 +1,6 @@
-# Bragi Sentry
+# Tyche Sentry
 
-The Bragi Sentry is a powerful tool for protecting your financial infrastructure from cyber attacks and other security threats. Named after the Norse god of poetry and music, the Bragi Sentry is designed to be both elegant and effective, helping to secure your banking and finance systems with ease.
+The Tyche Sentry is a powerful tool for protecting your financial infrastructure from cyber attacks and other security threats. Named after the Norse god of poetry and music, the Bragi Sentry is designed to be both elegant and effective, helping to secure your banking and finance systems with ease.
 
 ## Features
 
@@ -20,12 +20,12 @@ The Bragi Sentry is a powerful tool for protecting your financial infrastructure
 
 ## Getting Started
 
-To get started with the Bragi Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Bragi Sentry will begin monitoring your financial infrastructure and provide real-time threat intelligence and incident response.
+To get started with the Tyche Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Bragi Sentry will begin monitoring your financial infrastructure and provide real-time threat intelligence and incident response.
 
 ## Contributing
 
-If you're interested in contributing to the Bragi Sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
+If you're interested in contributing to the Tyche Sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
 
 ## License
 
-Bragi Sentry is licensed under the [MIT License]().
+Tyche Sentry is licensed under the [MIT License]().
