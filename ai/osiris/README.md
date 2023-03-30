@@ -1,9 +1,5 @@
 # Osiris Sentry
 
-<p align="center">
-  <img src="https://cdn.pixabay.com/photo/2020/03/06/16/50/anubis-4906385_1280.jpg" width="350" title="Osiris Sentry">
-</p>
-
 The Osiris Sentry is an advanced security system designed to protect other community-based governmental organizations, such as non-profit organizations, religious institutions, and community centers. It is named after the ancient Egyptian god of the afterlife, who was believed to judge the souls of the dead and protect the living.
 
 ## Purpose

@@ -20,24 +20,24 @@ This repository serves as the main hub for the Sentinel Project, containing all 
 
 The following are our Sentries and their designated sectors to protect:
 
-* [Thor](ai/thor/README.md) - Energy
-* [Fandral](ai/fandral/README.md) - Water
-* [Hermes](ai/hermes/README.md) - Postal & Shipping
-* [Loki](ai/loki/README.md) - Telecommunications
 * [Tyche](ai/tyche/README.md) - Banking & Finance
-* [Oden](ai/oden/README.md) - Government
-* [Sif](ai/sif/README.md) - Healthcare
-* [Demeter]() - Food & Agriculture
-* [Heimdall](ai/heimdall/README.md) - Defensive & Industrial Bases
-* [Ares]() - Chemical
-* [Artemis](ai/artemis/README.md) - Commercial Facilities
-* [Hestia](ai/hestia/README.md) - Emergency Services
-* [Chernobog](ai/chernobog/README.md) - Nuclear Reactors, Materials, and Waste
+* [Ra](ai/ra/README.md) - Energy
+* [Lir](ai/lir/README.md) - Water
+* [Lugh](ai/lugh/README.md) - Postal & Shipping
+* [Thoth](ai/thoth/README.md) - Telecommunications
+* [Jupiter](ai/jupiter/README.md) - Government
+* [Apollo](ai/apollo/README.md) - Healthcare
+* [Demeter](ai/demeter/README.md) - Food & Agriculture
+* [Ares](ai/ares/README.md) - Defensive & Industrial Bases
+* [Morrigan](ai/morrigan/README.md) - Chemical
+* [Mercury](ai/mercury/README.md) - Commercial Facilities
+* [Osiris](ai/osiris/README.md) - Emergency Services
+* [Shiva](ai/shiva/README.md) - Nuclear Reactors, Materials, and Waste
 * [Sobek](ai/sobek/README.md) - Dams
-* [Hephaestus](ai/hephaestus/README.md) - Critical Manufacturing 
+* [Ptah](ai/ptah/README.md) - Critical Manufacturing 
 * [Mercury](ai/mercury/README.md) - Transportation
-* [Enki]() - Information Technology
-* [Osiris](ai/osiris/README.md) - Other Community-Based Governmental Organizations
+* [Fenrir](ai/fenrir/README.md) - Information Technology
+* [Athena](ai/athena/README.md) - Other Community-Based Governmental Organizations
 
 --- 
 
@@ -46,24 +46,24 @@ The following are our Sentries and their designated sectors to protect:
 ```md
 | Industry                                            | Sentry Name     |
 | --------------------------------------------------- | ----------------|
-| Energy                                              | Thor            |
-| Water                                               | Fandral         |
-| Transportation                                      | Mercury         |
-| Communications                                      | Loki            |
+| Energy                                              | Ra              |
+| Water                                               | Lir             |
+| Transportation                                      | Hermes          |
+| Telecommunications                                  | Thoth           |
 | Banking and Finance                                 | Tyche           |
-| Government                                          | Oden            |
-| Healthcare                                          | Sif             |
-| Food and Agriculture                                | Volstagg        |
-| Defense Industrial Base                             | Heimdall        |
-| Chemical                                            | Ares            |
-| Commercial Facilities                               | Artemis         |
-| Emergency Services                                  | Hestia          |
-| Nuclear Reactors, Materials, and Waste              | Chernobog       |
+| Government                                          | Jupiter         |
+| Healthcare                                          | Apollo          |
+| Food and Agriculture                                | Demeter         |
+| Defense Industrial Base                             | Ares            |
+| Chemical                                            | Morrigan        |
+| Commercial Facilities                               | Mercury         |
+| Emergency Services                                  | Osiris          |
+| Nuclear Reactors, Materials, and Waste              | Shiva           |
 | Dams                                                | Sobek           |
-| Critical Manufacturing                              | Hephaestus      |
-| Postal and Shipping                                 | Hermes          |
-| Information Technology                              | Enki            |
-| Other Community-Based Governmental Organizations    | Osiris          |
+| Critical Manufacturing                              | Ptah            |
+| Postal and Shipping                                 | Lugh            |
+| Information Technology                              | Fenrir          |
+| Other Community-Based Governmental Organizations    | Athena          |
 ```
 
 ---
