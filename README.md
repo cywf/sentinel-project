@@ -18,6 +18,13 @@ This repository serves as the main hub for the Sentinel Project, containing all 
 
 ## Sentry Overview
 
+<!--
+Budget Index for 18 total sectors 
+
+Each deployed AI = $30 milliom
+Total = $540 million
+-->
+
 The following are our Sentries and their designated sectors to protect:
 
 * [Tyche](ai/tyche/README.md) - Banking & Finance
@@ -74,6 +81,12 @@ We plan to use the following technologies and frameworks:
 
 #### Programming Languages:
 
+<!--
+Edit: 06-18-2023
+
+we need to re-evaluate which in particular of these are actually necessary to implement or not. 
+-->
+
 - **Python**: a high-level, general-purpose programming language with dynamic semantics, used for web development, data analysis, and scientific computing
 - **MySQL**: a popular open-source relational database management system that uses Structured Query Language (SQL) for managing data
 - **Flask**: a microweb framework for Python, used for developing web applications
@@ -108,6 +121,21 @@ We plan to use the following technologies and frameworks:
 - **FreeBSD**: a free and open-source operating system used for building and running modern applications and services
 
 ---
+
+## Training of the AI
+
+In the training of this AI we pulling from a lot of resourse, but one book in particular that is very important as to how we go about _teaching_ the AI is called:
+
+**Strategic Teaching and Learning: _Cognitive Instruction in the Content Areas_** 
+
+<!--
+
+Copywrite 1987 by the North Central Reginional Educational Laboratory. 
+125 N. West Street
+Alexandria, VA 22314-2798
+Telephone: 703-549-9110
+
+-->
 
 ## Summary of components
 
