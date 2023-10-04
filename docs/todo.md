@@ -1,7 +1,7 @@
 # ToDo for Sentinel Project 
 
 <!--
-Date: 10-01-2023
+Date: 10-04-2023
 Auth: cywf
 -->
 
@@ -15,6 +15,20 @@ Auth: cywf
 ## Wiki Pages
 
 - [] Sentinel Project Terraform Deployment Guide
-- [] Base Senty scripts functionality via python 
 - [] ZeroTier implementation in the Sentinel Project 
-- [] 
+- [] How to use the Sentinel Project
+- [x] Thoth Sentry Wiki Guide
+- [x] Tyche Sentry Wiki Guide
+- [x] Jupiter Sentry Wiki Guide
+- [x] Apollo Sentry Wiki Guide
+- [x] Demeter Sentry Wiki Guide
+- [x] Ares Sentry Wiki Guide
+- [x] Morrigan Sentry Wiki Guide
+- [x] Mercury Sentry Wiki Guide
+- [x] Osisris Sentry Wiki Guide
+- [x] Shiva Sentry Wiki Guide
+- [x] Sobek Sentry Wiki Guide
+- [x] Ptah Sentry Wiki Guide
+- [x] Lugh Sentry Wiki Guide
+- [x] Fenrir Sentry Wiki Guide
+- [x] Athena Sentry Wiki Guide
