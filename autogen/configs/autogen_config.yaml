@@ -1,0 +1,28 @@
+# AutoGen Configuration for the Sentinel Project
+
+# Path to the Sentinel Project's codebase
+source_directory: ../
+
+# Desired output formats
+outputs:
+  - documentation
+  - client_libraries
+
+# Documentation settings
+documentation:
+  format: markdown
+  output_directory: outputs/documentation
+
+# Client libraries settings
+client_libraries:
+  languages:
+    - python
+    - javascript
+  output_directory: outputs/client_libraries
+
+# Any other specific settings required by AutoGen
+settings:
+  recursive: true
+  exclude_patterns:
+    - "*.test.*"
+    - "terraform/*"
