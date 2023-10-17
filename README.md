@@ -1,6 +1,6 @@
 # Sentinel Project
 
-![alt text]()
+![alt]
 
 <!--
 Revision History:
