@@ -8,7 +8,7 @@ description: >-
 
 baseurl: "/sentinel-project" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
+twitter_username:
 github_username: cywf
 
 # Build settings
@@ -18,10 +18,10 @@ plugins:
 
 navigation:
   - title: "Home"
-    url: "/"
+    url: "/sentinel-project/"
   - title: "About"
-    url: "/about"
+    url: "/sentinel-project/about/"
   - title: "Sentries"
-    url: "/sentries"
+    url: "/sentinel-project/sentries"
   - title: "News"
-    url: "/news"
+    url: "/sentinel-project/news"
