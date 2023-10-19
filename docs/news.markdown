@@ -8,8 +8,8 @@ permalink: /sentinel-project/news/
 
 - [Home](/sentinel-project/)
 - [About](/sentinel-project/about/)
-- [Sentries](/sentinel-project/sentries)
-- [News](/sentinel-project/news)
+- [Sentries](/sentinel-project/sentries/)
+- [News](/sentinel-project/news/)
 
 ## Latest Discussion Posts:
 

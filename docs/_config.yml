@@ -22,6 +22,6 @@ navigation:
   - title: "About"
     url: "/sentinel-project/about/"
   - title: "Sentries"
-    url: "/sentinel-project/sentries"
+    url: "/sentinel-project/sentries/"
   - title: "News"
-    url: "/sentinel-project/news"
+    url: "/sentinel-project/news/"
