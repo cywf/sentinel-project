@@ -1,7 +1,7 @@
 # ToDo for Sentinel Project 
 
 <!--
-Date: 10-04-2023
+Date: 10-19-2023
 Auth: cywf
 -->
 
@@ -11,6 +11,7 @@ Auth: cywf
 - [] Defining necessary resources for each Sentry 
 - [] What base scripts do we need for each Sentry 
 - [] What is the best way to implement ZeroTier into the Sentry Project
+- [] Current Project Status
 
 ## Wiki Pages
 
@@ -32,3 +33,7 @@ Auth: cywf
 - [x] Lugh Sentry Wiki Guide
 - [x] Fenrir Sentry Wiki Guide
 - [x] Athena Sentry Wiki Guide
+
+## Web Development 
+
+- [] Update css and web files
