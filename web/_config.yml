@@ -6,7 +6,7 @@ email: support@folkvarlabs.com
 description: >-
   The Sentinel Project is an advanced security system designed to protect critical infrastructure industries from cyber threats. Using cutting-edge technology and customized algorithms, Sentinel Project aims to reduce the need for human intervention in security incidents, while providing real-time threat intelligence & incident response capabilities.
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/sentinel-project" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: cywf
