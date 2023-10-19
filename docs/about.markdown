@@ -1,15 +1,15 @@
 ---
 layout: default
 title: About
-permalink: /about/
+permalink: /sentinel-project/about/
 ---
 
 ## Page Navigation
 
-- [Home](/)
-- [About](/about)
-- [Sentries](/sentries)
-- [News](/news)
+- [Home](/sentinel-project/)
+- [About](/sentinel-project/about/)
+- [Sentries](/sentinel-project/sentries)
+- [News](/sentinel-project/news)
 
 # Sentinel Project Wiki
 

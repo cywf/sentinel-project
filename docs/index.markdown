@@ -1,14 +1,15 @@
 ---
 layout: default
 title: Home
+permalink: /sentinel-project/
 ---
 
 ## Page Navigation
 
-- [Home](/)
-- [About](/about)
-- [Sentries](/sentries)
-- [News](/news)
+- [Home](/sentinel-project/)
+- [About](/sentinel-project/about/)
+- [Sentries](/sentinel-project/sentries)
+- [News](/sentinel-project/news)
 
 ## Welcome to the Sentinel Project
 
