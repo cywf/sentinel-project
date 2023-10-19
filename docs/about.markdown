@@ -1,7 +1,6 @@
 ---
 layout: default
 title: About
-permalink: /sentinel-project/about/
 ---
 
 ## Page Navigation

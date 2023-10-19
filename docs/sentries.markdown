@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Sentries
-permalink: /sentinel-project/sentries/
 ---
 
 ## Page Navigation

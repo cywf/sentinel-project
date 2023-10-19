@@ -1,7 +1,6 @@
 ---
 layout: default
 title: News
-permalink: /sentinel-project/news/
 ---
 
 ## Page Navigation
