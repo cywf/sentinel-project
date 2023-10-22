@@ -1,35 +1,31 @@
 # Osiris Sentry
 
-The Osiris Sentry is an advanced security system designed to protect other community-based governmental organizations, such as non-profit organizations, religious institutions, and community centers. It is named after the ancient Egyptian god of the afterlife, who was believed to judge the souls of the dead and protect the living.
+### Overview
 
-## Purpose
+The Osiris Sentry is a specialized security system designed to protect Emergency Services from cyber threats. As part of the Sentinel Project, Osiris aims to provide real-time threat intelligence and incident response capabilities tailored to the unique challenges and requirements of the Emergency Services sector.
 
-The Osiris Sentry is designed to provide comprehensive security for community-based organizations. It can monitor access to buildings, detect and alert to suspicious behavior, and provide real-time threat intelligence to law enforcement and other security personnel.
+### Features
 
-## Features
+* Real-time monitoring of emergency response infrastructure and systems.
+* Advanced threat detection algorithms specific to emergency-related threats.
+* Integration with existing emergency response systems and platforms.
+* Automated incident response protocols.
+* User-friendly dashboard for monitoring and management.
 
-* 24/7 monitoring of all access points
-* Advanced threat detection and response
-* Real-time alerting and incident response
-* Integration with local law enforcement and emergency services
-* Customizable security policies to meet the unique needs of each organization
+### Deployment
 
-## Technologies Used
+The Osiris Sentry can be deployed across various emergency service facilities and institutions, including:
 
-* Facial recognition software
-* Infrared motion sensors
-* Machine learning algorithms
-* Cloud-based storage and analysis
-* Mobile app for remote monitoring and management
+* Fire stations and firefighting units
+* Police stations and law enforcement agencies
+* Ambulance services and medical emergency units
+* Search and rescue operations centers
+* Disaster response and management agencies
 
-## Getting Started
+### Development Progress
 
-To get started with the Osiris Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Osiris Sentry will provide comprehensive security for your community-based organization.
+The development board for the Osiris Sentry can be found [here](https://github.com/users/cywf/projects/59). It provides a detailed breakdown of the tasks, progress, and milestones related to this Sentry.
 
-## Contributing
+### Collaboration
 
-If you're interested in contributing to the Osiris Sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
-
-## License
-
-The Osiris Sentry is licensed under the [MIT License]().
+For any questions, suggestions, or feedback related to the Osiris Sentry, please reach out to our team or participate in the [discussion board](https://github.com/cywf/sentinel-project/discussions).

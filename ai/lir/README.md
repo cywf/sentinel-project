@@ -1,28 +1,32 @@
-# Fandral Sentry
+# Lir Sentry
 
-The Fandral Sentry is a powerful tool for protecting water infrastructure and resources. It is designed to monitor and analyze data from a variety of sources, including sensors, satellites, and social media, in order to detect threats to water quality, availability, and distribution.
+### Overview
 
-With its advanced machine learning algorithms, the Fandral Sentry can quickly identify patterns and anomalies in water-related data, allowing it to anticipate and respond to potential problems before they become critical. It can also provide real-time alerts and notifications to water managers, emergency responders, and other stakeholders, enabling them to take action quickly and effectively.
+The Lir Sentry is a specialized security system designed to protect the Water sector from cyber threats. As part of the Sentinel Project, Lir aims to provide real-time threat intelligence and incident response capabilities tailored to the unique challenges and requirements of the Water industry.
 
-## Key features of the Fandral Sentry include:
+### Features
 
-- Real-time monitoring of water quality, availability, and distribution
-- Automatic detection and classification of anomalies and events
-- Integration with a wide range of data sources and platforms
-- Customizable dashboards and reports for easy data visualization
-- Secure and scalable cloud-based architecture
+* Real-time monitoring of water infrastructure.
+* Advanced threat detection algorithms specific to water-related threats.
+* Integration with existing water management systems.
+* Automated incident response protocols.
+* User-friendly dashboard for monitoring and management.
 
-Whether you're responsible for managing a municipal water supply, protecting a sensitive wetland ecosystem, or ensuring safe drinking water for a community, the Fandral Sentry is the ideal tool for enhancing your water security and resilience. Contact us today to learn more about how it can help you protect one of our most precious resources.
-Of course, this is just an example, and the actual content and features of the Fandral Sentry would need to be tailored to the specific needs and requirements of water-related industries and organizations.
+### Deployment
 
-## Getting Started
+The Lir Sentry can be deployed across various water facilities, including:
 
-To get started with The Lir Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Lir  sentry will begin monitoring your water infrastructure and provide real-time threat intelligence and incident response.
+* Water treatment plants
+* Reservoirs and dams
+* Water distribution networks
+* Desalination plants
+* Groundwater monitoring systems
 
-## Contributing
+### Development Progress
 
-If you're interested in contributing to Lir sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
+The development board for the Lir Sentry can be found [here](https://github.com/users/cywf/projects/49). It provides a detailed breakdown of the tasks, progress, and milestones related to this Sentry.
 
-## License
+### Collaboration
 
-Lir sentry is licensed under the [MIT License]()
+For any questions, suggestions, or feedback related to the Lir Sentry, please reach out to our team or participate in the [discussion board](https://github.com/cywf/sentinel-project/discussions).
+

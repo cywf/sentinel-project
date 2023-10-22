@@ -1,29 +1,32 @@
 # Mercury Sentry
 
-The Mercury Sentry is a component of the Sentinel Project that is specifically designed to provide comprehensive security for the Postal and Shipping industry. By leveraging cutting-edge technologies and advanced machine learning algorithms, the Mercury Sentry is able to monitor and analyze vast amounts of data in real-time, identifying potential security threats and alerting the appropriate personnel to take action.
+### Overview
 
-## Features
+The Mercury Sentry is a specialized security system designed to protect Commercial Facilities from cyber threats. As part of the Sentinel Project, Mercury aims to provide real-time threat intelligence and incident response capabilities tailored to the unique challenges and requirements of the Commercial Facilities sector.
 
-- Real-time monitoring of postal and shipping facilities and networks
-- Advanced threat detection and response capabilities
-- Machine learning algorithms that continually learn and adapt to new threats
-- Customizable alerts and notifications
-- Comprehensive reporting and analytics capabilities
+### Features
 
-## Technologies Used
+* Real-time monitoring of commercial infrastructure and systems.
+* Advanced threat detection algorithms specific to commercial-related threats.
+* Integration with existing commercial systems and platforms.
+* Automated incident response protocols.
+* User-friendly dashboard for monitoring and management.
 
-- Artificial intelligence and machine learning algorithms
-- Big data analytics and visualization tools
-- Advanced networking and cybersecurity technologies
+### Deployment
 
-## Getting Started
+The Mercury Sentry can be deployed across various commercial facilities and establishments, including:
 
-To get started with the Mercury Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Mercury Sentry will begin monitoring your postal and shipping infrastructure and provide real-time threat intelligence and incident response.
+* Shopping malls and retail centers
+* Hotels and resorts
+* Convention centers and exhibition halls
+* Sports arenas and entertainment venues
+* Office buildings and business parks
 
-## Contributing
+### Development Progress
 
-If you're interested in contributing to the Mercury Sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
+The development board for the Mercury Sentry can be found [here](https://github.com/users/cywf/projects/58). It provides a detailed breakdown of the tasks, progress, and milestones related to this Sentry.
 
-## License
+### Collaboration
 
-Mercury Sentry is licensed under the [MIT License]().
+For any questions, suggestions, or feedback related to the Mercury Sentry, please reach out to our team or participate in the [discussion board](https://github.com/cywf/sentinel-project/discussions).
+

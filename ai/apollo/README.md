@@ -1,31 +1,32 @@
 # Apollo Sentry
 
-The Apollo Sentry is a cutting-edge security solution designed to protect the Healthcare industry against cyber threats and security incidents. Named after the Norse goddess of health and fertility, the Apollo Sentry uses advanced machine learning algorithms to identify and respond to potential security threats in real-time, keeping your healthcare infrastructure safe and secure.
+### Overview
 
-## Features
+The Apollo Sentry is a specialized security system designed to protect the Healthcare sector from cyber threats. As part of the Sentinel Project, Apollo aims to provide real-time threat intelligence and incident response capabilities tailored to the unique challenges and requirements of the Healthcare industry.
 
-* Advanced machine learning algorithms for real-time threat detection and response
-* Customizable security policies to fit your organization's unique needs
-* Integration with existing security systems and tools for streamlined incident response
-* Cloud-based architecture for easy deployment and scalability
-* 24/7 support and maintenance from the Sentinel Project team
+### Features
 
-## Technologies Used
+* Real-time monitoring of healthcare infrastructure and systems.
+* Advanced threat detection algorithms specific to healthcare-related threats.
+* Integration with existing healthcare systems and platforms.
+* Automated incident response protocols.
+* User-friendly dashboard for monitoring and management.
 
-* Machine learning libraries and frameworks
-* Cloud-based computing platforms
-* Security information and event management (SIEM) systems
-* Intrusion detection and prevention systems (IDPS)
-* Network security tools and protocols
+### Deployment
 
-## Getting Started
+The Apollo Sentry can be deployed across various healthcare institutions and facilities, including:
 
-To get started with the Apollo Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Apollo Sentry will begin monitoring your healthcare infrastructure and provide real-time threat intelligence and incident response.
+* Hospitals and clinics
+* Research and diagnostic labs
+* Pharmaceutical companies
+* Medical device manufacturers
+* Health insurance providers
 
-## Contributing
+### Development Progress
 
-If you're interested in contributing to the Apollo Sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
+The development board for the Apollo Sentry can be found [here](https://github.com/users/cywf/projects/54). It provides a detailed breakdown of the tasks, progress, and milestones related to this Sentry.
 
-## License
+### Collaboration
 
-The Apollo Sentry is licensed under the [MIT License]().
+For any questions, suggestions, or feedback related to the Apollo Sentry, please reach out to our team or participate in the [discussion board](https://github.com/cywf/sentinel-project/discussions).
+

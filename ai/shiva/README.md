@@ -1,31 +1,32 @@
 # Shiva Sentry
 
-The Shiva Sentry is a sophisticated security solution specifically designed to protect critical infrastructure in the nuclear reactors, materials, and waste industry. This Sentry uses advanced machine learning algorithms and neural networks to monitor nuclear facilities and detect any anomalies or malicious activity in real-time. In the event of an incident, the Chernobog Sentry is capable of providing a rapid and effective response, minimizing the risk of damage or harm to personnel.
+### Overview
 
-## Features
+The Shiva Sentry is a specialized security system designed to protect the sector of Nuclear Reactors, Materials, and Waste from cyber threats. As part of the Sentinel Project, Shiva aims to provide real-time threat intelligence and incident response capabilities tailored to the unique challenges and requirements of this critical sector.
 
-* Real-time monitoring and analysis of nuclear facilities
-* Advanced machine learning algorithms and neural networks for anomaly detection
-* Rapid incident response capabilities
-* Customizable settings to meet the specific needs of each facility
-* Comprehensive reporting and analytics tools
+### Features
 
-## Technologies Used
+* Real-time monitoring of nuclear facilities and material handling systems.
+* Advanced threat detection algorithms specific to nuclear-related threats.
+* Integration with existing nuclear management systems and protocols.
+* Automated incident response protocols for nuclear emergencies.
+* User-friendly dashboard for monitoring and management of nuclear assets.
 
-* Artificial Intelligence and Machine Learning
-* Neural Networks
-* Big Data Analytics
-* Cloud Computing
-* Physical and Cybersecurity
+### Deployment
 
-## Getting Started
+The Shiva Sentry can be deployed across various nuclear facilities and institutions, including:
 
-To get started with the Shiva Sentry, please contact the Sentinel Project team at [FolkvarLabs]() to schedule a consultation and installation. Once installed, the Shiva Sentry will begin monitoring your nuclear facilities and provide real-time threat intelligence and incident response.
+* Nuclear power plants
+* Research reactors and laboratories
+* Nuclear fuel processing facilities
+* Radioactive waste management sites
+* Nuclear material storage and transportation units
 
-## Contributing
+### Development Progress
 
-If you're interested in contributing to the Shiva Sentry, please check out our [contribution guidelines]() and [code of conduct]() for more information.
+The development board for the Shiva Sentry can be found [here](https://github.com/users/cywf/projects/60). It provides a detailed breakdown of the tasks, progress, and milestones related to this Sentry.
 
-## License
+### Collaboration
 
-The Shiva Sentry is licensed under the [MIT License]().
+For any questions, suggestions, or feedback related to the Shiva Sentry, please reach out to our team or participate in the [discussion board](https://github.com/cywf/sentinel-project/discussions).
+
