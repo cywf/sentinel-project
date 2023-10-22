@@ -1,7 +1,5 @@
 # Sentinel Project
 
-![alt]
-
 <!--
 Revision History:
 - 2023-01-01: Initial Draft
