@@ -75,11 +75,7 @@ The following are our Sentries and their designated sectors to protect:
 
 ---
 
-## Do you have any specific technologies or frameworks in mind that you plan to use?
-
-We plan to use the following technologies and frameworks:
-
-#### Programming Languages:
+#### Programming Languages We Plan to Use:
 
 <!--
 Edit: 06-18-2023
@@ -89,17 +85,13 @@ we need to re-evaluate which in particular of these are actually necessary to im
 
 - **Python**: a high-level, general-purpose programming language with dynamic semantics, used for web development, data analysis, and scientific computing
 - **MySQL**: a popular open-source relational database management system that uses Structured Query Language (SQL) for managing data
-- **Flask**: a microweb framework for Python, used for developing web applications
-- **React**: a JavaScript library for building user interfaces, commonly used for building single-page applications
-- **Node.js**: a JavaScript runtime environment that executes code outside of a browser, commonly used for building server-side applications
-- **Express.js**: a web application framework for Node.js, used for building web and mobile applications
 - **Rust**: a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety
 - **Golang**: a statically-typed programming language developed by Google, used for building simple, reliable, and efficient software
 - **JavaScript**: a high-level, interpreted programming language that is commonly used for building interactive elements on websites
 - **HTML**: a markup language used for structuring and formatting content on the web
 - **CSS**: a style sheet language used for describing the look and formatting of a document written in HTML
 
-#### Frameworks and Tools:
+#### Frameworks and Tools We Plan to Use:
 
 - **HashiCorp Vault**: a tool for securely storing and managing secrets and sensitive data
 - **Terraform**: a tool for building, changing, and versioning infrastructure safely and efficiently
@@ -119,6 +111,10 @@ we need to re-evaluate which in particular of these are actually necessary to im
 - **Portainer**: a lightweight management tool for Docker that allows developers to easily manage their Docker environments
 - **OpenWRT**: an open-source operating system for network devices, such as routers and switches
 - **FreeBSD**: a free and open-source operating system used for building and running modern applications and services
+- **Flask**: a microweb framework for Python, used for developing web applications
+- **React**: a JavaScript library for building user interfaces, commonly used for building single-page applications
+- **Node.js**: a JavaScript runtime environment that executes code outside of a browser, commonly used for building server-side applications
+- **Express.js**: a web application framework for Node.js, used for building web and mobile applications
 
 ---
 
