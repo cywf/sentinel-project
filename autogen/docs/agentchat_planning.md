@@ -6,10 +6,10 @@ In this notebook, we demonstrate how to use multiple agents to work together and
 
 ## Requirements
 
-1. AutoGen requires Python>=3.8. To run this notebook example, please install pyautogen and docker:
+1. AutoGen requires Python>=3.8. To run this notebook example, please install ag2 and docker:
 
 ```python
-pip install pyautogen docker
+pip install ag2 docker
 ```
 2. Set your API Endpoint
 
