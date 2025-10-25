@@ -11,7 +11,11 @@ from typing import Dict, Any
 
 # Configure logging
 logger = logging.getLogger()
-logger.setLevel(os.environ.get('LOG_LEVEL', 'INFO'))
+log_level = os.environ.get('LOG_LEVEL', 'INFO').upper()
+# Validate log level
+if log_level not in ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']:
+    log_level = 'INFO'
+logger.setLevel(getattr(logging, log_level))
 
 
 class SentryProcessor:
@@ -148,12 +152,23 @@ def lambda_handler(event, context):
         processor = SentryProcessor(sentry_name, industry)
         
         # Parse event data
-        if isinstance(event, str):
-            event_data = json.loads(event)
-        else:
-            event_data = event.get('body', event)
-            if isinstance(event_data, str):
-                event_data = json.loads(event_data)
+        try:
+            if isinstance(event, str):
+                event_data = json.loads(event)
+            else:
+                event_data = event.get('body', event)
+                if isinstance(event_data, str):
+                    event_data = json.loads(event_data)
+        except json.JSONDecodeError as e:
+            logger.error(f"Invalid JSON in request: {str(e)}")
+            return {
+                'statusCode': 400,
+                'headers': {'Content-Type': 'application/json'},
+                'body': json.dumps({
+                    'error': 'Invalid request format',
+                    'message': 'Request body must be valid JSON'
+                })
+            }
         
         # Process the security event
         result = processor.analyze_event(event_data)
@@ -177,7 +192,7 @@ def lambda_handler(event, context):
             },
             'body': json.dumps({
                 'error': 'Internal server error',
-                'message': str(e)
+                'message': 'An error occurred while processing your request'
             })
         }
 

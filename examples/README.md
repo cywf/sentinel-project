@@ -31,6 +31,8 @@ zip -r lambda_package.zip lambda_function.py
 
 2. **Copy to your sentry directory:**
 ```bash
+# Ensure the target directory exists
+mkdir -p ../ai/apollo/terraform/
 cp lambda_package.zip ../ai/apollo/terraform/
 ```
 
