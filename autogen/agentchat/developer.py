@@ -71,7 +71,8 @@ class SentinelDeveloper:
             return "Developer is not available. Please check AutoGen installation and configuration."
         
         try:
-            response = self.dev.ask(message)
+            # Use UserProxyAgent to initiate chat with the AssistantAgent
+            response = self.user_proxy.initiate_chat(self.dev, message=message)
             return response
         except Exception as e:
             return f"Error communicating with developer: {e}"
