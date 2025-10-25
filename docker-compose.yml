@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # Development environment
+  sentinel-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinel-dev
+    volumes:
+      - .:/app
+      - sentinel-data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=DEBUG
+      - SENTRY_NAME=Development
+      - INDUSTRY=Test
+    command: tail -f /dev/null  # Keep container running
+    networks:
+      - sentinel-network
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: sentinel-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - sentinel-network
+
+  # PostgreSQL for data storage
+  postgres:
+    image: postgres:16-alpine
+    container_name: sentinel-postgres
+    environment:
+      - POSTGRES_DB=sentinel
+      - POSTGRES_USER=sentinel
+      - POSTGRES_PASSWORD=sentinel_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - sentinel-network
+
+  # Example API service (optional)
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinel-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=postgresql://sentinel:sentinel_password@postgres:5432/sentinel
+      - REDIS_URL=redis://redis:6379/0
+      - LOG_LEVEL=INFO
+    depends_on:
+      - redis
+      - postgres
+    networks:
+      - sentinel-network
+    command: python -m uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  sentinel-data:
+  redis-data:
+  postgres-data:
+
+networks:
+  sentinel-network:
+    driver: bridge
