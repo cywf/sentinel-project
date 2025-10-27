@@ -192,15 +192,19 @@ Services included:
 ### Using the Planner Agent
 
 ```python
-from autogen.agentchat import SentinelPlanner
+from autogen.agentchat import SentinelPlanner, ask_planner
 
-# Initialize planner
+# Option 1: Using the instance method
 planner = SentinelPlanner()
-
-# Ask for task prioritization
 response = planner.ask_planner("What security tasks should we prioritize today?")
 print(response)
+
+# Option 2: Using the convenience function
+response = ask_planner("What security tasks should we prioritize today?")
+print(response)
 ```
+
+**Note**: Ensure your OpenAI API key is set in the environment variables before running.
 
 ### Using the Developer Agent
 
@@ -214,6 +218,8 @@ developer = SentinelDeveloper()
 response = developer.ask("What's the current status of the Apollo sentry?")
 print(response)
 ```
+
+**Note**: The `ask()` method will return error messages if AutoGen is not properly installed or configured. Always check for error responses in production code.
 
 ### Deploying a Lambda Function
 
@@ -263,7 +269,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Built with [Microsoft AutoGen](https://microsoft.github.io/autogen/)
+- Built with [Microsoft AutoGen](https://github.com/microsoft/autogen)
 - Developed by [FolkvarLabs](https://github.com/cywf)
 
 ---
