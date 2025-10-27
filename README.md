@@ -35,14 +35,14 @@ The following are our Sentries and their designated sectors to protect:
 * [Jupiter](ai/jupiter/README.md) - Government
 * [Apollo](ai/apollo/README.md) - Healthcare
 * [Demeter](ai/demeter/README.md) - Food & Agriculture
-* [Ares](ai/ares/README.md) - Defensive & Industrial Bases
+* [Ares](ai/ares/README.md) - Defense Industrial Base
 * [Morrigan](ai/morrigan/README.md) - Chemical
 * [Mercury](ai/mercury/README.md) - Commercial Facilities
 * [Osiris](ai/osiris/README.md) - Emergency Services
 * [Shiva](ai/shiva/README.md) - Nuclear Reactors, Materials, and Waste
 * [Sobek](ai/sobek/README.md) - Dams
 * [Ptah](ai/ptah/README.md) - Critical Manufacturing 
-* [Mercury](ai/mercury/README.md) - Transportation
+* [Hermes](ai/hermes/README.md) - Transportation
 * [Fenrir](ai/fenrir/README.md) - Information Technology
 * [Athena](ai/athena/README.md) - Other Community-Based Governmental Organizations
 

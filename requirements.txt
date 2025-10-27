@@ -1,0 +1,21 @@
+# Sentinel Project Dependencies
+
+# Core AutoGen dependencies
+pyautogen>=0.2.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+
+# Code quality
+black>=23.7.0
+flake8>=6.1.0
+pylint>=2.17.5
+
+# Type checking
+mypy>=1.5.0
+
+# Utilities
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
