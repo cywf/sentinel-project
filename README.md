@@ -1,31 +1,70 @@
 # Sentinel Project
 
-<!--
-Revision History:
-- 2023-01-01: Initial Draft
-- 2023-03-19: Redeigning the project (https://github.com/orgs/folkvarlabs/projects/3)
--->
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## What is the Sentinel Project?
+## Overview
 
-The Sentinel Project is a cutting-edge security system that uses the latest technologies and innovative thinking to reduce human interaction with security incidents and events. Designed by FolkvarLabs, the Sentinel Project features a set of highly specialized and fine-tuned "Sentries" that can be deployed to protect various critical infrastructure industries, such as Energy, Water, Transportation, Communications, Banking and Finance, and more.
+The Sentinel Project is a cutting-edge AI-powered security system that uses Microsoft AutoGen to provide autonomous threat intelligence and incident response for critical infrastructure. Designed by FolkvarLabs, the Sentinel Project features a set of highly specialized "Sentries" - AI agents that can be deployed to protect 18 major critical infrastructure sectors including Energy, Water, Transportation, Communications, Banking and Finance, and more.
 
-Each Sentry is designed to think for itself and provide real-time threat intelligence and incident response, ensuring that your infrastructure is always protected from harm. With the Sentinel Project, you can rest assured that your critical infrastructure is secure, even in the face of the most advanced threats.
+Each Sentry is an autonomous AI agent designed to provide real-time threat intelligence and incident response capabilities tailored to the unique challenges of its designated sector. Built on the AutoGen framework, these sentries can think, plan, and respond to security incidents with minimal human intervention.
 
-This repository serves as the main hub for the Sentinel Project, containing all the necessary documentation, source code, and other resources for getting started with the project. Whether you're interested in contributing to the project or just want to learn more about the Sentinel Project and its various Sentries, you'll find everything you need right here.
+This repository contains the core implementation, including the AutoGen agent framework, individual sentry configurations, infrastructure-as-code for deployment, and comprehensive documentation for getting started.
 
----
+## Quick Start
 
-## Sentry Overview
+### Prerequisites
 
-<!--
-Budget Index for 18 total sectors 
+- Python 3.8 or higher
+- Docker and Docker Compose (optional, for containerized deployment)
+- OpenAI API key for AutoGen agents
 
-Each deployed AI = $30 milliom
-Total = $540 million
--->
+### Installation
 
-The following are our Sentries and their designated sectors to protect:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/cywf/sentinel-project.git
+   cd sentinel-project
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -e ".[dev]"
+   ```
+
+4. **Configure environment variables:**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API keys and configuration
+   ```
+
+5. **Run tests to verify installation:**
+   ```bash
+   pytest autogen/tests/ -v
+   ```
+
+For detailed development setup and usage instructions, see the [DEVELOPMENT.md](DEVELOPMENT.md) guide.
+
+## Architecture
+
+The Sentinel Project is built on the following core components:
+
+- **AutoGen Framework**: Microsoft's AutoGen library powers the autonomous AI agents
+- **Planner Agent**: Coordinates security tasks and threat responses across sentries
+- **Developer Agent**: Implements and maintains security solutions
+- **Sentry Modules**: 18 specialized AI agents, each focused on a specific infrastructure sector
+- **Infrastructure as Code**: Terraform configurations for multi-cloud deployment
+- **Lambda Functions**: Serverless deployment options for individual sentries
+
+## Sentries Overview
+
+The Sentinel Project protects 18 critical infrastructure sectors through specialized AI sentries:
 
 * [Tyche](ai/tyche/README.md) - Banking & Finance
 * [Ra](ai/ra/README.md) - Energy
@@ -46,9 +85,196 @@ The following are our Sentries and their designated sectors to protect:
 * [Fenrir](ai/fenrir/README.md) - Information Technology
 * [Athena](ai/athena/README.md) - Other Community-Based Governmental Organizations
 
---- 
+Each sentry is documented in its own directory within the `ai/` folder.
 
-## What is the scope and scale of your project?
+## Technology Stack
+
+The Sentinel Project is implemented using:
+
+**Core Technologies:**
+- **Python 3.8+**: Primary implementation language
+- **Microsoft AutoGen**: AI agent framework for autonomous operations
+- **PyYAML**: Configuration management
+- **Python-dotenv**: Environment variable management
+
+**Infrastructure & Deployment:**
+- **Docker**: Containerization for consistent deployment
+- **Docker Compose**: Multi-container orchestration
+- **Terraform**: Infrastructure as Code for multi-cloud deployment (AWS, Azure, GCP, Linode, Digital Ocean, Vultr)
+- **AWS Lambda**: Serverless deployment options
+
+**Data & Caching:**
+- **PostgreSQL**: Persistent data storage
+- **Redis**: Caching and session management
+
+**Development Tools:**
+- **pytest**: Testing framework
+- **black**: Code formatting
+- **flake8**: Linting
+- **mypy**: Static type checking
+- **pylint**: Code analysis
+
+## Features
+
+- **Autonomous AI Agents**: Built on Microsoft AutoGen for intelligent, self-directed operation
+- **18 Specialized Sentries**: Each tailored to specific critical infrastructure sectors
+- **Multi-Cloud Deployment**: Terraform configurations for AWS, Azure, GCP, and more
+- **Containerized Deployment**: Docker and Docker Compose support
+- **Serverless Options**: AWS Lambda function templates included
+- **Comprehensive Testing**: Full test suite with pytest
+- **Extensible Architecture**: Easy to add new sentries or capabilities
+- **Real-time Threat Analysis**: Event processing and threat assessment
+- **Automated Response**: Configurable incident response protocols
+
+## Project Structure
+
+```
+sentinel-project/
+├── ai/                      # Individual sentry implementations
+│   ├── apollo/             # Healthcare sentry
+│   ├── ra/                 # Energy sentry
+│   ├── fenrir/             # IT sentry
+│   └── ...                 # Other 15 sentries
+├── autogen/                # AutoGen agent implementations
+│   ├── agentchat/         # Chat agents (planner, developer)
+│   ├── configs/           # Configuration files
+│   ├── tests/             # Unit tests
+│   ├── constants.py       # Project constants
+│   └── utils.py           # Utility functions
+├── terraform/              # Infrastructure as Code
+│   ├── env/               # Environment-specific configs
+│   ├── global_modules/    # Reusable modules
+│   └── global_variables/  # Global variables
+├── examples/               # Example implementations
+│   └── lambda_function.py # AWS Lambda template
+├── docs/                   # Documentation
+├── requirements.txt        # Python dependencies
+├── setup.py               # Package configuration
+├── Dockerfile             # Container image
+├── docker-compose.yml     # Multi-container setup
+└── README.md              # This file
+```
+
+## Development
+
+For detailed development instructions, including:
+- Environment setup
+- Running tests
+- Code standards
+- Contributing guidelines
+- Terraform deployment
+- Working with sentries
+
+Please refer to the [DEVELOPMENT.md](DEVELOPMENT.md) guide.
+
+## Docker Deployment
+
+The project includes Docker support for easy deployment:
+
+```bash
+# Build and start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+```
+
+Services included:
+- **sentinel-dev**: Development environment
+- **postgres**: PostgreSQL database
+- **redis**: Redis cache
+
+## Example Usage
+
+### Using the Planner Agent
+
+```python
+from autogen.agentchat import SentinelPlanner, ask_planner
+
+# Option 1: Using the instance method
+planner = SentinelPlanner()
+response = planner.ask_planner("What security tasks should we prioritize today?")
+print(response)
+
+# Option 2: Using the convenience function
+response = ask_planner("What security tasks should we prioritize today?")
+print(response)
+```
+
+**Note**: Ensure your OpenAI API key is set in the environment variables before running.
+
+### Using the Developer Agent
+
+```python
+from autogen.agentchat import SentinelDeveloper
+
+# Initialize developer
+developer = SentinelDeveloper()
+
+# Query about sentry status
+response = developer.ask("What's the current status of the Apollo sentry?")
+print(response)
+```
+
+**Note**: The `ask()` method will return error messages if AutoGen is not properly installed or configured. Always check for error responses in production code.
+
+### Deploying a Lambda Function
+
+See `examples/lambda_function.py` for a complete serverless deployment template that includes:
+- Event processing
+- Threat assessment
+- Automated response recommendations
+- Error handling
+
+## Testing
+
+Run the test suite:
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=autogen --cov-report=html
+
+# Run specific test file
+pytest autogen/tests/test_planner.py -v
+```
+
+## Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Run tests and linting (`pytest && black autogen/ && flake8 autogen/`)
+5. Commit your changes (`git commit -m 'Add your feature'`)
+6. Push to the branch (`git push origin feature/your-feature`)
+7. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+- **Issues**: [GitHub Issues](https://github.com/cywf/sentinel-project/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/cywf/sentinel-project/discussions)
+- **Documentation**: See the `docs/` directory
+- **Development Guide**: [DEVELOPMENT.md](DEVELOPMENT.md)
+
+## Acknowledgments
+
+- Built with [Microsoft AutoGen](https://github.com/microsoft/autogen)
+- Developed by [FolkvarLabs](https://github.com/cywf)
+
+---
+
+**Sector Coverage Table**
 
 ```md
 | Industry                                            | Sentry Name     |
@@ -72,49 +298,4 @@ The following are our Sentries and their designated sectors to protect:
 | Information Technology                              | Fenrir          |
 | Other Community-Based Governmental Organizations    | Athena          |
 ```
-
----
-
-#### Programming Languages We Plan to Use:
-
-<!--
-Edit: 06-18-2023
-
-we need to re-evaluate which in particular of these are actually necessary to implement or not. 
--->
-
-- **Python**: a high-level, general-purpose programming language with dynamic semantics, used for web development, data analysis, and scientific computing
-- **MySQL**: a popular open-source relational database management system that uses Structured Query Language (SQL) for managing data
-- **Rust**: a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety
-- **Golang**: a statically-typed programming language developed by Google, used for building simple, reliable, and efficient software
-- **JavaScript**: a high-level, interpreted programming language that is commonly used for building interactive elements on websites
-- **HTML**: a markup language used for structuring and formatting content on the web
-- **CSS**: a style sheet language used for describing the look and formatting of a document written in HTML
-
-#### Frameworks and Tools We Plan to Use:
-
-- **HashiCorp Vault**: a tool for securely storing and managing secrets and sensitive data
-- **Terraform**: a tool for building, changing, and versioning infrastructure safely and efficiently
-- **AWS**: Amazon Web Services, a cloud computing platform that offers a wide range of services, including storage, computing, networking, and more
-- **Azure**: Microsoft Azure, a cloud computing platform and infrastructure for building, deploying, and managing applications and services
-- **Google Cloud**: Google Cloud Platform, a cloud computing platform that offers a wide range of services, including storage, computing, networking, and more
-- **Linode**: a cloud hosting provider that offers a range of services, including virtual private servers, cloud storage, and more
-- **Digital Ocean**: a cloud hosting provider that offers a range of services, including virtual private servers, cloud storage, and more
-- **Heroku**: a cloud platform that allows developers to build, run, and operate applications entirely in the cloud
-- **Docker**: a containerization platform that allows developers to package applications and dependencies into portable containers
-- **Kubernetes**: an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications
-- **Ansible**: a configuration management and orchestration tool that allows developers to automate tasks and manage infrastructure
-- **Jenkins**: an open-source automation server that helps developers automate parts of the software development process
-- **Git**: a version control system for tracking changes in computer files and coordinating work on those files among multiple people
-- **GitHub**: a web-based platform for hosting and collaborating on Git repositories
-- **Git Actions**: a tool for automating, customizing, and executing software development workflows
-- **Portainer**: a lightweight management tool for Docker that allows developers to easily manage their Docker environments
-- **OpenWRT**: an open-source operating system for network devices, such as routers and switches
-- **FreeBSD**: a free and open-source operating system used for building and running modern applications and services
-- **Flask**: a microweb framework for Python, used for developing web applications
-- **React**: a JavaScript library for building user interfaces, commonly used for building single-page applications
-- **Node.js**: a JavaScript runtime environment that executes code outside of a browser, commonly used for building server-side applications
-- **Express.js**: a web application framework for Node.js, used for building web and mobile applications
-
----
 
