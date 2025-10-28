@@ -5,7 +5,6 @@ from unittest.mock import Mock, patch
 from autogen.agentchat.developer import SentinelDeveloper
 
 
-
 class TestDeveloper(unittest.TestCase):
     """Test cases for the SentinelDeveloper class."""
 

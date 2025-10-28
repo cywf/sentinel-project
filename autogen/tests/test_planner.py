@@ -5,7 +5,6 @@ from unittest.mock import Mock, patch, MagicMock
 from autogen.agentchat.planner import SentinelPlanner, ask_planner
 
 
-
 class TestPlanner(unittest.TestCase):
     """Test cases for the SentinelPlanner class."""
 

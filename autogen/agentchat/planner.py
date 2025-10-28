@@ -92,7 +92,6 @@ def ask_planner(message: str) -> str:
     return planner.ask_planner(message)
 
 
-
 if __name__ == "__main__":
     # Sample execution
     response = ask_planner("What are the tasks for today?")
