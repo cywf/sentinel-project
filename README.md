@@ -51,6 +51,16 @@ This repository contains the core implementation, including the AutoGen agent fr
 
 For detailed development setup and usage instructions, see the [DEVELOPMENT.md](DEVELOPMENT.md) guide.
 
+## Live Codebase Mindmap
+
+Auto-generated on each push: **repo-map.html** (via GitHub Pages and CI artifact).
+When Pages is enabled, it will be served at: `https://cywf.github.io/sentinel-project/repo-map.html`
+
+The mindmap provides an interactive visualization of the repository structure, including:
+- Directory tree with file organization
+- Language distribution statistics
+- Quick navigation through the codebase
+
 ## Architecture
 
 The Sentinel Project is built on the following core components:
