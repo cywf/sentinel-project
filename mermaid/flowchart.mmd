@@ -1,0 +1,629 @@
+flowchart TB
+classDef dir fill:#eef,stroke:#99c,stroke-width:1px;
+d__["sentinel-project/"]:::dir
+f__env_example[".env.example"]
+f__gitignore[".gitignore"]
+f__markmapignore[".markmapignore"]
+f__mermaidignore[".mermaidignore"]
+d_ai["ai/"]:::dir
+d_ai_apollo["apollo/"]:::dir
+f_ai_apollo_README_md["README.md"]
+f_ai_apollo_sentry_build_md["sentry-build.md"]
+d_ai_apollo_terraform["terraform/"]:::dir
+f_ai_apollo_terraform_main_tf["main.tf"]
+f_ai_apollo_terraform_outputs_tf["outputs.tf"]
+f_ai_apollo_terraform_variables_tf["variables.tf"]
+d_ai_ares["ares/"]:::dir
+f_ai_ares_README_md["README.md"]
+f_ai_ares_sentry_build_md["sentry-build.md"]
+d_ai_ares_terraform["terraform/"]:::dir
+f_ai_ares_terraform_main_tf["main.tf"]
+f_ai_ares_terraform_outputs_tf["outputs.tf"]
+f_ai_ares_terraform_variables_tf["variables.tf"]
+d_ai_athena["athena/"]:::dir
+f_ai_athena_README_md["README.md"]
+f_ai_athena_sentry_build_md["sentry-build.md"]
+d_ai_athena_terraform["terraform/"]:::dir
+f_ai_athena_terraform_main_tf["main.tf"]
+f_ai_athena_terraform_outputs_tf["outputs.tf"]
+f_ai_athena_terraform_variables_tf["variables.tf"]
+d_ai_demeter["demeter/"]:::dir
+f_ai_demeter_README_md["README.md"]
+f_ai_demeter_sentry_build_md["sentry-build.md"]
+d_ai_demeter_terraform["terraform/"]:::dir
+f_ai_demeter_terraform_main_tf["main.tf"]
+f_ai_demeter_terraform_outputs_tf["outputs.tf"]
+f_ai_demeter_terraform_variables_tf["variables.tf"]
+d_ai_fenrir["fenrir/"]:::dir
+f_ai_fenrir_README_md["README.md"]
+f_ai_fenrir_sentry_build_md["sentry-build.md"]
+d_ai_fenrir_terraform["terraform/"]:::dir
+f_ai_fenrir_terraform_main_tf["main.tf"]
+f_ai_fenrir_terraform_outputs_tf["outputs.tf"]
+f_ai_fenrir_terraform_variables_tf["variables.tf"]
+d_ai_hermes["hermes/"]:::dir
+f_ai_hermes_README_md["README.md"]
+f_ai_hermes_sentry_build_md["sentry-build.md"]
+d_ai_hermes_terraform["terraform/"]:::dir
+f_ai_hermes_terraform_main_tf["main.tf"]
+f_ai_hermes_terraform_outputs_tf["outputs.tf"]
+f_ai_hermes_terraform_variables_tf["variables.tf"]
+d_ai_jupiter["jupiter/"]:::dir
+f_ai_jupiter_README_md["README.md"]
+f_ai_jupiter_sentry_build_md["sentry-build.md"]
+d_ai_jupiter_terraform["terraform/"]:::dir
+f_ai_jupiter_terraform_main_tf["main.tf"]
+f_ai_jupiter_terraform_outputs_tf["outputs.tf"]
+f_ai_jupiter_terraform_variables_tf["variables.tf"]
+d_ai_lir["lir/"]:::dir
+f_ai_lir_README_md["README.md"]
+f_ai_lir_sentry_build_md["sentry-build.md"]
+d_ai_lir_terraform["terraform/"]:::dir
+f_ai_lir_terraform_main_tf["main.tf"]
+f_ai_lir_terraform_outputs_tf["outputs.tf"]
+f_ai_lir_terraform_variables_tf["variables.tf"]
+d_ai_lugh["lugh/"]:::dir
+f_ai_lugh_README_md["README.md"]
+f_ai_lugh_sentry_build_md["sentry-build.md"]
+d_ai_lugh_terraform["terraform/"]:::dir
+f_ai_lugh_terraform_main_tf["main.tf"]
+f_ai_lugh_terraform_outputs_tf["outputs.tf"]
+f_ai_lugh_terraform_variables_tf["variables.tf"]
+d_ai_mercury["mercury/"]:::dir
+f_ai_mercury_README_md["README.md"]
+f_ai_mercury_sentry_build_md["sentry-build.md"]
+d_ai_mercury_terraform["terraform/"]:::dir
+f_ai_mercury_terraform_main_tf["main.tf"]
+f_ai_mercury_terraform_outputs_tf["outputs.tf"]
+f_ai_mercury_terraform_variables_tf["variables.tf"]
+d_ai_morrigan["morrigan/"]:::dir
+f_ai_morrigan_README_md["README.md"]
+f_ai_morrigan_sentry_build_md["sentry-build.md"]
+d_ai_morrigan_terraform["terraform/"]:::dir
+f_ai_morrigan_terraform_main_tf["main.tf"]
+f_ai_morrigan_terraform_outputs_tf["outputs.tf"]
+f_ai_morrigan_terraform_variables_tf["variables.tf"]
+d_ai_osiris["osiris/"]:::dir
+f_ai_osiris_README_md["README.md"]
+f_ai_osiris_sentry_build_md["sentry-build.md"]
+d_ai_osiris_terraform["terraform/"]:::dir
+f_ai_osiris_terraform_main_tf["main.tf"]
+f_ai_osiris_terraform_outputs_tf["outputs.tf"]
+f_ai_osiris_terraform_variables_tf["variables.tf"]
+d_ai_ptah["ptah/"]:::dir
+f_ai_ptah_README_md["README.md"]
+f_ai_ptah_sentry_build_md["sentry-build.md"]
+d_ai_ptah_terraform["terraform/"]:::dir
+f_ai_ptah_terraform_main_tf["main.tf"]
+f_ai_ptah_terraform_outputs_tf["outputs.tf"]
+f_ai_ptah_terraform_variables_tf["variables.tf"]
+d_ai_ra["ra/"]:::dir
+f_ai_ra_README_md["README.md"]
+f_ai_ra_sentry_build_md["sentry-build.md"]
+d_ai_ra_terraform["terraform/"]:::dir
+f_ai_ra_terraform_main_tf["main.tf"]
+f_ai_ra_terraform_outputs_tf["outputs.tf"]
+f_ai_ra_terraform_variables_tf["variables.tf"]
+f_ai_README_md["README.md"]
+d_ai_shiva["shiva/"]:::dir
+f_ai_shiva_README_md["README.md"]
+f_ai_shiva_sentry_build_md["sentry-build.md"]
+d_ai_shiva_terraform["terraform/"]:::dir
+f_ai_shiva_terraform_main_tf["main.tf"]
+f_ai_shiva_terraform_outputs_tf["outputs.tf"]
+f_ai_shiva_terraform_variables_tf["variables.tf"]
+d_ai_sobek["sobek/"]:::dir
+f_ai_sobek_README_md["README.md"]
+f_ai_sobek_sentry_build_md["sentry-build.md"]
+d_ai_sobek_terraform["terraform/"]:::dir
+f_ai_sobek_terraform_main_tf["main.tf"]
+f_ai_sobek_terraform_outputs_tf["outputs.tf"]
+f_ai_sobek_terraform_variables_tf["variables.tf"]
+d_ai_thoth["thoth/"]:::dir
+f_ai_thoth_README_md["README.md"]
+f_ai_thoth_sentry_build_md["sentry-build.md"]
+d_ai_thoth_terraform["terraform/"]:::dir
+f_ai_thoth_terraform_main_tf["main.tf"]
+f_ai_thoth_terraform_outputs_tf["outputs.tf"]
+f_ai_thoth_terraform_variables_tf["variables.tf"]
+d_ai_tyche["tyche/"]:::dir
+f_ai_tyche_README_md["README.md"]
+f_ai_tyche_sentry_build_md["sentry-build.md"]
+d_ai_tyche_terraform["terraform/"]:::dir
+f_ai_tyche_terraform_main_tf["main.tf"]
+f_ai_tyche_terraform_outputs_tf["outputs.tf"]
+f_ai_tyche_terraform_variables_tf["variables.tf"]
+d_autogen["autogen/"]:::dir
+f_autogen___init___py["__init__.py"]
+d_autogen_agentchat["agentchat/"]:::dir
+f_autogen_agentchat___init___py["__init__.py"]
+f_autogen_agentchat_developer_py["developer.py"]
+f_autogen_agentchat_planner_py["planner.py"]
+d_autogen_configs["configs/"]:::dir
+f_autogen_configs_autogen_config_yaml["autogen_config.yaml"]
+f_autogen_constants_py["constants.py"]
+d_autogen_docs["docs/"]:::dir
+f_autogen_docs_agentchat_planning_md["agentchat_planning.md"]
+f_autogen_docs_README_md["README.md"]
+f_autogen_README_md["README.md"]
+d_autogen_tests["tests/"]:::dir
+f_autogen_tests___init___py["__init__.py"]
+f_autogen_tests_test_constants_py["test_constants.py"]
+f_autogen_tests_test_developer_py["test_developer.py"]
+f_autogen_tests_test_planner_py["test_planner.py"]
+f_autogen_tests_test_utils_py["test_utils.py"]
+f_autogen_utils_py["utils.py"]
+f_CODE_REVIEW_SUMMARY_md["CODE_REVIEW_SUMMARY.md"]
+f_DEVELOPMENT_md["DEVELOPMENT.md"]
+f_docker_compose_yml["docker-compose.yml"]
+f_Dockerfile["Dockerfile"]
+d_docs["docs/"]:::dir
+f_docs__config_yml["_config.yml"]
+f_docs__gitignore[".gitignore"]
+f_docs_404_html["404.html"]
+f_docs_ARCHITECTURE_md["ARCHITECTURE.md"]
+d_docs_css["css/"]:::dir
+f_docs_css_main_css["main.css"]
+f_docs_DOCKER_md["DOCKER.md"]
+f_docs_Gemfile["Gemfile"]
+f_docs_Gemfile_lock["Gemfile.lock"]
+d_docs_js["js/"]:::dir
+f_docs_js_main_js["main.js"]
+f_docs_old_index_html["old-index.html"]
+f_docs_README_md["README.md"]
+d_docs_rebuild["rebuild/"]:::dir
+f_docs_rebuild_build_md["build.md"]
+f_docs_rebuild_old_readme_md["old-readme.md"]
+f_docs_rebuild_README_md["README.md"]
+f_docs_rebuild_todo_md["todo.md"]
+d_examples["examples/"]:::dir
+f_examples_lambda_function_py["lambda_function.py"]
+f_examples_README_md["README.md"]
+f_LICENSE["LICENSE"]
+d_mermaid["mermaid/"]:::dir
+f_mermaid_bpmnish_mmd["bpmnish.mmd"]
+f_mermaid_ci_sequence_mmd["ci-sequence.mmd"]
+f_mermaid_er_mmd["er.mmd"]
+f_README_md["README.md"]
+f_requirements_txt["requirements.txt"]
+d_scripts["scripts/"]:::dir
+f_scripts_generate_markmap_mjs["generate-markmap.mjs"]
+f_scripts_generate_mermaid_mjs["generate-mermaid.mjs"]
+f_setup_py["setup.py"]
+f_SUMMARY_md["SUMMARY.md"]
+d_terraform["terraform/"]:::dir
+d_terraform_docs["docs/"]:::dir
+f_terraform_docs_README_md["README.md"]
+d_terraform_env["env/"]:::dir
+d_terraform_env_aws["aws/"]:::dir
+d_terraform_env_aws__dev[".dev/"]:::dir
+d_terraform_env_aws__dev_modules["modules/"]:::dir
+d_terraform_env_aws__dev_policy["policy/"]:::dir
+f_terraform_env_aws__dev_README_md["README.md"]
+d_terraform_env_aws__dev_terraform["terraform/"]:::dir
+d_terraform_env_aws__dev_variables["variables/"]:::dir
+d_terraform_env_aws_modules["modules/"]:::dir
+f_terraform_env_aws_modules_README_md["README.md"]
+d_terraform_env_aws_policy["policy/"]:::dir
+f_terraform_env_aws_policy_policy_hcl["policy.hcl"]
+f_terraform_env_aws_policy_README_md["README.md"]
+f_terraform_env_aws_README_md["README.md"]
+d_terraform_env_aws_terraform["terraform/"]:::dir
+f_terraform_env_aws_terraform_main_tf["main.tf"]
+f_terraform_env_aws_terraform_providers_tf["providers.tf"]
+f_terraform_env_aws_terraform_README_md["README.md"]
+f_terraform_env_aws_terraform_variables_tf["variables.tf"]
+d_terraform_env_aws_variables["variables/"]:::dir
+f_terraform_env_aws_variables_README_md["README.md"]
+d_terraform_env_azure["azure/"]:::dir
+d_terraform_env_azure__dev[".dev/"]:::dir
+d_terraform_env_azure__dev_modules["modules/"]:::dir
+d_terraform_env_azure__dev_policy["policy/"]:::dir
+f_terraform_env_azure__dev_README_md["README.md"]
+d_terraform_env_azure__dev_terraform["terraform/"]:::dir
+d_terraform_env_azure__dev_variables["variables/"]:::dir
+d_terraform_env_azure_modules["modules/"]:::dir
+f_terraform_env_azure_modules_README_md["README.md"]
+d_terraform_env_azure_policy["policy/"]:::dir
+f_terraform_env_azure_policy_policy_hcl["policy.hcl"]
+f_terraform_env_azure_policy_README_md["README.md"]
+f_terraform_env_azure_README_md["README.md"]
+d_terraform_env_azure_terraform["terraform/"]:::dir
+f_terraform_env_azure_terraform_main_tf["main.tf"]
+f_terraform_env_azure_terraform_providers_tf["providers.tf"]
+f_terraform_env_azure_terraform_README_md["README.md"]
+f_terraform_env_azure_terraform_variables_tf["variables.tf"]
+d_terraform_env_azure_variables["variables/"]:::dir
+f_terraform_env_azure_variables_README_md["README.md"]
+d_terraform_env_digitalocean["digitalocean/"]:::dir
+d_terraform_env_digitalocean__dev[".dev/"]:::dir
+d_terraform_env_digitalocean__dev_modules["modules/"]:::dir
+f_terraform_env_digitalocean__dev_README_md["README.md"]
+d_terraform_env_digitalocean__dev_terraform["terraform/"]:::dir
+d_terraform_env_digitalocean__dev_variables["variables/"]:::dir
+d_terraform_env_digitalocean_modules["modules/"]:::dir
+f_terraform_env_digitalocean_modules_README_md["README.md"]
+f_terraform_env_digitalocean_README_md["README.md"]
+d_terraform_env_digitalocean_terraform["terraform/"]:::dir
+f_terraform_env_digitalocean_terraform_main_tf["main.tf"]
+f_terraform_env_digitalocean_terraform_providers_tf["providers.tf"]
+f_terraform_env_digitalocean_terraform_README_md["README.md"]
+f_terraform_env_digitalocean_terraform_variables_tf["variables.tf"]
+d_terraform_env_digitalocean_variables["variables/"]:::dir
+f_terraform_env_digitalocean_variables_README_md["README.md"]
+d_terraform_env_gcp["gcp/"]:::dir
+d_terraform_env_gcp__dev[".dev/"]:::dir
+d_terraform_env_gcp__dev_modules["modules/"]:::dir
+d_terraform_env_gcp__dev_policy["policy/"]:::dir
+f_terraform_env_gcp__dev_README_md["README.md"]
+d_terraform_env_gcp__dev_terraform["terraform/"]:::dir
+d_terraform_env_gcp__dev_variables["variables/"]:::dir
+d_terraform_env_gcp_modules["modules/"]:::dir
+f_terraform_env_gcp_modules_README_md["README.md"]
+d_terraform_env_gcp_policy["policy/"]:::dir
+f_terraform_env_gcp_policy_policy_hcl["policy.hcl"]
+f_terraform_env_gcp_policy_README_md["README.md"]
+f_terraform_env_gcp_README_md["README.md"]
+d_terraform_env_gcp_terraform["terraform/"]:::dir
+f_terraform_env_gcp_terraform_main_tf["main.tf"]
+f_terraform_env_gcp_terraform_providers_tf["providers.tf"]
+f_terraform_env_gcp_terraform_README_md["README.md"]
+f_terraform_env_gcp_terraform_variables_tf["variables.tf"]
+d_terraform_env_gcp_variables["variables/"]:::dir
+f_terraform_env_gcp_variables_README_md["README.md"]
+d_terraform_env_linode["linode/"]:::dir
+d_terraform_env_linode__dev[".dev/"]:::dir
+d_terraform_env_linode__dev_modules["modules/"]:::dir
+f_terraform_env_linode__dev_README_md["README.md"]
+d_terraform_env_linode__dev_terraform["terraform/"]:::dir
+d_terraform_env_linode__dev_variables["variables/"]:::dir
+d_terraform_env_linode_modules["modules/"]:::dir
+f_terraform_env_linode_modules_README_md["README.md"]
+f_terraform_env_linode_README_md["README.md"]
+d_terraform_env_linode_terraform["terraform/"]:::dir
+f_terraform_env_linode_terraform_main_tf["main.tf"]
+f_terraform_env_linode_terraform_providers_tf["providers.tf"]
+f_terraform_env_linode_terraform_README_md["README.md"]
+f_terraform_env_linode_terraform_variables_tf["variables.tf"]
+d_terraform_env_linode_variables["variables/"]:::dir
+f_terraform_env_linode_variables_README_md["README.md"]
+f_terraform_env_README_md["README.md"]
+d_terraform_env_vultr["vultr/"]:::dir
+d_terraform_env_vultr__dev[".dev/"]:::dir
+d_terraform_env_vultr__dev_modules["modules/"]:::dir
+f_terraform_env_vultr__dev_README_md["README.md"]
+d_terraform_env_vultr__dev_terraform["terraform/"]:::dir
+d_terraform_env_vultr__dev_variables["variables/"]:::dir
+d_terraform_env_vultr_modules["modules/"]:::dir
+f_terraform_env_vultr_modules_README_md["README.md"]
+f_terraform_env_vultr_README_md["README.md"]
+d_terraform_env_vultr_terraform["terraform/"]:::dir
+f_terraform_env_vultr_terraform_main_tf["main.tf"]
+f_terraform_env_vultr_terraform_providers_tf["providers.tf"]
+f_terraform_env_vultr_terraform_README_md["README.md"]
+f_terraform_env_vultr_terraform_variables_tf["variables.tf"]
+d_terraform_env_vultr_variables["variables/"]:::dir
+f_terraform_env_vultr_variables_README_md["README.md"]
+d_terraform_global_modules["global_modules/"]:::dir
+f_terraform_global_modules_README_md["README.md"]
+d_terraform_global_variables["global_variables/"]:::dir
+f_terraform_global_variables_README_md["README.md"]
+f_terraform_README_md["README.md"]
+d_terraform_templates["templates/"]:::dir
+f_terraform_templates_aws_lambda_outputs_tf["aws_lambda_outputs.tf"]
+f_terraform_templates_aws_lambda_sentry_tf["aws_lambda_sentry.tf"]
+f_terraform_templates_aws_lambda_variables_tf["aws_lambda_variables.tf"]
+f_terraform_templates_README_md["README.md"]
+d__ --> f__env_example
+d__ --> f__gitignore
+d__ --> f__markmapignore
+d__ --> f__mermaidignore
+d__ --> d_ai
+d_ai --> d_ai_apollo
+d_ai_apollo --> f_ai_apollo_README_md
+d_ai_apollo --> f_ai_apollo_sentry_build_md
+d_ai_apollo --> d_ai_apollo_terraform
+d_ai_apollo_terraform --> f_ai_apollo_terraform_main_tf
+d_ai_apollo_terraform --> f_ai_apollo_terraform_outputs_tf
+d_ai_apollo_terraform --> f_ai_apollo_terraform_variables_tf
+d_ai --> d_ai_ares
+d_ai_ares --> f_ai_ares_README_md
+d_ai_ares --> f_ai_ares_sentry_build_md
+d_ai_ares --> d_ai_ares_terraform
+d_ai_ares_terraform --> f_ai_ares_terraform_main_tf
+d_ai_ares_terraform --> f_ai_ares_terraform_outputs_tf
+d_ai_ares_terraform --> f_ai_ares_terraform_variables_tf
+d_ai --> d_ai_athena
+d_ai_athena --> f_ai_athena_README_md
+d_ai_athena --> f_ai_athena_sentry_build_md
+d_ai_athena --> d_ai_athena_terraform
+d_ai_athena_terraform --> f_ai_athena_terraform_main_tf
+d_ai_athena_terraform --> f_ai_athena_terraform_outputs_tf
+d_ai_athena_terraform --> f_ai_athena_terraform_variables_tf
+d_ai --> d_ai_demeter
+d_ai_demeter --> f_ai_demeter_README_md
+d_ai_demeter --> f_ai_demeter_sentry_build_md
+d_ai_demeter --> d_ai_demeter_terraform
+d_ai_demeter_terraform --> f_ai_demeter_terraform_main_tf
+d_ai_demeter_terraform --> f_ai_demeter_terraform_outputs_tf
+d_ai_demeter_terraform --> f_ai_demeter_terraform_variables_tf
+d_ai --> d_ai_fenrir
+d_ai_fenrir --> f_ai_fenrir_README_md
+d_ai_fenrir --> f_ai_fenrir_sentry_build_md
+d_ai_fenrir --> d_ai_fenrir_terraform
+d_ai_fenrir_terraform --> f_ai_fenrir_terraform_main_tf
+d_ai_fenrir_terraform --> f_ai_fenrir_terraform_outputs_tf
+d_ai_fenrir_terraform --> f_ai_fenrir_terraform_variables_tf
+d_ai --> d_ai_hermes
+d_ai_hermes --> f_ai_hermes_README_md
+d_ai_hermes --> f_ai_hermes_sentry_build_md
+d_ai_hermes --> d_ai_hermes_terraform
+d_ai_hermes_terraform --> f_ai_hermes_terraform_main_tf
+d_ai_hermes_terraform --> f_ai_hermes_terraform_outputs_tf
+d_ai_hermes_terraform --> f_ai_hermes_terraform_variables_tf
+d_ai --> d_ai_jupiter
+d_ai_jupiter --> f_ai_jupiter_README_md
+d_ai_jupiter --> f_ai_jupiter_sentry_build_md
+d_ai_jupiter --> d_ai_jupiter_terraform
+d_ai_jupiter_terraform --> f_ai_jupiter_terraform_main_tf
+d_ai_jupiter_terraform --> f_ai_jupiter_terraform_outputs_tf
+d_ai_jupiter_terraform --> f_ai_jupiter_terraform_variables_tf
+d_ai --> d_ai_lir
+d_ai_lir --> f_ai_lir_README_md
+d_ai_lir --> f_ai_lir_sentry_build_md
+d_ai_lir --> d_ai_lir_terraform
+d_ai_lir_terraform --> f_ai_lir_terraform_main_tf
+d_ai_lir_terraform --> f_ai_lir_terraform_outputs_tf
+d_ai_lir_terraform --> f_ai_lir_terraform_variables_tf
+d_ai --> d_ai_lugh
+d_ai_lugh --> f_ai_lugh_README_md
+d_ai_lugh --> f_ai_lugh_sentry_build_md
+d_ai_lugh --> d_ai_lugh_terraform
+d_ai_lugh_terraform --> f_ai_lugh_terraform_main_tf
+d_ai_lugh_terraform --> f_ai_lugh_terraform_outputs_tf
+d_ai_lugh_terraform --> f_ai_lugh_terraform_variables_tf
+d_ai --> d_ai_mercury
+d_ai_mercury --> f_ai_mercury_README_md
+d_ai_mercury --> f_ai_mercury_sentry_build_md
+d_ai_mercury --> d_ai_mercury_terraform
+d_ai_mercury_terraform --> f_ai_mercury_terraform_main_tf
+d_ai_mercury_terraform --> f_ai_mercury_terraform_outputs_tf
+d_ai_mercury_terraform --> f_ai_mercury_terraform_variables_tf
+d_ai --> d_ai_morrigan
+d_ai_morrigan --> f_ai_morrigan_README_md
+d_ai_morrigan --> f_ai_morrigan_sentry_build_md
+d_ai_morrigan --> d_ai_morrigan_terraform
+d_ai_morrigan_terraform --> f_ai_morrigan_terraform_main_tf
+d_ai_morrigan_terraform --> f_ai_morrigan_terraform_outputs_tf
+d_ai_morrigan_terraform --> f_ai_morrigan_terraform_variables_tf
+d_ai --> d_ai_osiris
+d_ai_osiris --> f_ai_osiris_README_md
+d_ai_osiris --> f_ai_osiris_sentry_build_md
+d_ai_osiris --> d_ai_osiris_terraform
+d_ai_osiris_terraform --> f_ai_osiris_terraform_main_tf
+d_ai_osiris_terraform --> f_ai_osiris_terraform_outputs_tf
+d_ai_osiris_terraform --> f_ai_osiris_terraform_variables_tf
+d_ai --> d_ai_ptah
+d_ai_ptah --> f_ai_ptah_README_md
+d_ai_ptah --> f_ai_ptah_sentry_build_md
+d_ai_ptah --> d_ai_ptah_terraform
+d_ai_ptah_terraform --> f_ai_ptah_terraform_main_tf
+d_ai_ptah_terraform --> f_ai_ptah_terraform_outputs_tf
+d_ai_ptah_terraform --> f_ai_ptah_terraform_variables_tf
+d_ai --> d_ai_ra
+d_ai_ra --> f_ai_ra_README_md
+d_ai_ra --> f_ai_ra_sentry_build_md
+d_ai_ra --> d_ai_ra_terraform
+d_ai_ra_terraform --> f_ai_ra_terraform_main_tf
+d_ai_ra_terraform --> f_ai_ra_terraform_outputs_tf
+d_ai_ra_terraform --> f_ai_ra_terraform_variables_tf
+d_ai --> f_ai_README_md
+d_ai --> d_ai_shiva
+d_ai_shiva --> f_ai_shiva_README_md
+d_ai_shiva --> f_ai_shiva_sentry_build_md
+d_ai_shiva --> d_ai_shiva_terraform
+d_ai_shiva_terraform --> f_ai_shiva_terraform_main_tf
+d_ai_shiva_terraform --> f_ai_shiva_terraform_outputs_tf
+d_ai_shiva_terraform --> f_ai_shiva_terraform_variables_tf
+d_ai --> d_ai_sobek
+d_ai_sobek --> f_ai_sobek_README_md
+d_ai_sobek --> f_ai_sobek_sentry_build_md
+d_ai_sobek --> d_ai_sobek_terraform
+d_ai_sobek_terraform --> f_ai_sobek_terraform_main_tf
+d_ai_sobek_terraform --> f_ai_sobek_terraform_outputs_tf
+d_ai_sobek_terraform --> f_ai_sobek_terraform_variables_tf
+d_ai --> d_ai_thoth
+d_ai_thoth --> f_ai_thoth_README_md
+d_ai_thoth --> f_ai_thoth_sentry_build_md
+d_ai_thoth --> d_ai_thoth_terraform
+d_ai_thoth_terraform --> f_ai_thoth_terraform_main_tf
+d_ai_thoth_terraform --> f_ai_thoth_terraform_outputs_tf
+d_ai_thoth_terraform --> f_ai_thoth_terraform_variables_tf
+d_ai --> d_ai_tyche
+d_ai_tyche --> f_ai_tyche_README_md
+d_ai_tyche --> f_ai_tyche_sentry_build_md
+d_ai_tyche --> d_ai_tyche_terraform
+d_ai_tyche_terraform --> f_ai_tyche_terraform_main_tf
+d_ai_tyche_terraform --> f_ai_tyche_terraform_outputs_tf
+d_ai_tyche_terraform --> f_ai_tyche_terraform_variables_tf
+d__ --> d_autogen
+d_autogen --> f_autogen___init___py
+d_autogen --> d_autogen_agentchat
+d_autogen_agentchat --> f_autogen_agentchat___init___py
+d_autogen_agentchat --> f_autogen_agentchat_developer_py
+d_autogen_agentchat --> f_autogen_agentchat_planner_py
+d_autogen --> d_autogen_configs
+d_autogen_configs --> f_autogen_configs_autogen_config_yaml
+d_autogen --> f_autogen_constants_py
+d_autogen --> d_autogen_docs
+d_autogen_docs --> f_autogen_docs_agentchat_planning_md
+d_autogen_docs --> f_autogen_docs_README_md
+d_autogen --> f_autogen_README_md
+d_autogen --> d_autogen_tests
+d_autogen_tests --> f_autogen_tests___init___py
+d_autogen_tests --> f_autogen_tests_test_constants_py
+d_autogen_tests --> f_autogen_tests_test_developer_py
+d_autogen_tests --> f_autogen_tests_test_planner_py
+d_autogen_tests --> f_autogen_tests_test_utils_py
+d_autogen --> f_autogen_utils_py
+d__ --> f_CODE_REVIEW_SUMMARY_md
+d__ --> f_DEVELOPMENT_md
+d__ --> f_docker_compose_yml
+d__ --> f_Dockerfile
+d__ --> d_docs
+d_docs --> f_docs__config_yml
+d_docs --> f_docs__gitignore
+d_docs --> f_docs_404_html
+d_docs --> f_docs_ARCHITECTURE_md
+d_docs --> d_docs_css
+d_docs_css --> f_docs_css_main_css
+d_docs --> f_docs_DOCKER_md
+d_docs --> f_docs_Gemfile
+d_docs --> f_docs_Gemfile_lock
+d_docs --> d_docs_js
+d_docs_js --> f_docs_js_main_js
+d_docs --> f_docs_old_index_html
+d_docs --> f_docs_README_md
+d_docs --> d_docs_rebuild
+d_docs_rebuild --> f_docs_rebuild_build_md
+d_docs_rebuild --> f_docs_rebuild_old_readme_md
+d_docs_rebuild --> f_docs_rebuild_README_md
+d_docs_rebuild --> f_docs_rebuild_todo_md
+d__ --> d_examples
+d_examples --> f_examples_lambda_function_py
+d_examples --> f_examples_README_md
+d__ --> f_LICENSE
+d__ --> d_mermaid
+d_mermaid --> f_mermaid_bpmnish_mmd
+d_mermaid --> f_mermaid_ci_sequence_mmd
+d_mermaid --> f_mermaid_er_mmd
+d__ --> f_README_md
+d__ --> f_requirements_txt
+d__ --> d_scripts
+d_scripts --> f_scripts_generate_markmap_mjs
+d_scripts --> f_scripts_generate_mermaid_mjs
+d__ --> f_setup_py
+d__ --> f_SUMMARY_md
+d__ --> d_terraform
+d_terraform --> d_terraform_docs
+d_terraform_docs --> f_terraform_docs_README_md
+d_terraform --> d_terraform_env
+d_terraform_env --> d_terraform_env_aws
+d_terraform_env_aws --> d_terraform_env_aws__dev
+d_terraform_env_aws__dev --> d_terraform_env_aws__dev_modules
+d_terraform_env_aws__dev --> d_terraform_env_aws__dev_policy
+d_terraform_env_aws__dev --> f_terraform_env_aws__dev_README_md
+d_terraform_env_aws__dev --> d_terraform_env_aws__dev_terraform
+d_terraform_env_aws__dev --> d_terraform_env_aws__dev_variables
+d_terraform_env_aws --> d_terraform_env_aws_modules
+d_terraform_env_aws_modules --> f_terraform_env_aws_modules_README_md
+d_terraform_env_aws --> d_terraform_env_aws_policy
+d_terraform_env_aws_policy --> f_terraform_env_aws_policy_policy_hcl
+d_terraform_env_aws_policy --> f_terraform_env_aws_policy_README_md
+d_terraform_env_aws --> f_terraform_env_aws_README_md
+d_terraform_env_aws --> d_terraform_env_aws_terraform
+d_terraform_env_aws_terraform --> f_terraform_env_aws_terraform_main_tf
+d_terraform_env_aws_terraform --> f_terraform_env_aws_terraform_providers_tf
+d_terraform_env_aws_terraform --> f_terraform_env_aws_terraform_README_md
+d_terraform_env_aws_terraform --> f_terraform_env_aws_terraform_variables_tf
+d_terraform_env_aws --> d_terraform_env_aws_variables
+d_terraform_env_aws_variables --> f_terraform_env_aws_variables_README_md
+d_terraform_env --> d_terraform_env_azure
+d_terraform_env_azure --> d_terraform_env_azure__dev
+d_terraform_env_azure__dev --> d_terraform_env_azure__dev_modules
+d_terraform_env_azure__dev --> d_terraform_env_azure__dev_policy
+d_terraform_env_azure__dev --> f_terraform_env_azure__dev_README_md
+d_terraform_env_azure__dev --> d_terraform_env_azure__dev_terraform
+d_terraform_env_azure__dev --> d_terraform_env_azure__dev_variables
+d_terraform_env_azure --> d_terraform_env_azure_modules
+d_terraform_env_azure_modules --> f_terraform_env_azure_modules_README_md
+d_terraform_env_azure --> d_terraform_env_azure_policy
+d_terraform_env_azure_policy --> f_terraform_env_azure_policy_policy_hcl
+d_terraform_env_azure_policy --> f_terraform_env_azure_policy_README_md
+d_terraform_env_azure --> f_terraform_env_azure_README_md
+d_terraform_env_azure --> d_terraform_env_azure_terraform
+d_terraform_env_azure_terraform --> f_terraform_env_azure_terraform_main_tf
+d_terraform_env_azure_terraform --> f_terraform_env_azure_terraform_providers_tf
+d_terraform_env_azure_terraform --> f_terraform_env_azure_terraform_README_md
+d_terraform_env_azure_terraform --> f_terraform_env_azure_terraform_variables_tf
+d_terraform_env_azure --> d_terraform_env_azure_variables
+d_terraform_env_azure_variables --> f_terraform_env_azure_variables_README_md
+d_terraform_env --> d_terraform_env_digitalocean
+d_terraform_env_digitalocean --> d_terraform_env_digitalocean__dev
+d_terraform_env_digitalocean__dev --> d_terraform_env_digitalocean__dev_modules
+d_terraform_env_digitalocean__dev --> f_terraform_env_digitalocean__dev_README_md
+d_terraform_env_digitalocean__dev --> d_terraform_env_digitalocean__dev_terraform
+d_terraform_env_digitalocean__dev --> d_terraform_env_digitalocean__dev_variables
+d_terraform_env_digitalocean --> d_terraform_env_digitalocean_modules
+d_terraform_env_digitalocean_modules --> f_terraform_env_digitalocean_modules_README_md
+d_terraform_env_digitalocean --> f_terraform_env_digitalocean_README_md
+d_terraform_env_digitalocean --> d_terraform_env_digitalocean_terraform
+d_terraform_env_digitalocean_terraform --> f_terraform_env_digitalocean_terraform_main_tf
+d_terraform_env_digitalocean_terraform --> f_terraform_env_digitalocean_terraform_providers_tf
+d_terraform_env_digitalocean_terraform --> f_terraform_env_digitalocean_terraform_README_md
+d_terraform_env_digitalocean_terraform --> f_terraform_env_digitalocean_terraform_variables_tf
+d_terraform_env_digitalocean --> d_terraform_env_digitalocean_variables
+d_terraform_env_digitalocean_variables --> f_terraform_env_digitalocean_variables_README_md
+d_terraform_env --> d_terraform_env_gcp
+d_terraform_env_gcp --> d_terraform_env_gcp__dev
+d_terraform_env_gcp__dev --> d_terraform_env_gcp__dev_modules
+d_terraform_env_gcp__dev --> d_terraform_env_gcp__dev_policy
+d_terraform_env_gcp__dev --> f_terraform_env_gcp__dev_README_md
+d_terraform_env_gcp__dev --> d_terraform_env_gcp__dev_terraform
+d_terraform_env_gcp__dev --> d_terraform_env_gcp__dev_variables
+d_terraform_env_gcp --> d_terraform_env_gcp_modules
+d_terraform_env_gcp_modules --> f_terraform_env_gcp_modules_README_md
+d_terraform_env_gcp --> d_terraform_env_gcp_policy
+d_terraform_env_gcp_policy --> f_terraform_env_gcp_policy_policy_hcl
+d_terraform_env_gcp_policy --> f_terraform_env_gcp_policy_README_md
+d_terraform_env_gcp --> f_terraform_env_gcp_README_md
+d_terraform_env_gcp --> d_terraform_env_gcp_terraform
+d_terraform_env_gcp_terraform --> f_terraform_env_gcp_terraform_main_tf
+d_terraform_env_gcp_terraform --> f_terraform_env_gcp_terraform_providers_tf
+d_terraform_env_gcp_terraform --> f_terraform_env_gcp_terraform_README_md
+d_terraform_env_gcp_terraform --> f_terraform_env_gcp_terraform_variables_tf
+d_terraform_env_gcp --> d_terraform_env_gcp_variables
+d_terraform_env_gcp_variables --> f_terraform_env_gcp_variables_README_md
+d_terraform_env --> d_terraform_env_linode
+d_terraform_env_linode --> d_terraform_env_linode__dev
+d_terraform_env_linode__dev --> d_terraform_env_linode__dev_modules
+d_terraform_env_linode__dev --> f_terraform_env_linode__dev_README_md
+d_terraform_env_linode__dev --> d_terraform_env_linode__dev_terraform
+d_terraform_env_linode__dev --> d_terraform_env_linode__dev_variables
+d_terraform_env_linode --> d_terraform_env_linode_modules
+d_terraform_env_linode_modules --> f_terraform_env_linode_modules_README_md
+d_terraform_env_linode --> f_terraform_env_linode_README_md
+d_terraform_env_linode --> d_terraform_env_linode_terraform
+d_terraform_env_linode_terraform --> f_terraform_env_linode_terraform_main_tf
+d_terraform_env_linode_terraform --> f_terraform_env_linode_terraform_providers_tf
+d_terraform_env_linode_terraform --> f_terraform_env_linode_terraform_README_md
+d_terraform_env_linode_terraform --> f_terraform_env_linode_terraform_variables_tf
+d_terraform_env_linode --> d_terraform_env_linode_variables
+d_terraform_env_linode_variables --> f_terraform_env_linode_variables_README_md
+d_terraform_env --> f_terraform_env_README_md
+d_terraform_env --> d_terraform_env_vultr
+d_terraform_env_vultr --> d_terraform_env_vultr__dev
+d_terraform_env_vultr__dev --> d_terraform_env_vultr__dev_modules
+d_terraform_env_vultr__dev --> f_terraform_env_vultr__dev_README_md
+d_terraform_env_vultr__dev --> d_terraform_env_vultr__dev_terraform
+d_terraform_env_vultr__dev --> d_terraform_env_vultr__dev_variables
+d_terraform_env_vultr --> d_terraform_env_vultr_modules
+d_terraform_env_vultr_modules --> f_terraform_env_vultr_modules_README_md
+d_terraform_env_vultr --> f_terraform_env_vultr_README_md
+d_terraform_env_vultr --> d_terraform_env_vultr_terraform
+d_terraform_env_vultr_terraform --> f_terraform_env_vultr_terraform_main_tf
+d_terraform_env_vultr_terraform --> f_terraform_env_vultr_terraform_providers_tf
+d_terraform_env_vultr_terraform --> f_terraform_env_vultr_terraform_README_md
+d_terraform_env_vultr_terraform --> f_terraform_env_vultr_terraform_variables_tf
+d_terraform_env_vultr --> d_terraform_env_vultr_variables
+d_terraform_env_vultr_variables --> f_terraform_env_vultr_variables_README_md
+d_terraform --> d_terraform_global_modules
+d_terraform_global_modules --> f_terraform_global_modules_README_md
+d_terraform --> d_terraform_global_variables
+d_terraform_global_variables --> f_terraform_global_variables_README_md
+d_terraform --> f_terraform_README_md
+d_terraform --> d_terraform_templates
+d_terraform_templates --> f_terraform_templates_aws_lambda_outputs_tf
+d_terraform_templates --> f_terraform_templates_aws_lambda_sentry_tf
+d_terraform_templates --> f_terraform_templates_aws_lambda_variables_tf
+d_terraform_templates --> f_terraform_templates_README_md
