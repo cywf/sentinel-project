@@ -1,0 +1,17 @@
+sequenceDiagram
+actor Dev
+participant GitHub
+participant Runner
+Dev->>GitHub: triggers "CI/CD Pipeline"
+GitHub->>Runner: dispatch
+loop CI/CD Pipeline
+Runner->>Runner: job test
+Runner->>Runner: job terraform-validate
+Runner->>Runner: job security-scan
+end
+Dev->>GitHub: triggers "Codebase Mindmap"
+GitHub->>Runner: dispatch
+loop Codebase Mindmap
+Runner->>Runner: job build
+Runner->>Runner: job deploy
+end
