@@ -1,0 +1,39 @@
+---
+interface Props {
+  items?: { label: string; href?: string }[];
+}
+
+const { items } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+// Auto-generate breadcrumbs from URL if not provided
+let breadcrumbs = items;
+if (!breadcrumbs) {
+  const { pathname } = Astro.url;
+  const parts = pathname.replace(base, '').split('/').filter(Boolean);
+  
+  breadcrumbs = [
+    { label: 'Home', href: `${base}/` },
+    ...parts.map((part, index) => ({
+      label: part.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+      href: index === parts.length - 1 ? undefined : `${base}/${parts.slice(0, index + 1).join('/')}`
+    }))
+  ];
+}
+---
+
+{breadcrumbs && breadcrumbs.length > 1 && (
+  <div class="text-sm breadcrumbs px-4 py-2 bg-base-200">
+    <ul>
+      {breadcrumbs.map((item, index) => (
+        <li>
+          {item.href && index < breadcrumbs.length - 1 ? (
+            <a href={item.href} class="hover:text-primary">{item.label}</a>
+          ) : (
+            <span class="text-base-content font-semibold">{item.label}</span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+)}

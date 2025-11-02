@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-base-100 text-base-content;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .skip-to-content {
+    @apply absolute left-0 top-0 z-50 -translate-y-full bg-primary px-4 py-2 text-primary-content focus:translate-y-0;
+  }
+  
+  .skeleton {
+    @apply animate-pulse bg-base-300 rounded;
+  }
+}

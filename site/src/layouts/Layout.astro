@@ -1,0 +1,123 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  showBreadcrumbs?: boolean;
+  breadcrumbItems?: { label: string; href?: string }[];
+}
+
+const { 
+  title, 
+  description = 'Sentinel Project - AI-powered security system for critical infrastructure',
+  showBreadcrumbs = true,
+  breadcrumbItems
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    
+    <title>{title} | Sentinel Project</title>
+    
+    <!-- Theme initialization script (prevent flash) -->
+    <script is:inline>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const defaultTheme = 'nightfall';
+        if (stored) {
+          document.documentElement.setAttribute('data-theme', stored);
+        } else {
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', prefersDark ? defaultTheme : 'nightfall');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">
+      Skip to main content
+    </a>
+    
+    <Navigation />
+    
+    {showBreadcrumbs && <Breadcrumbs items={breadcrumbItems} />}
+    
+    <main id="main-content" class="min-h-screen">
+      <slot />
+    </main>
+    
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+      <aside>
+        <p class="font-bold text-lg">
+          Sentinel Project
+        </p>
+        <p>AI-powered security system for critical infrastructure</p>
+        <p class="text-sm opacity-70">
+          &copy; {new Date().getFullYear()} FolkvarLabs. Licensed under MIT.
+        </p>
+      </aside>
+      <nav>
+        <div class="grid grid-flow-col gap-4">
+          <a 
+            href="https://github.com/cywf/sentinel-project" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="link link-hover"
+            aria-label="GitHub Repository"
+          >
+            GitHub
+          </a>
+          <a 
+            href={`${base}/docs`}
+            class="link link-hover"
+          >
+            Documentation
+          </a>
+          <a 
+            href="https://github.com/cywf/sentinel-project/blob/main/SECURITY.md" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="link link-hover"
+          >
+            Security
+          </a>
+          <a 
+            href="https://github.com/cywf/sentinel-project/blob/main/DEVELOPMENT.md" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="link link-hover"
+          >
+            Development
+          </a>
+        </div>
+      </nav>
+    </footer>
+  </body>
+</html>
