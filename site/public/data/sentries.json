@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "name": "Apollo",
+    "path": "ai/apollo",
+    "description": "The Apollo Sentry is a specialized security system designed to protect the Healthcare sector from cyber threats. As part of the Sentinel Project, Apol...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/apollo"
+  },
+  {
+    "name": "Ares",
+    "path": "ai/ares",
+    "description": "The Ares Sentry is a specialized security system designed to protect the Defense Industrial Base from cyber threats. As part of the Sentinel Project, ...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/ares"
+  },
+  {
+    "name": "Athena",
+    "path": "ai/athena",
+    "description": "The Athena Sentry is a specialized security system designed to protect Other Community-Based Governmental Organizations from cyber threats. As part of...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/athena"
+  },
+  {
+    "name": "Demeter",
+    "path": "ai/demeter",
+    "description": "The Demeter Sentry is a specialized security system designed to protect the Food and Agriculture sector from cyber threats. As part of the Sentinel Pr...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/demeter"
+  },
+  {
+    "name": "Fenrir",
+    "path": "ai/fenrir",
+    "description": "The Fenrir Sentry is a specialized security system designed to protect the Information Technology sector from cyber threats. As part of the Sentinel P...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/fenrir"
+  },
+  {
+    "name": "Hermes",
+    "path": "ai/hermes",
+    "description": "The Hermes Sentry is a specialized security system designed to protect the Transportation sector from cyber threats. As part of the Sentinel Project, ...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/hermes"
+  },
+  {
+    "name": "Jupiter",
+    "path": "ai/jupiter",
+    "description": "The Jupiter Sentry is a specialized security system designed to protect the Government sector from cyber threats. As part of the Sentinel Project, Jup...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/jupiter"
+  },
+  {
+    "name": "Lir",
+    "path": "ai/lir",
+    "description": "The Lir Sentry is a specialized security system designed to protect the Water sector from cyber threats. As part of the Sentinel Project, Lir aims to ...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/lir"
+  },
+  {
+    "name": "Lugh",
+    "path": "ai/lugh",
+    "description": "The Lugh Sentry is a specialized security system designed to protect the Postal and Shipping sector from cyber threats. As part of the Sentinel Projec...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/lugh"
+  },
+  {
+    "name": "Mercury",
+    "path": "ai/mercury",
+    "description": "The Mercury Sentry is a specialized security system designed to protect Commercial Facilities from cyber threats. As part of the Sentinel Project, Mer...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/mercury"
+  },
+  {
+    "name": "Morrigan",
+    "path": "ai/morrigan",
+    "description": "The Morrigan Sentry is a specialized security system designed to protect the Chemical sector from cyber threats. As part of the Sentinel Project, Morr...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/morrigan"
+  },
+  {
+    "name": "Osiris",
+    "path": "ai/osiris",
+    "description": "The Osiris Sentry is a specialized security system designed to protect Emergency Services from cyber threats. As part of the Sentinel Project, Osiris ...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/osiris"
+  },
+  {
+    "name": "Ptah",
+    "path": "ai/ptah",
+    "description": "The Ptah Sentry is a specialized security system designed to protect the Critical Manufacturing sector from cyber threats. As part of the Sentinel Pro...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/ptah"
+  },
+  {
+    "name": "Ra",
+    "path": "ai/ra",
+    "description": "The Ra Sentry is a specialized security system designed to protect the Energy sector from cyber threats. As part of the Sentinel Project, Ra aims to p...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/ra"
+  },
+  {
+    "name": "Shiva",
+    "path": "ai/shiva",
+    "description": "The Shiva Sentry is a specialized security system designed to protect the sector of Nuclear Reactors, Materials, and Waste from cyber threats. As part...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/shiva"
+  },
+  {
+    "name": "Sobek",
+    "path": "ai/sobek",
+    "description": "The Sobek Sentry is a specialized security system designed to protect the Dams sector from cyber threats. As part of the Sentinel Project, Sobek aims ...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/sobek"
+  },
+  {
+    "name": "Thoth",
+    "path": "ai/thoth",
+    "description": "The Thoth Sentry is a specialized security system designed to protect the Telecommunications sector from cyber threats. As part of the Sentinel Projec...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/thoth"
+  },
+  {
+    "name": "Tyche",
+    "path": "ai/tyche",
+    "description": "The Tyche Sentry is a specialized security system designed to protect the Banking and Finance sector from cyber threats. As part of the Sentinel Proje...",
+    "readmeUrl": "https://github.com/cywf/sentinel-project/tree/main/ai/tyche"
+  }
+]

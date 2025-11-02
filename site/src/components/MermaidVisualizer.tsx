@@ -47,7 +47,7 @@ export default function MermaidVisualizer() {
         setDiagramContent(content);
         setLoading(false);
       })
-      .catch(err => {
+      .catch(() => {
         setError('Failed to load diagram');
         setLoading(false);
       });

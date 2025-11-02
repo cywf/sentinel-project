@@ -40,7 +40,10 @@ jobs:
         run: |
           cd site
           mkdir -p public/data
-          npm run fetch-data || echo "Warning: Data fetch failed, using placeholders"
+          npx tsx scripts/fetch_repo_data.ts || echo "Warning: Stats fetch failed"
+          npx tsx scripts/fetch_discussions.ts || echo "Warning: Discussions fetch failed"
+          npx tsx scripts/fetch_projects.ts || echo "Warning: Projects fetch failed"
+          npx tsx scripts/scan_ai_dirs.ts || echo "Warning: Sentries scan failed"
 
       - name: Build site
         env:

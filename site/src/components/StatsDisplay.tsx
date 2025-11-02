@@ -27,7 +27,7 @@ export default function StatsDisplay() {
         setStats(data);
         setLoading(false);
       })
-      .catch(err => {
+      .catch(() => {
         setError('Failed to load statistics');
         setLoading(false);
       });
