@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectBoard from '../components/ProjectBoard';
+---
+
+<Layout title="Development Board">
+  <div class="container mx-auto px-4 py-8">
+    <div class="prose max-w-none mb-8">
+      <h1 class="text-4xl font-bold mb-4 text-base-content">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block h-10 w-10 mr-3 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        </svg>
+        Development Board
+      </h1>
+      <p class="text-lg text-base-content/80">
+        Track the progress of ongoing work, features, and bug fixes in the Sentinel Project.
+      </p>
+    </div>
+
+    <ProjectBoard client:load />
+  </div>
+</Layout>

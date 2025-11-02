@@ -3,6 +3,8 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+🌐 **[Live Site](https://cywf.github.io/sentinel-project/)** | 📊 [Statistics](https://cywf.github.io/sentinel-project/statistics) | 💬 [Discussions](https://cywf.github.io/sentinel-project/discussions) | 📚 [Documentation](https://cywf.github.io/sentinel-project/docs)
+
 ## Overview
 
 The Sentinel Project is a cutting-edge AI-powered security system that uses Microsoft AutoGen to provide autonomous threat intelligence and incident response for critical infrastructure. Designed by FolkvarLabs, the Sentinel Project features a set of highly specialized "Sentries" - AI agents that can be deployed to protect 18 major critical infrastructure sectors including Energy, Water, Transportation, Communications, Banking and Finance, and more.
@@ -50,6 +52,55 @@ This repository contains the core implementation, including the AutoGen agent fr
    ```
 
 For detailed development setup and usage instructions, see the [DEVELOPMENT.md](DEVELOPMENT.md) guide.
+
+## Project Website
+
+The Sentinel Project has a modern, multi-page website built with Astro and React, deployed at:
+
+🌐 **https://cywf.github.io/sentinel-project/**
+
+### Website Features
+
+- **Project Dashboard**: Overview with quick links and status badges
+- **Statistics**: Real-time repository metrics, language breakdown, and commit activity
+- **Discussions**: Browse and search community discussions
+- **Development Board**: Track project progress and issues
+- **Documentation**: Access comprehensive guides and references
+- **Visualizer**: Interactive Mermaid diagrams showing project architecture
+- **Sentries**: Explore all 18 AI agents and their capabilities
+- **Theme System**: 7 selectable dark/neon themes with localStorage persistence
+
+### Contributing to the Website
+
+#### Adding Documentation
+
+1. Add Markdown files to the `/docs` directory
+2. Documentation is automatically linked from the website
+3. Follows the same contribution workflow as code changes
+
+#### Adding Mermaid Diagrams
+
+1. Create `.mmd` files in the `/mermaid` directory
+2. Diagrams are automatically discovered and rendered on the Visualizer page
+3. Use Mermaid syntax for flowcharts, sequence diagrams, ER diagrams, etc.
+
+Example:
+```bash
+# Add a new diagram
+echo "graph TD
+  A[Start] --> B[Process]
+  B --> C[End]" > mermaid/my-diagram.mmd
+```
+
+#### CI Data Snapshots
+
+The website uses CI-generated JSON snapshots for dynamic data:
+- **Repository stats**: Stars, forks, watchers, languages, commit activity
+- **Discussions**: Latest community discussions
+- **Projects**: GitHub Projects v2 board or issues-by-label fallback
+- **Sentries**: Auto-enumerated from `ai/` directories
+
+Data is refreshed automatically on each push to `main` via GitHub Actions.
 
 ## Live Codebase Mindmap
 

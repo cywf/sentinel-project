@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Home" showBreadcrumbs={false}>
+  <div class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <div class="hero min-h-[50vh] bg-base-200 rounded-lg mb-8">
+      <div class="hero-content text-center">
+        <div class="max-w-4xl">
+          <h1 class="text-5xl font-bold mb-4">
+            <span class="text-primary">Sentinel</span> Project
+          </h1>
+          <p class="text-xl mb-6 opacity-80">
+            AI-powered security system for critical infrastructure protection
+          </p>
+          <p class="text-lg mb-8 max-w-2xl mx-auto">
+            The Sentinel Project uses Microsoft AutoGen to provide autonomous threat intelligence 
+            and incident response for 18 major critical infrastructure sectors including Energy, 
+            Water, Transportation, Communications, and Banking.
+          </p>
+          
+          <!-- Status Badges -->
+          <div class="flex flex-wrap justify-center gap-3 mb-6">
+            <a href="https://github.com/cywf/sentinel-project" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/badge/python-3.8%2B-blue.svg" alt="Python Version" />
+            </a>
+            <a href="https://github.com/cywf/sentinel-project/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License" />
+            </a>
+            <a href="https://github.com/cywf/sentinel-project/stargazers" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/github/stars/cywf/sentinel-project" alt="GitHub stars" />
+            </a>
+            <a href="https://github.com/cywf/sentinel-project/network/members" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/github/forks/cywf/sentinel-project" alt="GitHub forks" />
+            </a>
+          </div>
+          
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://github.com/cywf/sentinel-project/issues" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Issues
+            </a>
+            <a href="https://github.com/cywf/sentinel-project/discussions" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Discussions
+            </a>
+            <a href="https://github.com/cywf/sentinel-project/projects" target="_blank" rel="noopener noreferrer" class="btn btn-accent">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              Projects
+            </a>
+            <a href="https://github.com/cywf/sentinel-project/releases" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+              </svg>
+              Releases
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <!-- About the Project -->
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            About the Project
+          </h2>
+          <p class="mb-4">
+            Each Sentry is an autonomous AI agent designed to provide real-time threat intelligence 
+            and incident response capabilities tailored to the unique challenges of its designated sector.
+          </p>
+          <p class="mb-4">
+            Built on the AutoGen framework, these sentries can think, plan, and respond to security 
+            incidents with minimal human intervention.
+          </p>
+          <div class="card-actions">
+            <a href={`${base}/sentries`} class="btn btn-sm btn-primary">
+              Explore Sentries
+            </a>
+            <a href={`${base}/docs`} class="btn btn-sm btn-outline">
+              Documentation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Start -->
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h2 class="card-title text-2xl mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Quick Start
+          </h2>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="badge badge-primary badge-lg">1</span>
+              <div>
+                <p class="font-semibold">Clone the repository</p>
+                <code class="text-xs bg-base-300 px-2 py-1 rounded block mt-1">
+                  git clone https://github.com/cywf/sentinel-project.git
+                </code>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="badge badge-secondary badge-lg">2</span>
+              <div>
+                <p class="font-semibold">Install dependencies</p>
+                <code class="text-xs bg-base-300 px-2 py-1 rounded block mt-1">
+                  pip install -e ".[dev]"
+                </code>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="badge badge-accent badge-lg">3</span>
+              <div>
+                <p class="font-semibold">Configure environment</p>
+                <code class="text-xs bg-base-300 px-2 py-1 rounded block mt-1">
+                  cp .env.example .env
+                </code>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions mt-4">
+            <a href="https://github.com/cywf/sentinel-project/blob/main/DEVELOPMENT.md" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+              Development Guide
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security & Resources -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Security
+          </h3>
+          <p class="text-sm">
+            Report security vulnerabilities and review our security policy.
+          </p>
+          <a href="https://github.com/cywf/sentinel-project/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline mt-2">
+            Security Policy
+          </a>
+        </div>
+      </div>
+
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            Statistics
+          </h3>
+          <p class="text-sm">
+            View repository metrics, languages breakdown, and activity trends.
+          </p>
+          <a href={`${base}/statistics`} class="btn btn-sm btn-outline mt-2">
+            View Stats
+          </a>
+        </div>
+      </div>
+
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <h3 class="card-title text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Visualizations
+          </h3>
+          <p class="text-sm">
+            Explore project architecture through interactive Mermaid diagrams.
+          </p>
+          <a href={`${base}/visualizer`} class="btn btn-sm btn-outline mt-2">
+            View Diagrams
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
